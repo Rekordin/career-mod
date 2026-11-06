@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Карьера игрока — футбольный симулятор</title>
+<title>Карьера — футбольный менеджер</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&family=Unbounded:wght@400;500;600&display=swap&subset=cyrillic" rel="stylesheet">
 <style>:root{--bg:#060a15;--card:rgba(12,18,34,.72);--card2:rgba(255,255,255,.045);--card3:rgba(255,255,255,.08);--line:rgba(255,255,255,.1);--line2:rgba(255,255,255,.16);
@@ -158,6 +159,11 @@ body.hints .hint{display:block!important;border-left:2px solid var(--ac);padding
 .mbox{padding-top:22px}.mbox h2{padding-right:44px}.mbox.hashint h2{padding-right:84px}
 .hbtn{right:52px!important}
 .modes{display:grid;gap:10px}.mode{text-align:left;padding:16px!important;display:block!important}.mode b{display:block;font-family:var(--hf);font-weight:500;font-size:14px;letter-spacing:.06em;text-transform:uppercase;margin-bottom:4px}.mode span{font-size:12.5px;opacity:.85;font-weight:400;letter-spacing:0;text-transform:none}
+
+html.tg body{padding-top:var(--tgtop,0px)}html.tg header.top{top:var(--tgtop,0px)}
+html.tg nav.tabs{padding-bottom:max(var(--tgbot,0px),env(safe-area-inset-bottom))}
+html.tg .modal{padding-top:var(--tgtop,0px)}
+html.tg #app{padding-bottom:calc(88px + var(--tgbot,0px))}
 
 .ic{display:inline-block;width:1.1em;height:1.1em;vertical-align:-.18em;background:currentColor;-webkit-mask:var(--i) center/contain no-repeat;mask:var(--i) center/contain no-repeat;font-style:normal}
 .ic-ball{--i:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22%2F%3E%3Cpath%20d%3D%22M12%207.6l4.2%203-1.6%204.9H9.4L7.8%2010.6z%22%2F%3E%3Cpath%20d%3D%22M12%203v4.6M16.2%2010.6l4.4-1.5M14.6%2015.5l2.7%203.8M9.4%2015.5l-2.7%203.8M7.8%2010.6L3.4%209.1%22%2F%3E%3C%2Fsvg%3E")}
@@ -1285,7 +1291,7 @@ const STYLE_DESC={bal:'Без перекосов — стабильно в лю�
  poss:'Держать мяч. Хорошо, когда вы сильнее; меньше голов.',counter:'Отдать мяч и ловить на контратаках. Отлично против сильных.',
  kickrun:'Длинные передачи на нападающих. Зависит от форвардов, игра становится непредсказуемой.',bus:'Глухая оборона. Только против намного более сильных; очень мало голов.',
  highline:'Высокая линия защиты. Нужны сильные центральные защитники, больше голов в обе стороны.',direct:'Быстрый переход к атаке. Зависит от скорости флангов и форвардов.',park:'Сохранить преимущество. Хорошо, когда вы сильнее; голов мало.'};
-const LICENSES={C:['Лицензия C','Начинающий тренер: клубы с рейтингом до 68',5,68],B:['Лицензия B','Клубы с рейтингом до 72',15,72],A:['Лицензия A','Клубы с рейтингом до 77',28,77],PRO:['Лицензия PRO','Клубы с рейтингом до 82',42,82]};
+const LICENSES={C:['Лицензия C','Начинающий тренер: клубы с рейтингом до 68',5,68],B:['Лицензия B','Клубы с рейтингом до 72',15,72],A:['Лицензия A','Клубы с рейтингом до 77',28,77],PRO:['Лицензия PRO','Любой клуб мира',42,99]};
 const COACH_PTS={cup:10,UCL:30,UEL:20,UECL:10,LIB:20,ACL:15,CCC:10,WC:50,EURO:25,COPA:25,AFCON:15,ASIA:15,objOk:5,objPlus:10,coy:30};
 
 function styleAdj(st,my,opp){return styleEffect({style:st,lu:null},my,opp).adj;}
@@ -2076,6 +2082,35 @@ function flagE(n){return `<i class="flg">${flagSvg(n)}</i>`;}
 // ===================== ИКОНКИ =====================
 function ic(n){return `<i class="ic ic-${n}"></i>`;}
 
+// ===================== TELEGRAM MINI APP =====================
+// Работает только внутри Telegram; в обычном браузере ничего не делает.
+const TG=(()=>{const w=window.Telegram&&window.Telegram.WebApp;return w&&w.initData!==undefined&&(w.platform&&w.platform!=='unknown')?w:null;})();
+function tgHaptic(kind,style){if(!TG||!TG.HapticFeedback)return;try{if(kind==='impact')TG.HapticFeedback.impactOccurred(style||'light');else if(kind==='notify')TG.HapticFeedback.notificationOccurred(style||'success');else TG.HapticFeedback.selectionChanged();}catch(e){}}
+function tgUserName(){try{const u=TG&&TG.initDataUnsafe&&TG.initDataUnsafe.user;if(!u)return '';return [u.first_name,u.last_name].filter(Boolean).join(' ').slice(0,40);}catch(e){return '';}}
+// вибрация по результату последнего матча
+function tgResult(){if(!TG||typeof G==='undefined'||!G)return;let e=null;
+ if(G.mode==='coach'&&G.coach){e=G.coach.log&&G.coach.log[G.coach.log.length-1];if(!e)return;const w=e.gf>e.ga||e.pen===1,l=e.gf<e.ga||e.pen===-1;tgHaptic('notify',w?'success':l?'error':'warning');}
+ else if(G.user&&G.user.log){e=G.user.log[G.user.log.length-1];if(!e)return;tgHaptic('notify',e.g>0?'success':'warning');}}
+(function tgInit(){if(!TG)return;document.documentElement.classList.add('tg');
+ try{TG.ready();TG.expand();}catch(e){}
+ try{TG.setHeaderColor('#060a15');TG.setBackgroundColor('#060a15');if(TG.setBottomBarColor)TG.setBottomBarColor('#060a15');}catch(e){}
+ try{if(TG.disableVerticalSwipes)TG.disableVerticalSwipes();}catch(e){}
+ try{if(TG.isVersionAtLeast&&TG.isVersionAtLeast('8.0')&&TG.requestFullscreen&&/android|ios/.test(TG.platform))TG.requestFullscreen();}catch(e){}
+ try{if(TG.enableClosingConfirmation)TG.enableClosingConfirmation();}catch(e){}
+ const insets=()=>{const s=TG.safeAreaInset||{},c=TG.contentSafeAreaInset||{};const top=(s.top||0)+(c.top||0),bot=(s.bottom||0)+(c.bottom||0);
+  document.documentElement.style.setProperty('--tgtop',top+'px');document.documentElement.style.setProperty('--tgbot',bot+'px');};
+ insets();try{TG.onEvent('safeAreaChanged',insets);TG.onEvent('contentSafeAreaChanged',insets);TG.onEvent('fullscreenChanged',insets);TG.onEvent('viewportChanged',insets);}catch(e){}
+ // системная кнопка «Назад» закрывает открытое окно (если в нём не нужно принять решение)
+ const back=()=>{const x=document.querySelector('.modal .mx');if(x&&!x.disabled){x.click();tgHaptic('impact','light');}};
+ try{TG.BackButton.onClick(back);}catch(e){}
+ const sync=()=>{try{const x=document.querySelector('.modal .mx');if(x&&!x.disabled)TG.BackButton.show();else TG.BackButton.hide();}catch(e){}};
+ new MutationObserver(sync).observe(document.documentElement,{childList:true,subtree:true});
+ // лёгкая вибрация на кнопках
+ document.addEventListener('click',ev=>{const b=ev.target.closest&&ev.target.closest('.btn,.evopt,nav.tabs button,.icon');if(b&&!b.disabled)tgHaptic('impact',b.classList.contains('big')?'medium':'light');},true);
+ // имя игрока/тренера из профиля Telegram
+ new MutationObserver(()=>{const n=tgUserName();if(!n)return;['fName','cName'].forEach(id=>{const el=document.getElementById(id);if(el&&!el.dataset.tg){el.dataset.tg=1;el.value=n;}});}).observe(document.documentElement,{childList:true,subtree:true});
+})();
+
 // ===================== ИНТЕРФЕЙС =====================
 const KEY='fcCareerSave1',HOF_KEY='fcCareerHOF1';
 const $=s=>document.querySelector(s);
@@ -2178,7 +2213,7 @@ function tabSeason(){const u=G.user,p=G.P[u.pid];const m=$('#main');const nf=nex
  html+=`<div class="card"><h3>Статистика сезона</h3><div class="stats">${statBox('Матчи',T[0])}${statBox('В старте',T[1])}${statBox('Голы',T[2])}${statBox('Пасы',T[3])}${GROUP[u.pos]==='GK'?statBox('Сейвы',T[6]):statBox('Отборы',T[4])}${statBox('Сухие',T[5])}${statBox('Оценка',avg)}${statBox('Минуты',T[8])}</div></div>`;
  if(u.log.length>1)html+=`<div class="card"><h3>Матчи сезона</h3>${u.log.slice().reverse().slice(1,60).map(e=>matchRow(e)).join('')}</div>`;
  m.innerHTML=html;
- const run=mode=>{const res=advance(mode);UI.resume=(res==='event'&&mode!=='match')?mode:null;save();render();};
+ const run=mode=>{const res=advance(mode);UI.resume=(res==='event'&&mode!=='match')?mode:null;save();render();if(mode==='match')tgResult();};
  if($('#bNext'))$('#bNext').onclick=()=>run('match');
  if($('#bMid'))$('#bMid').onclick=()=>run('mid');
  if($('#bEnd'))$('#bEnd').onclick=()=>{$('#bEnd').textContent='Симуляция…';setTimeout(()=>run('end'),20);};
@@ -2473,7 +2508,7 @@ function cTabSeason(){const C=G.coach;const m=$('#main');const over=seasonOver()
  const last=C.log[C.log.length-1];if(last)h+=cMatchCard(last);
  if(C.log.length>1)h+=`<div class="card"><h3>Матчи сезона</h3>${C.log.slice().reverse().slice(1,60).map(cMatchRow).join('')}</div>`;
  m.innerHTML=h;
- const run=mode=>{advance(mode);save();render();};
+ const run=mode=>{advance(mode);save();render();if(mode==='match')tgResult();};
  if($('#bNext'))$('#bNext').onclick=()=>run('match');
  if($('#bLine'))$('#bLine').onclick=()=>preMatch(()=>run('match'));if($('#bMid'))$('#bMid').onclick=()=>run('mid');
  if($('#bEnd'))$('#bEnd').onclick=()=>{$('#bEnd').textContent='Симуляция…';setTimeout(()=>run('end'),20);};
