@@ -69,7 +69,7 @@ header.top{position:sticky;top:0;z-index:5;display:flex;align-items:center;gap:1
 .o85{background:linear-gradient(135deg,#ffe08a,var(--gold))}.o78{background:linear-gradient(135deg,#7ff0b4,#33d68a)}.o70{background:linear-gradient(135deg,#8bd8ff,#4fb3e8)}.o60{background:#c5ccdb}.o50{background:#f0a07f}
 .warn{background:rgba(246,180,69,.14);color:var(--warn);padding:8px 12px;font-size:13px;margin:8px 12px}
 nav.tabs{position:fixed;bottom:0;left:0;right:0;display:flex;justify-content:center;background:rgba(6,10,21,.78);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-top:1px solid var(--line);z-index:6;padding-bottom:env(safe-area-inset-bottom)}
-nav.tabs button{flex:1;max-width:150px;background:none;border:0;color:var(--mu);padding:9px 2px 10px;font:500 11px var(--bf);letter-spacing:.04em;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;position:relative;min-width:0}
+nav.tabs button{flex:1;max-width:150px;background:none;border:0;color:var(--mu);padding:9px 1px 10px;font:500 10px var(--bf);letter-spacing:.04em;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;position:relative;min-width:0}
 nav.tabs button i{font-style:normal;font-size:19px}nav.tabs button.on{color:#fff}
 nav.tabs button.on:before{content:'';position:absolute;top:-1px;left:22%;right:22%;height:3px;background:var(--ac);box-shadow:0 0 12px var(--ac);clip-path:polygon(3px 0,100% 0,calc(100% - 3px) 100%,0 100%)}
 nav.tabs button.on i{color:var(--ac2)}
@@ -318,6 +318,26 @@ nav.tabs button.on:after{border-radius:0;clip-path:polygon(6px 0,100% 0,100% cal
 b.ok,.ok{color:var(--good)}
 .ovr-s.fuzzy{font-size:11px;letter-spacing:-.02em;min-width:52px}
 .fxl span.ok{background:rgba(60,207,134,.14)}.fxl span.bad{background:rgba(255,84,104,.14)}
+
+.inv{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.07)}.inv:last-child{border-bottom:0}.invb{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.invb .btn{flex:1 1 auto;white-space:normal;min-width:0}
+/* мини-игры */
+.mg .mgoal,.mg .mgpitch{width:100%;max-width:420px;display:block;margin:6px auto 4px}
+.mg-z{fill:rgba(255,255,255,.02);stroke:rgba(255,255,255,.08)}
+.mg-z.on{cursor:pointer;fill:rgba(255,255,255,.05);transition:fill .15s}.mg-z.on:hover{fill:rgba(255,59,78,.35)}
+.mg-z.hit{fill:rgba(60,207,134,.35)}
+.mg-ball{filter:drop-shadow(0 0 6px rgba(255,255,255,.7))}
+.mg-mate{cursor:pointer}
+.mg-res{text-align:center;font:800 26px var(--hf,inherit);letter-spacing:.04em;margin:8px 0 2px}
+.mg-res.ok{color:#3ccf86}.mg-res.bad{color:#ff5a6b}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:8px}
+.mgbar{position:relative;height:30px;background:rgba(255,255,255,.08);border-radius:8px;margin:14px 0;overflow:hidden}
+.mgbar .z{position:absolute;top:0;bottom:0;background:rgba(60,207,134,.55)}
+.mgbar .m{position:absolute;top:-2px;bottom:-2px;width:4px;margin-left:-2px;background:#fff;box-shadow:0 0 10px #fff}
+.mg-drib{display:flex;justify-content:space-around;margin:8px 0;font-size:15px}
+.mg-tgt{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:300px;margin:10px auto}
+.mg-tgt button{aspect-ratio:1;border-radius:50%;border:2px solid rgba(255,255,255,.15);background:rgba(255,255,255,.04);cursor:pointer}
+.mg-tgt button.on{background:radial-gradient(circle,#fff 0 18%,#ff3b4e 19% 45%,#fff 46% 55%,#ff3b4e 56%);border-color:#ff3b4e;box-shadow:0 0 16px rgba(255,59,78,.7)}
+.evopt.sel{outline:2px solid #ff3b4e !important;background:rgba(255,59,78,.18) !important}
 
 .ic{display:inline-block;width:1.1em;height:1.1em;vertical-align:-.18em;background:currentColor;-webkit-mask:var(--i) center/contain no-repeat;mask:var(--i) center/contain no-repeat;font-style:normal}
 .ic-ball{--i:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22%2F%3E%3Cpath%20d%3D%22M12%207.6l4.2%203-1.6%204.9H9.4L7.8%2010.6z%22%2F%3E%3Cpath%20d%3D%22M12%203v4.6M16.2%2010.6l4.4-1.5M14.6%2015.5l2.7%203.8M9.4%2015.5l-2.7%203.8M7.8%2010.6L3.4%209.1%22%2F%3E%3C%2Fsvg%3E")}
@@ -794,7 +814,7 @@ function startSeason(){natDepth();
  G.P.forEach(p=>{p.s=null;p.sl=null;if(p.inj)p.inj=Math.max(0,p.inj-prevLast-13);if(!p.ret&&!p.u&&p.cl>=0&&p.cy===undefined)p.cy=ri(1,5);});
  if(G.user&&!G.user.retired){const u=G.user;u.log=[];u.ss={k:{},team:{}};u.earnS=0;u.evDev=0;u.called=false;u.frozen=0;u.ballonBoost=0;if(u.shockMax===undefined){u.shockMax=3;u.shockN=0;}G.season.shock=null;
   if(u.accused===1&&rnd()<.7)G.season.shock={s:ri(10,70),id:'cleared'};else if(u.shockN<u.shockMax&&rnd()<.2)G.season.shock={s:ri(10,72)};
-  const ev=[];const n=ri(5,7);while(ev.length<n){const x=ri(6,76);if(!ev.includes(x))ev.push(x);}G.season.ev=ev.sort((a,b)=>a-b);G.season.evUsed=[];if(typeof p2SeasonStart==='function')p2SeasonStart();}
+  const ev=[];const n=ri(5,7);const span=70/n;for(let i=0;i<n;i++)ev.push(Math.round(6+i*span+rnd()*span*.8));G.season.ev=ev;/* равномерно по сезону */G.season.evUsed=[];if(typeof p2SeasonStart==='function')p2SeasonStart();}
  const C=G.season.comps;
  // лиги
  for(const l of LEAGUES){const ids=G.lgClubs[l.id];const k='L:'+l.id;const dbl=ids.length<=24;
@@ -905,9 +925,11 @@ function playFx(f){const comp=G.season.comps[f.c];
  const {pw,pd}=resultProbs(Math.max(rh,ra),Math.min(rh,ra),comp.up);const r=rnd();
  const res=r<pw?-1:r<pw+pd?0:1;const [gs,gw]=scoreFor(res,diff,gm);
  f.hg=hs?gs:gw;f.ag=hs?gw:gs;f.p=1;
- if(f.ko&&f.hg===f.ag){f.pen=rnd()<.5+clamp((rh-ra)*.02,-.15,.15)?f.h:f.a;}
+ {const U=G.user;if(U&&U.mfx&&!U.retired){const up=G.P[U.pid];const me=comp.nat?(U.nat===f.h?1:U.nat===f.a?2:0):(up.cl===f.h?1:up.cl===f.a?2:0);
+  if(me){if((U.mfx.g||U.mfx.a)){if(me===1&&!f.hg)f.hg=1;if(me===2&&!f.ag)f.ag=1;}if(U.mfx.ga){if(me===1&&!f.ag)f.ag=1;if(me===2&&!f.hg)f.hg=1;}}}}
+ if(f.ko&&f.hg===f.ag){f.pen=penDecide(f,rh,ra,comp);}
  if(f.leg===2){const f1=G.season.fx[f.l1];const aggH=f.hg+f1.ag,aggA=f.ag+f1.hg;f.agg=aggH+':'+aggA;
-  f.aggW=aggH>aggA?f.h:aggA>aggH?f.a:(f.pen=rnd()<.5+clamp((rh-ra)*.02,-.15,.15)?f.h:f.a);}
+  f.aggW=aggH>aggA?f.h:aggA>aggH?f.a:(f.pen=penDecide(f,rh,ra,comp));}
  if(comp.table&&f.g===undefined)tableAdd(comp.table,f.h,f.a,f.hg,f.ag);
  const isL=comp.kind==='league';
  if(H.lu)distribute(H,f.hg,f.ag,ra,isL,f,true,comp);
@@ -934,24 +956,31 @@ function distribute(side,gf,ga,oppR,isL,f,home,comp){
  const nSub=Math.min(lu.bench.length,ri(3,5));const bench=lu.bench.filter(p=>p.pos!=='GK'||rnd()<.03);
  for(let i=0;i<nSub&&bench.length;i++){const s=wpick(bench.slice(0,8),p=>Math.pow(Math.max(1,p.ovr-bench[bench.length-1].ovr+4),2)*(p.u?Math.max(.3,1+formBonus()/6)*(G.P[G.user.pid].age<=21?1.7:1):1));
   bench.splice(bench.indexOf(s),1);const outs=parts.filter(x=>x.st&&x.pos!=='GK'&&x.m===90);if(!outs.length)break;const o=wpick(outs,x=>x.p.u?.6:1);const mm=ri(8,35);o.m=90-mm;parts.push({p:s,pos:s.pos,m:mm,st:0});}
+ {const U=G.user;if(U&&U.mfx&&!U.retired&&!parts.some(x=>x.p.u)){const up=G.P[U.pid];if(lu.bench.includes(up)&&!(up.inj>G.slot)){const outs=parts.filter(x=>x.st&&x.pos!=='GK'&&x.m===90&&(up.pos==='GK')===(x.pos==='GK'));const o=outs.length?outs[outs.length-1]:null;const mm=ri(20,35);if(o)o.m=90-mm;parts.push({p:up,pos:up.pos,m:mm,st:0});}}}
  const sc=parts.map(()=>({g:0,a:0,t:0,sv:0}));
  // кто забивает и отдаёт: позиция, стиль команды, сила игрока относительно партнёров (с потолком), возраст, у игрока — мораль и специализации
  const sty=side.style||(side.nat||comp.nat?null:(typeof npcStyle==='function'?npcStyle(comp,side.ref):null));const SG=(sty&&STY_G[sty])||{},SA=(sty&&STY_A[sty])||{};
- const qOf=x=>x.p.u?(G.P[G.user.pid].ovr+(G.user.attr.sho+G.user.attr.ap)/2)/2:x.p.ovr;const qA=x=>x.p.u?(G.P[G.user.pid].ovr+(G.user.attr.pas+G.user.attr.vis)/2)/2:x.p.ovr;
+ // у вашего игрока решают навыки: удар и выбор позиции — для голов, пас и видение — для передач
+ const qOf=x=>x.p.u?.5*G.P[G.user.pid].ovr+.5*(G.user.attr.sho+G.user.attr.ap)/2:x.p.ovr;const qA=x=>x.p.u?.5*G.P[G.user.pid].ovr+.5*(G.user.attr.pas+G.user.attr.vis)/2:x.p.ovr;const uc=x=>x.p.u?[.8,1.22]:[.8,1.2];
  const avgQ=parts.reduce((a,x)=>a+x.p.ovr,0)/Math.max(1,parts.length);const ageF=a=>a<=19?.75:a<=21?.85:a<=23?.93:1;
- const gwt=x=>GW[x.pos]*(SG[x.pos]||1)*Math.pow(clamp(qOf(x)/avgQ,.8,1.2),4)*ageF(x.p.age)*x.m/90*(x.p.u?moraleAct()*perkVal('gw'):1);
- const awt=x=>AW[x.pos]*(SA[x.pos]||1)*Math.pow(clamp(qA(x)/avgQ,.8,1.2),3)*ageF(x.p.age)*x.m/90*(x.p.u?moraleAct()*perkVal('aw'):1);
+ const gwt=x=>GW[x.pos]*(SG[x.pos]||1)*Math.pow(clamp(qOf(x)/avgQ,...uc(x)),4)*ageF(x.p.age)*x.m/90*(x.p.u?moraleAct()*perkVal('gw')*focusK('g'):1);
+ const awt=x=>AW[x.pos]*(SA[x.pos]||1)*Math.pow(clamp(qA(x)/avgQ,...uc(x)),3)*ageF(x.p.age)*x.m/90*(x.p.u?moraleAct()*perkVal('aw')*focusK('a'):1);
  for(let k=0;k<gf;k++){const i=windex(parts,(x,ii)=>gwt(x)*(sc[ii].g>=3?.1:sc[ii].g>=2?.45:1));if(i<0)continue;sc[i].g++;
   if(rnd()<.72){const j=windex(parts,(x,jj)=>jj===i?0:awt(x)*(sc[jj].a>=2?.3:1));if(j>=0)sc[j].a++;}}
- {const ui=parts.findIndex(x=>x.p.u);const U=G.user;if(ui>=0&&U&&U.mfx){if(U.mfx.g&&gf>0&&!sc[ui].g){const o=sc.findIndex((s,i)=>i!==ui&&s.g>0);if(o>=0){sc[o].g--;sc[ui].g++;}}if(U.mfx.a&&gf>0&&!sc[ui].a){const o=sc.findIndex((s,i)=>i!==ui&&s.a>0);if(o>=0){sc[o].a--;sc[ui].a++;}else if(sc.some((s,i)=>i!==ui&&s.g>0))sc[ui].a++;}}}
+ {const ui=parts.findIndex(x=>x.p.u);const U=G.user;if(ui>=0&&U&&U.mfx){if(U.mfx.g&&gf>0&&!sc[ui].g){const o=sc.findIndex((s,i)=>i!==ui&&s.g>0);if(o>=0){sc[o].g--;sc[ui].g++;}}if(U.mfx.a&&gf>0&&!sc[ui].a){const o=sc.findIndex((s,i)=>i!==ui&&s.a>0);if(o>=0){sc[o].a--;sc[ui].a++;}
+  else{let k=sc.findIndex((s,i)=>i!==ui&&s.g>0);
+   // все голы у вас — один из них забил партнёр после вашей передачи
+   if(k<0&&sc[ui].g>(U.mfx.g?1:0)){const tg=parts.map((x,i)=>i).filter(i=>i!==ui&&parts[i].pos!=='GK').sort((a,b)=>(GROUP[parts[b].pos]==='FWD')-(GROUP[parts[a].pos]==='FWD'))[0];if(tg!==undefined){sc[ui].g--;sc[tg].g++;k=tg;}}
+   if(k>=0)sc[ui].a++;}}}}
  const myR=lu.rating;
- parts.forEach((x,i)=>{const d=x.p.u?G.user.attr.def*moraleAct()*perkVal('tw'):x.p.ovr*.9;sc[i].t=poisson(TW[x.pos]*(d/70)*(x.m/90)*clamp(1+(oppR-myR)*.03,.6,1.5));});
+ parts.forEach((x,i)=>{const d=x.p.u?G.user.attr.def*moraleAct()*perkVal('tw')*focusK('t'):x.p.ovr*.9;sc[i].t=poisson(TW[x.pos]*(d/70)*(x.m/90)*clamp(1+(oppR-myR)*.03,.6,1.5));});
  const gkI=parts.findIndex(x=>x.pos==='GK');if(gkI>=0){const sot=ga+poisson(clamp(2.6+(oppR-myR)*.08,.8,5));sc[gkI].sv=sot-ga;if(parts[gkI].p.u)sc[gkI].sv=Math.round(sc[gkI].sv*perkVal('sv'));}
+ {const ui=parts.findIndex(x=>x.p.u);const U=G.user;if(ui>=0&&U&&U.mfx){if(U.mfx.t)sc[ui].t+=U.mfx.t;if(U.mfx.sv&&parts[ui].pos==='GK')sc[ui].sv+=U.mfx.sv;}}
  const resB=gf>ga?.45:gf===ga?.05:-.35;const cs=ga===0;
  parts.forEach((x,i)=>{const p=x.p,s=sc[i],grp=GROUP[x.pos]||'MID';
   let r=6.3+resB+s.g*.95+s.a*.55+(grp!=='FWD'?s.t*.12:s.t*.06)+(p.ovr-myR)*.025+gauss()*.45;
   if(grp==='GK')r+=s.sv*.18+(cs?.6:0)-ga*.25;if(grp==='DEF')r+=(cs?.5:-ga*.15);
-  if(p.u){r+=perkVal('r')+(cs?perkVal('rcs'):0)+(G.user.mfx?G.user.mfx.r:0)+moraleRate()+gauss()*(G.user.trait==='hothead'?.3:0)+((G.user.trait==='clutch'&&(f.g!==undefined||comp.nat))?.4:0);}
+  if(p.u){r+=perkVal('r')+(cs?perkVal('rcs'):0)+(G.user.mfx?G.user.mfx.r:0)-(G.ffwP?.2:0)+focusR(s,cs)+moraleRate()+gauss()*(G.user.trait==='hothead'?.3:0)+((G.user.trait==='clutch'&&(f.g!==undefined||comp.nat))?.4:0);}
   if(x.m<25)r=6.0+s.g*.8+s.a*.5+resB*.5+gauss()*.3;
   r=r1(clamp(r,3.5,10));const csOk=cs&&x.m>=60&&(grp==='GK'||grp==='DEF');
   if(!p.s)p.s=[0,0,0,0,0,0,0,0,0];const S=p.s;S[0]++;S[1]+=x.st;S[2]+=s.g;S[3]+=s.a;S[4]+=s.t;S[5]+=csOk?1:0;S[6]+=s.sv;S[7]+=r;S[8]+=x.m;if(f.g!==undefined&&INTL.includes(comp.k)){S[9]=(S[9]||0)+s.g+s.a;S[10]=(S[10]||0)+1;S[12]=(S[12]||0)+(csOk?1:0);}if(comp.nat)S[11]=(S[11]||0)+1;
@@ -959,11 +988,19 @@ function distribute(side,gf,ga,oppR,isL,f,home,comp){
   // травмы
   if(rnd()<(p.u?.03*(1.4-G.user.attr.phy/100)*injMult():.01)*(side.injM||1)*x.m/90){let d=injDur();if(G.mode==='coach'&&G.coach&&p.cl===G.coach.club){if(G.coach.medB===G.year)d=Math.max(1,Math.round(d*.75));if(d>=4)(G.coach.injQ=G.coach.injQ||[]).push({pid:p.id,d});}p.inj=G.slot+d;if(p.u)userInjury(d);}
   if(side.coach)(side.lines||(side.lines=[])).push({n:p.n,g:s.g,a:s.a,r,st:x.st});
-  if(p.u){logUser(f,comp,home,{st:x.st,m:x.m,g:s.g,a:s.a,t:s.t,sv:s.sv,cs:csOk?1:0,r});if(!comp.nat)p2AfterMatch(r,x);G.user.mfx=null;}});
+  if(p.u){focusAfter(s);logUser(f,comp,home,{st:x.st,m:x.m,g:s.g,a:s.a,t:s.t,sv:s.sv,cs:csOk?1:0,r});if(!comp.nat)p2AfterMatch(r,x);G.user.mfx=null;}});
 }
 // мораль: чем ниже, тем меньше полезных действий и ниже оценка
-function moraleAct(){const m=G.user.mor;return .35+.95*m/100;}
-function moraleRate(){const m=G.user.mor;return m<60?(m-60)/35:(m-60)/80;}
+// не больше одного события на два матча
+function evGate(){if(G.mode==='coach'||!G.user||G.ffw&&false)return true;return (G.user.evM??9)>=2;}
+function evMark(){if(G.user&&G.mode!=='coach')G.user.evM=0;}
+// установка на матч: игрок сам решает, на чём сосредоточиться
+const FOCUS={auto:{n:'По ситуации',g:1,a:1,t:1},self:{n:'Забивать самому',g:1.45,a:.7,t:.85},team:{n:'Играть на партнёров',g:.75,a:1.45,t:1},def:{n:'Больше в обороне',g:.7,a:.8,t:1.5}};
+function focusK(k){const u=G.user;if(!u||G.ffwP)return 1;const f=FOCUS[u.focus||'auto']||FOCUS.auto;return f[k];}
+function focusR(s,cs){const u=G.user;const f=u.focus||'auto';if(G.ffwP)return 0;if(f==='self'&&!s.g)return -.2;if(f==='def'&&cs)return .15;return 0;}
+function focusAfter(s){const u=G.user;const f=u.focus||'auto';if(G.ffwP||typeof ctrAdd!=='function')return;if(f==='self')ctrAdd(s.g?.3:-.4);else if(f==='team')ctrAdd(.3);else if(f==='def')ctrAdd(.2);}
+function moraleAct(){const m=G.user.mor;return .7+.5*m/100;}
+function moraleRate(){const m=G.user.mor;return (m-55)/90;}
 function injDur(){const r=rnd();return r<.5?ri(2,4):r<.85?ri(5,10):r<.97?ri(12,20):ri(24,40);}
 function windex(arr,wf){let t=0;const w=arr.map((x,i)=>{const v=Math.max(0,wf(x,i));t+=v;return v;});if(t<=0)return -1;let r=rnd()*t;for(let i=0;i<w.length;i++){r-=w[i];if(r<=0)return i;}return w.length-1;}
 
@@ -996,19 +1033,20 @@ function processSlot(){const s=G.slot;
  G.slot++;}
 function seasonOver(){return G.slot>lastSlot();}
 // режимы: 'match' — до следующего матча игрока, 'mid' — до зимы, 'end' — до конца сезона
-function advance(mode){G.ffwE=G.mode==='coach'&&mode==='end';const r=advance0(mode);G.ffwE=false;return r;}
+// «до конца сезона»: без событий и решений; в карьере игрока — без вашего участия форма и мораль проседают
+function advance(mode){G.ffwE=G.mode==='coach'&&mode==='end';G.ffwP=G.mode!=='coach'&&mode==='end';const r=advance0(mode);G.ffwE=false;G.ffwP=false;return r;}
 function advance0(mode){let played=false;G.ffw=mode!=='match';
  while(!seasonOver()){
   if(G.mode==='coach'){const cr=coachAdvanceCheck();if(cr)return cr;}
-  if(G.slot===WINTER_SLOT&&!G.season.winter){G.season.winter=1;const w=winterOffers();if(w){G.pending={type:'winter',offers:w};return 'winter';}}
-  if(G.season.shock&&G.slot>=G.season.shock.s){const sh=G.season.shock;G.season.shock=null;const id=sh.id||pickShock();if(id){const txt=runShock(id);G.pending={type:'shock',id,txt};return 'event';}}
-  if(G.season.ev&&G.season.ev.length&&G.slot>=G.season.ev[0]){G.season.ev.shift();const e=pickEvent();if(e){G.season.evUsed.push(e.id);G.pending={type:'event',id:e.id};return 'event';}}
-  if(G.mode!=='coach'&&typeof captCheckU==='function'&&captCheckU())return 'event';
-  if(G.mode!=='coach'&&typeof p2Check==='function'&&p2Check())return 'event';
+  if(G.slot===WINTER_SLOT&&!G.season.winter){G.season.winter=1;const w=G.ffwP?null:winterOffers();if(w){G.pending={type:'winter',offers:w};return 'winter';}}
+  if(G.season.shock&&G.slot>=G.season.shock.s&&evGate()&&!G.ffwP){const sh=G.season.shock;G.season.shock=null;const id=sh.id||pickShock();if(id){const txt=runShock(id);G.pending={type:'shock',id,txt};evMark();return 'event';}}
+  if(G.season.ev&&G.season.ev.length&&G.slot>=G.season.ev[0]&&evGate()&&!G.ffwP){G.season.ev.shift();const e=pickEvent();if(e){G.season.evUsed.push(e.id);G.pending={type:'event',id:e.id};evMark();return 'event';}}
+  if(G.mode!=='coach'&&!G.ffwP&&typeof captCheckU==='function'&&captCheckU())return 'event';
+  if(G.mode!=='coach'&&!G.ffwP&&typeof p2Check==='function'&&p2Check())return 'event';
   if(G.mode==='coach'&&typeof c4Check==='function'&&c4Check())return 'pending';
   if(G.mode==='coach'&&typeof c3Check==='function'&&c3Check())return 'pending';
   if(mode==='mid'&&G.slot>=WINTER_SLOT)return 'mid';
-  const has=slotHasUser(G.slot);processSlot();if(has&&mode==='match')return 'match';}
+  const has=slotHasUser(G.slot);processSlot();if(has&&G.user&&G.mode!=='coach')G.user.evM=(G.user.evM||0)+1;if(has&&mode==='match')return 'match';}
  return 'end';}
 
 // --------- турниры сборных ---------
@@ -1073,9 +1111,13 @@ function userStatus(){const p=G.P[G.user.pid];const sq=squad(p.cl).filter(x=>!x.
  return me>=minR?'Основной':me>=minR-5||me>=best2?'Ротация':'Запасной';}
 function estPot(){const u=G.user,p=G.P[u.pid];const age=p.age;const sp=age<=20?6:age<=23?4:age<=26?2:0;return [Math.max(p.ovr,u.pot-sp),Math.min(99,u.pot+sp)];}
 
-function attrCost(v){return v<80?1:v<85?2:v<90?3:v<95?4:6;}
+function attrCost(v){return v<70?1:v<80?2:v<85?3:v<90?4:v<95?5:7;}
+// потолок лиги: переросли уровень чемпионата — расти дальше труднее, пора в лигу сильнее
+function leagueCap(){const u=G.user,p=G.P[u.pid];if(p.cl<0)return 99;const ids=G.lgClubs[G.clubs[p.cl].lg]||[];return Math.round(Math.max(...ids.map(id=>G.clubs[id].r))+4);}
+function capMul(){const p=G.P[G.user.pid];const c=leagueCap();return p.ovr>=c+6?4:p.ovr>=c+3?3:p.ovr>=c?2:1;}
+function capGrow(){const p=G.P[G.user.pid];const c=leagueCap();return p.ovr>=c+3?.25:p.ovr>=c?.5:1;}
 function mentalBreak(){const a=G.user.attr;return a.iq>=87&&a.men>=87&&a.agg>=87&&a.bal>=87;}
-function upgradeCost(k){const u=G.user,p=G.P[u.pid];return attrCost(u.attr[k])*(p.ovr>=u.pot&&!mentalBreak()?3:1);}
+function upgradeCost(k){const u=G.user,p=G.P[u.pid];return attrCost(u.attr[k])*Math.min(4,(p.ovr>=u.pot&&!mentalBreak()?3:1)*capMul());}
 function upgrade(k){const u=G.user;const c=upgradeCost(k);if(u.devPts<c||u.attr[k]>=99)return false;u.devPts-=c;u.attr[k]++;syncUser();return true;}
 
 function natGrowthFactor(age,dt){
@@ -1084,7 +1126,7 @@ function natGrowthFactor(age,dt){
  return age<=20?.35:age<=23?.5:age<=26?.8:age<=29?.7:age<=31?.3:0;}
 function userAging(minShare){const u=G.user,p=G.P[u.pid];const age=p.age;// возраст уже увеличен
  const ch={};const add=(k,d)=>{if(!d)return;u.attr[k]=clamp(u.attr[k]+d,10,99);ch[k]=(ch[k]||0)+d;};
- const g=natGrowthFactor(age,u.dt)*(u.trait==='talent'?(age<=21?1.35:age>=25?.7:1):1);const gap=Math.max(0,u.pot-p.ovr);let gain=Math.round(g*(1.5+.2*gap)*(.45+.55*minShare));
+ const g=natGrowthFactor(age,u.dt)*(u.trait==='talent'?(age<=21?1.35:age>=25?.7:1):1);const gap=Math.max(0,u.pot-p.ovr);let gain=Math.round(g*(1+.13*gap)*(.4+.6*minShare)*capGrow());
  const w=WEIGHTS[u.pos];const keys=Object.keys(w);
  const target=Math.min(u.pot,p.ovr+gain);for(let i=0;i<250&&p.ovr<target;i++){const k=wpick(keys,x=>w[x]*(u.attr[x]<99?1:0));add(k,1);syncUser();}
  if(age>=23&&age<=34){for(const k of (u.pos==='GK'?['gpo','one','men','iq']:['iq','ap','vis','men','bal']))if(rnd()<.55)add(k,1);}
@@ -1208,7 +1250,7 @@ function endSeason(){
   if(tr.length)modMor(15*tr.length);if(aw.some(a=>a.k==='ballon'))modMor(20);
   tr.forEach(t=>u.trophies.push({y:G.year,n:t.n,k:t.k}));aw.forEach(a=>u.awards.push({y:G.year,n:a.n,k:a.k}));
   const curClub=up.cl;const lgPos=lgk?A.leagues[lgk].ord.indexOf(curClub)+1:0;
-  sum={devB,devM,devAw,devRaw,mult:Math.round(mult*100)/100,injN:u.injN||0,y:G.year,club:curClub,clubN:G.clubs[curClub].n,lg:lgk,lgPos,loan:!!u.loan,T,avgR:r1(avgR),pts,statPts,tr,aw,dev,earned,ovrBefore:up.ovr,bRank,age:up.age,status:userStatus()};
+  sum={devB,devM,devAw,devRaw,mult:Math.round(mult*100)/100,injN:u.injN||0,y:G.year,club:curClub,clubN:G.clubs[curClub].n,lg:lgk,lgPos,loan:!!u.loan,T,avgR:r1(avgR),pts,statPts,tr,aw,dev,earned,ovrBefore:up.ovr,bRank,age:up.age,status:userStatus()};sum.trPts=u.trPts||0;
   // аренда: влияние на потенциал
   if(u.loan){if(T[0]>=20&&avgR>=7.0)u.pot=Math.min(96,u.pot+ri(1,3));u.loanDone=1;}else u.loanDone=0;
   // потенциал динамический
@@ -1338,7 +1380,7 @@ function unpackGame(str){const o=JSON.parse(str);o.P=o.P.map(a=>a[2]===1&&a.leng
  if(o.season)o.season.fx=o.season.fx.map((a,i)=>{const f={i};FXK.forEach((k,j)=>f[k]=a[j]);if(a[7])Object.assign(f,a[7]);return f;});G=o;if(!G.rk&&G.clubs){rankCompress(true);G.rk=1;}if(!G.altv&&G.P){G.P.forEach(p=>{if(!p.ret&&!p.u&&!p.alt){const a=rollAlt(p.pos);if(a)p.alt=a;}});G.altv=1;}if(G.season&&G.mode!=='m38')natDepth();return G;}
 
 // --------- новые механики развития ---------
-const DEV_CAP=60;
+const DEV_CAP=30;// очки развития в конце сезона; ещё до 30 — за тренировки
 const INTL=['UCL','UEL','UECL','LIB','ACL','CCC','WC','EURO','COPA','AFCON','ASIA'];
 const POS_NEIGH={ST:['LW','RW','CAM'],LW:['LM','ST','RW'],RW:['RM','ST','LW'],LM:['LW','LB','CM'],RM:['RW','RB','CM'],CAM:['CM','ST','LW'],CM:['CDM','CAM'],CDM:['CM','CB'],CB:['CDM','RB','LB'],LB:['LM','CB','RB'],RB:['RM','CB','LB']};
 const TRAITS={pro:['Профессионал','Развивается стабильно, особенно после 28 лет; спад начинается позже и идёт мягче — можно играть на высоком уровне до 35+'],
@@ -1374,13 +1416,13 @@ function updateRep(tr,aw,bRank,T){const u=G.user,p=G.P[u.pid];if(!(p.cl>=0))retu
  if(w>0)w*=repMul();wAddX(u,w);if(typeof uCaptSeasonRep==='function')uCaptSeasonRep();if(bRank===0){u.wrep=100;u.rep=100;u.repLast=100;}}
 function repMul(){const t=G.user.trait;return (typeof socialRep==='function'?socialRep():1)*(t==='media'?1.3:t==='leader'?1.2:t==='greedy'?.8:t==='shy'?.7:1);}
 function modRep(d){const u=G.user;if(d>0)d*=repMul();else if(u.trait==='sensitive')d*=1.5;u.rep=clamp(u.rep+d,1,100);}
-function modMor(d){const u=G.user;const m=u.mor;if(d<0){const t=u.trait;d*=t==='sensitive'?1.5:t==='core'?.5:t==='leader'?.75:1;if(m<30)d*=1.2;}else{d*=clamp((100-m)/45,.08,1);if(m<15)d*=.6;}u.mor=clamp(m+d,0,100);}
+function modMor(d){const u=G.user;const m=u.mor;if(d<0){const t=u.trait;d*=t==='sensitive'?1.5:t==='core'?.5:t==='leader'?.75:1;if(m<25)d*=.6;else if(m<40)d*=.8;}else{d*=clamp((100-m)/45,.08,1);if(m<30)d*=1.3;}u.mor=clamp(m+d,0,100);}
 // мораль вне игры: скамейка, поражения команды, возврат к среднему
 function morDrift(st,win,loss){const u=G.user;const p=G.P[u.pid];const played=st&&st.m>=15;if(!played&&typeof p2NoPlay==='function')p2NoPlay();
- if(!played){if(p.inj>G.slot)modMor(-.6);else{const cl=G.clubs[p.cl];const exp=cl?clamp((p.ovr-cl.r+6)/8,0,1.5):.5;modMor(-(1.2+exp*2.2)*(p.age<=20?.6:1));}}
- if(loss)modMor(-1.2);else if(!win)modMor(-.4);
- u.mor=clamp(u.mor+(52-u.mor)*.035,0,100);
- if(rnd()<.03){const v=-ri(3,9);modMor(v);u.morNote='Неприятности вне поля: мораль '+v;}}
+ if(!played){if(p.inj>G.slot)modMor(-.4);else{const cl=G.clubs[p.cl];const exp=cl?clamp((p.ovr-cl.r+6)/8,0,1.5):.5;modMor(-(.6+exp*1.2)*(p.age<=20?.6:1));}}
+ if(loss)modMor(-.8);else if(win)modMor(.6);if(G.ffwP)modMor(-.4);
+ u.mor=clamp(u.mor+(55-u.mor)*.06,0,100);
+ if(rnd()<.02){const v=-ri(3,9);modMor(v);u.morNote='Неприятности вне поля: мораль '+v;}}
 // события: у каждого варианта есть плюсы и минусы
 // эффекты: rep, mor, dev (очки развития в конце сезона), inj (риск травм), mw (доля годовой зарплаты), wage (рост зарплаты), attr, boost (матчи с бонусом к старту), bench (матчи без старта), hurt (шанс лёгкой травмы)
 const EVENTS=[
@@ -1628,7 +1670,7 @@ function coachAfterMatch(f,comp,H,A){const C=G.coach;let side=null,home=true;
  const gf=home?f.hg:f.ag,ga=home?f.ag:f.hg;const opp=home?f.a:f.h;const oppR=home?A.rating:H.rating;
  const lines=(side.lines||[]).slice().sort((a,b)=>b.r-a.r);const sc=(side.lines||[]).filter(x=>x.g).map(x=>x.n.split(' ').slice(-1)[0]+(x.g>1?' ×'+x.g:'')).join(', ');
  let pen=0;if(f.pen!==undefined)pen=f.pen===(home?f.h:f.a)?1:-1;
- const e={strong:oppR-side.rating>=3?1:0,s:f.s,c:f.c,h:home,opp,gf,ga,nt:comp.nat?1:0,form:side.form,style:side.style,sc,best:lines[0]?lines[0].n+' ('+lines[0].r.toFixed(1)+')':'',pen,agg:f.agg};
+ const e={strong:oppR-side.rating>=3?1:0,s:f.s,c:f.c,h:home,opp,gf,ga,nt:comp.nat?1:0,form:side.form,style:side.style,sc,best:lines[0]?lines[0].n+' ('+lines[0].r.toFixed(1)+')':'',pen,agg:f.agg,so:f.so};
  C.log.push(e);if(C.log.length>80)C.log.shift();C.ss.team[f.c]=side.ref;
  const win=gf>ga||pen===1,loss=gf<ga||pen===-1;const d=side.rating-oppR;
  let dt=win?(d<-3?3:1.5):loss?(d>5?-4:d>0?-2.5:-1):(d>4?-1:d<-3?1:0);
@@ -2305,7 +2347,7 @@ EVENTS.push(
  {id:'coachcrit',t:'Критика тренера',d:'Тренер публично раскритиковал вашу игру на собрании команды.',o:[
   {t:'Принять критику',e:{attr:{men:1},mor:-2},tx:['Тренер оценил реакцию и стал больше доверять вам.','Вы сделали выводы.','Партнёры увидели в этом слабость.','Вы замкнулись и потеряли уверенность.']},
   {t:'Спорить',e:{mor:2,rep:-2,bench:1},tx:['Тренер признал вашу правоту.','Вы высказались — стало легче.','Тренер посадил вас на скамейку.','Конфликт вышел в прессу, вас убрали из состава.']},
-  {t:'Молча работать',e:{dev:1,mor:-1},tx:['Вы ответили голом в следующем матче.','Работа идёт.','Обида копится.','Вы перегорели на тренировках.']}]},
+  {t:'Молча работать',e:{dev:1,mor:-1},tx:['Вы ответили отличной неделей на тренировках.','Работа идёт.','Обида копится.','Вы перегорели на тренировках.']}]},
  {id:'slump',t:'Спад',d:'У вас затяжной спад: ничего не получается уже несколько недель.',o:[
   {t:'Работать с психологом',e:{mor:4,mw:-.02},tx:['Вы снова получаете удовольствие от игры.','Стало легче.','Сеансы не помогают.','Слухи о психологе попали в прессу.']},
   {t:'Видеоразбор ошибок',e:{attr:{iq:1},mor:-1},tx:['Вы нашли причину и исправили её.','Кое-что прояснилось.','Разбор только усилил сомнения.','Вы зациклились на ошибках.']},
@@ -2314,7 +2356,7 @@ EVENTS.push(
   {t:'Перейти',e:{wage:.05,rep:2,mor:-1},tx:['Новый агент выбил вам отличный бонус.','Связи агентства работают на вас.','Бывший агент подал иск.','Скандал с бывшим агентом на первых полосах.']},
   {t:'Остаться со старым агентом',e:{mor:2},tx:['Старый агент нашёл крупного спонсора.','Отношения стали крепче.','Вы упустили выгодные контракты.','Старый агент ушёл на пенсию, вы остались без представителя.']}]},
  {id:'mateinj',t:'Травма друга',d:'Ваш близкий друг в команде получил тяжёлую травму.',o:[
-  {t:'Посвятить ему следующий матч',e:{mor:2,rep:2,boost:2},tx:['Вы забили и посвятили гол другу. Трибуны встали.','Эмоциональный вечер.','Давление оказалось слишком сильным.','Вы провалили матч и чувствуете вину.']},
+  {t:'Посвятить ему следующий матч',e:{mor:2,rep:2,boost:2},tx:['Вы вышли на поле с его номером на футболке. Трибуны встали.','Эмоциональный вечер.','Давление оказалось слишком сильным.','Вы провалили матч и чувствуете вину.']},
   {t:'Навещать его в больнице',e:{mor:1,rep:1,dev:-1},tx:['Друг сказал, что это помогло ему вернуться.','Он благодарен.','Вы устали и плохо спите.','Вы выгорели эмоционально.']}]},
  {id:'captainarm',t:'Капитанская повязка',d:'Капитан травмирован, и тренер предлагает повязку вам на время.',c:u=>G.P[u.pid].age>=22,o:[
   {t:'Взять повязку',e:{rep:4,mor:2,attr:{men:1}},tx:['Команда пошла за вами — вы прирождённый лидер.','Повязка вам к лицу.','Ветераны недовольны вашим назначением.','В раздевалке бунт против нового капитана.']},
@@ -2440,18 +2482,18 @@ function applyChoiceFx(e,who){if(!e)return;if(who==='c'){const C=G.coach;
   relFromFx(e);if(e.fn)e.fn();return;}
  const u=G.user;if(e.rep)modRep(e.rep);if(e.mor)modMor(e.mor);if(e.dev)u.evDev=(u.evDev||0)+e.dev;if(e.ctr)ctrAdd(e.ctr);if(e.cash)u.earnS=(u.earnS||0)+e.cash;
  if(e.pot)u.pot=clamp(u.pot+e.pot,40,99);if(e.attr){for(const k in e.attr)u.attr[k]=clamp(u.attr[k]+e.attr[k],10,99);syncUser();}
- if(e.mr||e.mg||e.ma){u.mfx=u.mfx||{r:0,g:0,a:0};u.mfx.r+=e.mr||0;if(e.mg)u.mfx.g=1;if(e.ma)u.mfx.a=1;}
+ if(e.mr||e.mg||e.ma||e.mt||e.msv||e.mga){u.mfx=u.mfx||{r:0,g:0,a:0};u.mfx.r+=e.mr||0;if(e.mg)u.mfx.g=1;if(e.ma)u.mfx.a=1;if(e.mt)u.mfx.t=(u.mfx.t||0)+1;if(e.msv)u.mfx.sv=(u.mfx.sv||0)+1;if(e.mga)u.mfx.ga=1;}
  if(e.boost)u.boost=Math.max(u.boost||0,e.boost);if(e.bench)u.benchN=(u.benchN||0)+e.bench;if(e.fn)e.fn();
  u.rep=clamp(u.rep,1,100);u.mor=clamp(u.mor,0,100);}
-function resolveChoice(i){const pd=G.pending;const o=pd.o[i];let ef,txt,ok=null;
- if(o.e){ef=o.e;txt=o.r||'';}else{ok=rnd()<o.ch;ef=ok?o.ok:o.fail;txt=ok?o.okT:o.failT;}
+function resolveChoice(i,forced){const pd=G.pending;const o=pd.o[i];let ef,txt,ok=null;
+ if(o.e){ef=o.e;txt=o.r||'';}else{ok=forced!==undefined?!!forced:rnd()<o.ch;ef=ok?o.ok:o.fail;txt=ok?o.okT:o.failT;}
  applyChoiceFx(ef,pd.who);if(o.after)o.after(ok);pd.res={txt,ef,ok,opt:o.t};return pd.res;}
 function showChoice(){const pd=G.pending;const cat=pd.cat;
  if(pd.res){const R=pd.res;evModal(cat,`<h2>${esc(pd.t)}</h2>${R.ok===null?'':`<div class="tier ${R.ok?'t0':'t3'}">${R.ok?'Получилось':'Не получилось'}</div>`}<p class="small muted nh">Ваш выбор: ${esc(R.opt)}</p>${R.txt?`<p>${esc(R.txt)}</p>`:''}${fxChips(R.ef)}<div class="btns"><button class="btn big" id="chOk">Продолжить</button></div>`);
   $('#chOk').onclick=()=>{G.pending=null;save();contAfter();};return;}
  const isInfo=pd.o.length===1&&pd.info;
  evModal(cat,`<h2>${esc(pd.t)}</h2>${pd.d?`<p class="evd">${esc(pd.d)}</p>`:''}${pd.html||''}${pd.o.map((o,i)=>`<button class="evopt" data-ch="${i}"><b>${esc(o.t)}</b>${optHint(o)?`<span>${esc(optHint(o))}</span>`:''}</button>`).join('')}`);
- document.querySelectorAll('[data-ch]').forEach(b=>b.onclick=()=>{resolveChoice(+b.dataset.ch);save();if(isInfo){G.pending=null;save();contAfter();}else showChoice();});}
+ document.querySelectorAll('[data-ch]').forEach(b=>b.onclick=()=>{const oi=+b.dataset.ch;const oo=pd.o[oi];if(oo.mg&&typeof runMg==='function'){runMg(oo.mg,{gk:pd.oppGk,then:oo.then},ok=>{resolveChoice(oi,ok);save();showChoice();});return;}resolveChoice(+b.dataset.ch);save();if(isInfo){G.pending=null;save();contAfter();}else showChoice();});}
 // продолжить промотку после события
 function contAfter(){closeModal();const rm=UI.resume;render();if(rm&&!G.pending){setTimeout(()=>{const r=advance(rm);UI.resume=(r==='event'||r==='pending')?rm:null;save();render();},50);}}
 
@@ -2533,10 +2575,39 @@ const SOCIAL=[{n:'Закрытые соцсети',rep:.85,mor:1,d:'Репута
 function socialRep(){const u=G.user;return SOCIAL[u.social??1].rep;}
 
 // ---------- жизнь вне поля ----------
-function wealth(){const u=G.user;return Math.round((u.earn||0)+(u.earnS||0)-(u.spent||0)+(u.inv||0));}
-function lifeCost(k){const u=G.user;const w=Math.max(u.contract.wage,60000);return k==='house'?Math.round(Math.max(250000,w*1.2)/1000)*1000:k==='car'?Math.round(Math.max(60000,w*.35)/1000)*1000:Math.round(Math.max(50000,wealth()*.25)/1000)*1000;}
-function buyLife(k){const u=G.user;u.life=u.life||{};const c=lifeCost(k);if(wealth()<c)return 'Недостаточно денег';
- if(k==='inv'){u.spent=(u.spent||0)+c;u.inv=(u.inv||0)+c;return 'Вложено '+fmtM(c)+'. Доходность станет известна в конце сезона.';}
+// свободные деньги — только заработанное минус потраченное и вложенное; капитал — свободные деньги плюс стоимость вложений
+const INV={dep:{n:'Банковский вклад',risk:'низкий',d:'Надёжно, но доход небольшой',lo:.02,hi:.05},
+ stock:{n:'Акции',risk:'средний',d:'Бывают и хорошие, и плохие годы',lo:-.15,hi:.25},
+ crypto:{n:'Криптовалюта',risk:'очень высокий',d:'Можно разбогатеть, а можно потерять почти всё',lo:-.55,hi:.9}};
+const ASSET={realty:{n:'Недвижимость',lv:[['Квартира под сдачу',300e3],['Дом под сдачу',900e3],['Жилой комплекс',4e6],['Апарт-отель',15e6]],inc:[.05,.08],gr:[-.03,.06],d:'Каждый сезон приносит доход от аренды'},
+ biz:{n:'Бизнес',lv:[['Кофейня',150e3],['Ресторан',600e3],['Сеть ресторанов',3e6],['Футбольная школа',12e6]],inc:[-.06,.22],gr:[-.08,.08],d:'Доход зависит от года — бывает и убыток'}};
+function cash(){const u=G.user;return Math.round((u.earn||0)+(u.earnS||0)-(u.spent||0));}
+function invMig(){const u=G.user;u.inv2=u.inv2||{};if(u.inv){u.inv2.stock={v:((u.inv2.stock||{}).v||0)+u.inv};u.inv=0;}return u.inv2;}
+function invTotal(){const I=invMig();return Object.values(I).reduce((a,x)=>a+(x.v||0),0);}
+function wealth(){return Math.round(cash()+invTotal());}
+function invPut(k,frac){const u=G.user;const I=invMig();const a=Math.floor(cash()*frac/1000)*1000;if(a<10000)return 'Недостаточно свободных денег';u.spent=(u.spent||0)+a;I[k]=I[k]||{v:0};I[k].v+=a;return 'Вложено '+fmtM(a)+': '+INV[k].n.toLowerCase()+'.';}
+function invTake(k){const u=G.user;const I=invMig();const x=I[k];if(!x||!x.v)return '';const v=Math.round(x.v);u.spent=(u.spent||0)-v;x.v=0;if(ASSET[k])x.lv=0;return 'Продано за '+fmtM(v)+'.';}
+function assetNext(k){const I=invMig();const lv=(I[k]&&I[k].lv)||0;return ASSET[k].lv[lv]||null;}
+function assetBuy(k){const u=G.user;const I=invMig();const nx=assetNext(k);if(!nx)return 'Уже максимальный уровень';if(cash()<nx[1])return 'Недостаточно свободных денег';
+ u.spent=(u.spent||0)+nx[1];I[k]=I[k]||{v:0,lv:0};I[k].lv=(I[k].lv||0)+1;I[k].v+=nx[1];modMor(I[k].lv>=3?3:1);return (I[k].lv===1?'Куплено: ':'Улучшено до уровня «')+nx[0]+(I[k].lv===1?'.':'».');}
+function invSeason(sum){const u=G.user;const I=invMig();let d=0,inc=0;
+ const ev=[];
+ for(const k in INV){const x=I[k];if(!x||!x.v)continue;let r=INV[k].lo+rnd()*(INV[k].hi-INV[k].lo);
+  // редкие провалы
+  const D=INV_DIS[k];if(rnd()<D.p){r=-(D.lo+rnd()*(D.hi-D.lo));ev.push(D.t);}
+  const dv=Math.round(x.v*r);x.v=Math.max(0,x.v+dv);d+=dv;}
+ for(const k in ASSET){const x=I[k];if(!x||!x.v)continue;const A=ASSET[k];let g=A.gr[0]+rnd()*(A.gr[1]-A.gr[0]);let ir=A.inc[0]+rnd()*(A.inc[1]-A.inc[0]);
+  const D=INV_DIS[k];if(rnd()<D.p){g=-(D.lo+rnd()*(D.hi-D.lo));ir=k==='biz'?-.05:0;ev.push(D.t);}
+  const dv=Math.round(x.v*g);x.v=Math.max(0,x.v+dv);d+=dv;inc+=Math.round(x.v*ir);if(x.v<1000){x.v=0;x.lv=0;}}
+ if(inc)u.spent=(u.spent||0)-inc;if(d)sum.invD=d;if(inc)sum.invInc=inc;if(ev.length){sum.invEv=ev;modMor(-3*ev.length);}}
+// редкие провалы вложений: банк лопнул, обвал рынка, взлом биржи, объект не окупился, бизнес прогорел
+const INV_DIS={dep:{p:.02,lo:.6,hi:1,t:'Банк, где лежал ваш вклад, лопнул — большая часть денег сгорела.'},
+ stock:{p:.04,lo:.45,hi:.8,t:'Обвал на бирже: акции резко подешевели.'},
+ crypto:{p:.07,lo:.85,hi:1,t:'Криптобиржу взломали — почти все монеты пропали.'},
+ realty:{p:.03,lo:.3,hi:.55,t:'Недвижимость не окупилась: арендаторы съехали, объект подешевел.'},
+ biz:{p:.05,lo:.6,hi:1,t:'Бизнес прогорел: убытки и закрытие точек.'}};
+function lifeCost(k){const u=G.user;const w=Math.max(u.contract.wage,60000);return k==='house'?Math.round(Math.max(250000,w*1.2)/1000)*1000:Math.round(Math.max(60000,w*.35)/1000)*1000;}
+function buyLife(k){const u=G.user;u.life=u.life||{};const c=lifeCost(k);if(cash()<c)return 'Недостаточно свободных денег';
  if(u.life[k])return 'Уже куплено';u.spent=(u.spent||0)+c;u.life[k]=G.year;if(k==='house')modMor(6);if(k==='car'){modRep(1);modMor(3);}return (k==='house'?'Вы купили дом':'Вы купили машину мечты')+' за '+fmtM(c)+'.';}
 
 // ---------- проверка перед каждым слотом: может вернуть событие ----------
@@ -2546,33 +2617,40 @@ function p2Check(){const u=G.user;if(!u||u.retired||G.pending)return false;const
   G.pending=mkChoice('goal','Новая специализация',`Ваш уровень (${p.ovr}) открыл ${(u.perks||[]).length?'вторую':'первую'} специализацию. Она будет давать бонус весь остаток карьеры.`,
    L.map(x=>({t:x.n,s:x.d,e:{fn:()=>{(u.perks=u.perks||[]).push(x.k);}},r:'Специализация «'+x.n+'» открыта.'})));return true;}
  // события в начале сезона: реклама, семья
- if(u.lifeQ&&u.lifeQ.length&&G.slot>=u.lifeQ[0].s){const q=u.lifeQ.shift();const ev=LIFE_EV[q.id];if(ev){G.pending=mkChoice(ev.cat,ev.t,ev.d(u),ev.o(u));return true;}}
+ if(u.lifeQ&&u.lifeQ.length&&G.slot>=u.lifeQ[0].s&&evGate()){const q=u.lifeQ.shift();const ev=LIFE_EV[q.id];if(ev){G.pending=mkChoice(ev.cat,ev.t,ev.d(u),ev.o(u));evMark();return true;}}
  // ключевой момент матча
- if((u.momDone||0)<(u.momN||0)&&slotHasUser(G.slot)){const f=G.season.fx.find(x=>x.s===G.slot&&!x.p&&(x.h===p.cl||x.a===p.cl));
+ if((u.momDone||0)<(u.momN||0)&&slotHasUser(G.slot)&&evGate()){const f=G.season.fx.find(x=>x.s===G.slot&&!x.p&&(x.h===p.cl||x.a===p.cl));
   if(f&&!(p.inj>G.slot)){const comp=G.season.comps[f.c];const opp=f.h===p.cl?f.a:f.h;const oR=comp.nat?70:(G.clubs[opp]?G.clubs[opp].r:70);const my=G.clubs[p.cl].r;
    const big=f.g!==undefined||oR>=my-1||G.slot>62;const left=(u.momN-u.momDone);
-   if(big&&(rnd()<.4||G.slot>70-left*4)){u.momDone=(u.momDone||0)+1;G.pending=momentChoice(comp,opp);return true;}}}
+   if(big&&(rnd()<.4||G.slot>70-left*4)){u.momDone=(u.momDone||0)+1;G.pending=momentChoice(comp,opp);G.pending.oppGk=Math.round(oR);evMark();return true;}}}
  return false;}
 
 function momentChoice(comp,opp){const u=G.user,a=u.attr;const g=perkGroup();const oppN=comp.nat?flagN(opp):G.clubs[opp].n;
  const mor=(u.mor-50)/400,cl=u.trait==='clutch'?.1:0,hot=u.trait==='hothead'?.05:0;const pc=v=>clamp(v+mor+cl,.08,.92);
  const where=`${comp.n}, соперник — ${oppN}.`;
+ const alt=rnd()<.3;
+ if(g==='FWD'&&alt)return mkChoice('moment','Пенальти в ворота соперника',`Судья ставит пенальти в концовке. Мяч у вас. ${where}`,[
+  {t:'Бить самому',mg:'pen',ch:pc(.75+(a.sho-70)*.006),ok:{mg:1,mr:.8,rep:2,ctr:2},fail:{mr:-.6,ctr:-2,mor:-3},okT:'Хладнокровно! Гол.',failT:'Пенальти не забит. Тяжёлый момент.'},
+  {t:'Доверить удар капитану',e:{mr:0,ctr:1},r:'Вы уступили удар. Команда это оценила.'}]);
+ if(g==='MID'&&alt)return mkChoice('moment','Штрафной у ворот',`Фол в метре от штрафной. Вы ставите мяч. ${where}`,[
+  {t:'Бить по воротам',mg:'fk',ch:pc(.3+(a.sho-70)*.008),ok:{mg:1,mr:1,rep:3},fail:{mr:-.2},okT:'Мяч в сетке! Шедевр со штрафного.',failT:'Не вышло.'},
+  {t:'Навес на партнёра',ch:pc(.35+(a.pas-70)*.008),ok:{ma:1,mr:.6,ctr:2},fail:{mr:-.1},okT:'Партнёр выиграл верх — гол!',failT:'Защита выбила мяч.'}]);
  if(g==='FWD')return mkChoice('moment','Выход один на один',`Последние минуты, счёт равный. Вы убегаете один на один с вратарём. ${where}`,[
-  {t:'Бить самому',ch:pc(.42+(a.sho-70)*.008+hot),ok:{mg:1,mr:.8,rep:2,ctr:2},fail:{mr:-.5,ctr:-2,mor:-2},okT:'Гол! Трибуны взрываются.',failT:'Вратарь вытащил мяч. Тренер схватился за голову.'},
-  {t:'Отдать на свободного партнёра',ch:pc(.6+(a.vis-70)*.006),ok:{ma:1,mr:.5,ctr:3},fail:{mr:-.2},okT:'Партнёр закатил в пустые ворота.',failT:'Пас перехватили.'},
-  {t:'Тянуть время у углового флажка',e:{mr:.1,ctr:1,rep:-1},r:'Тренер доволен, болельщики — не очень.'}]);
+  {t:'Бить самому',mg:'1v1',ch:pc(.42+(a.sho-70)*.008+hot),ok:{mg:1,mr:.8,rep:2,ctr:2},fail:{mr:-.5,ctr:-2,mor:-2},okT:'Гол! Трибуны взрываются.',failT:'Не забили. Тренер схватился за голову.'},
+  {t:'Обвести вратаря',mg:'dribble',then:'open',ch:pc(.4+(a.dri-70)*.008),ok:{mg:1,mr:1,rep:3,ctr:1},fail:{mr:-.5,ctr:-2},okT:'Обвели и закатили в пустые!',failT:'Не получилось.'},
+  {t:'Отдать на свободного партнёра',mg:'pass',ch:pc(.6+(a.vis-70)*.006),ok:{ma:1,mr:.5,ctr:3},fail:{mr:-.2},okT:'Партнёр закатил в пустые ворота.',failT:'Пас перехватили.'}]);
  if(g==='MID')return mkChoice('moment','Решающая атака',`Мяч у вас в центре поля, команде нужен гол. ${where}`,[
-  {t:'Пас вразрез',ch:pc(.5+(a.vis-70)*.008),ok:{ma:1,mr:.7,rep:1,ctr:2},fail:{mr:-.4,ctr:-1},okT:'Идеальная передача — гол!',failT:'Защитник прочитал пас.'},
-  {t:'Удар издали',ch:pc(.28+(a.sho-70)*.008+hot),ok:{mg:1,mr:1,rep:3},fail:{mr:-.3,ctr:-1},okT:'Мяч в девятке! Гол сезона?',failT:'Мяч улетел на трибуну.'},
+  {t:'Пас вразрез',mg:'pass',ch:pc(.5+(a.vis-70)*.008),ok:{ma:1,mr:.7,rep:1,ctr:2},fail:{mr:-.4,ctr:-1},okT:'Идеальная передача — гол!',failT:'Защитник прочитал пас.'},
+  {t:'Удар издали',mg:'long',ch:pc(.28+(a.sho-70)*.008+hot),ok:{mg:1,mr:1,rep:3},fail:{mr:-.3,ctr:-1},okT:'Мяч в девятке! Гол сезона?',failT:'Не забили.'},
+  {t:'Обыграть защитника',mg:'dribble',then:'1v1',ch:pc(.35+(a.dri-70)*.008),ok:{mg:1,mr:1,rep:2},fail:{mr:-.4,ctr:-1},okT:'Прошли защитника и забили!',failT:'Атака сорвалась.'},
   {t:'Сохранить мяч и выстроить атаку',e:{mr:.2,ctr:2},r:'Надёжно, тренер ценит.'}]);
  if(g==='DEF')return mkChoice('moment','Соперник убегает',`Нападающий соперника вырвался вперёд, вы — последний защитник. ${where}`,[
-  {t:'Подкат',ch:pc(.55+(a.def-70)*.008-hot),ok:{mr:.8,ctr:3,rep:1},fail:{mr:-1,ctr:-3,mor:-3},okT:'Чистый отбор, стадион аплодирует.',failT:'Опоздали — пенальти и жёлтая карточка.'},
-  {t:'Держать позицию и тянуть время',ch:pc(.72+(a.iq-70)*.005),ok:{mr:.4,ctr:2},fail:{mr:-.5,ctr:-1},okT:'Дождались подстраховки.',failT:'Соперник всё же пробил.'},
+  {t:'Подкат',mg:'tackle',ch:pc(.55+(a.def-70)*.008-hot),ok:{mr:.8,ctr:3,rep:1,mt:1},fail:{mr:-1,ctr:-3,mor:-3,mga:1},okT:'Чистый отбор, стадион аплодирует.',failT:'Не успели — соперник забил.'},
+  {t:'Держать позицию и тянуть время',ch:pc(.72+(a.iq-70)*.005),ok:{mr:.4,ctr:2,mt:1},fail:{mr:-.5,ctr:-1},okT:'Дождались подстраховки.',failT:'Соперник всё же пробил.'},
   {t:'Тактический фол',e:{mr:-.2,ctr:1,rep:-1},r:'Жёлтая карточка, но атака сорвана.'}]);
  return mkChoice('moment','Пенальти в концовке',`Судья назначает пенальти в ваши ворота на последних минутах. ${where}`,[
-  {t:'Угадать угол заранее',ch:pc(.33+(a.ref-70)*.006),ok:{mr:1.2,rep:3,ctr:3},fail:{mr:-.3},okT:'Отразили! Вы — герой матча.',failT:'Не угадали.'},
-  {t:'Стоять до последнего',ch:pc(.25+(a.ref-70)*.006),ok:{mr:1,rep:2,ctr:2},fail:{mr:-.2},okT:'Дождались удара и отбили.',failT:'Мяч в сетке.'},
-  {t:'Психологическая атака на бьющего',ch:pc(.3),ok:{mr:.9,rep:1},fail:{mr:-.3,rep:-1},okT:'Бьющий не выдержал — мимо!',failT:'Не сработало, ещё и жёлтая.'}]);}
+  {t:'Отбивать пенальти',mg:'keeper',ch:pc(.33+(a.ref-70)*.006),ok:{mr:1.2,rep:3,ctr:3,msv:1},fail:{mr:-.3,mga:1},okT:'Отразили! Вы — герой матча.',failT:'Не взяли.'},
+  {t:'Психологическая атака на бьющего',ch:pc(.3),ok:{mr:.9,rep:1},fail:{mr:-.3,rep:-1,mga:1},okT:'Бьющий не выдержал — мимо!',failT:'Не сработало, ещё и жёлтая.'}]);}
 
 // ---------- события жизни и бренда ----------
 const LIFE_EV={
@@ -2590,7 +2668,7 @@ const LIFE_EV={
   o:u=>[{t:'Попросить больше игрового времени',ch:clamp(.25+(u.ctr??50)/150,.2,.85),ok:{ctr:4,boost:3},fail:{ctr:-5,mor:-3},okT:'Тренер пообещал шанс.',failT:'Тренер разозлился: «Место нужно заслужить».'},{t:'Спросить, над чем работать',e:{ctr:4,dev:1}},{t:'Пожаловаться на роль',ch:.3,ok:{ctr:2,boost:2},fail:{ctr:-8,bench:2,mor:-3},okT:'Тренер признал, что был неправ.',failT:'Вас отправили в запас.'}]},
 };
 function p2SeasonStart(){const u=G.user;if(!u||u.retired)return;const p=G.P[u.pid];u.ntCapt=null;uCaptEval();
- ctrSync();u.ctr=Math.round(u.ctr+(50-u.ctr)*.3);u.mfx=null;u.momN=ri(2,3);u.momDone=0;p2MakeGoals();
+ ctrSync();u.ctr=Math.round(u.ctr+(50-u.ctr)*.3);u.mfx=null;u.trUsed=0;u.trPts=0;u.evM=9;u.momN=ri(2,3);u.momDone=0;p2MakeGoals();
  if(u.trait==='hothead')u.hotRoll=r1(.85+rnd()*.35);
  if(!u.rival||!G.P[u.rival]||G.P[u.rival].ret||G.P[u.rival].cl===p.cl)u.rival=p2PickRival();
  u.rivalStart=null;
@@ -2626,7 +2704,7 @@ function p2SeasonEnd(sum){const u=G.user;const x=sum.p2||{};
  // агент берёт процент
  const A=AGENTS[u.agent||0];if(A.fee){const fee=Math.round(sum.earned*A.fee);u.spent=(u.spent||0)+fee;sum.agentFee=fee;}
  // инвестиции
- if(u.inv){const r=-.1+rnd()*.25;const d=Math.round(u.inv*r);u.inv=Math.max(0,u.inv+d);sum.invD=d;}
+ invSeason(sum);
  if((u.life||{}).car)modRep(1);if((u.life||{}).house)modMor(3);if((u.life||{}).fam)modMor(2);
  if((u.social??1)===0)modMor(2);
  // клуб тот же — растёт верность
@@ -2640,6 +2718,28 @@ const AFTER={
  dir:{n:'Спортивный директор',s:u=>'Ценятся трофеи и сезоны в одном клубе. Очки карьеры +'+Math.min(30,u.trophies.length*3+(u.sameYrs||0)*2),pts:u=>Math.min(30,u.trophies.length*3+(u.sameYrs||0)*2),d:'Вы вернулись в клуб уже в кабинете: трансферы и стратегия теперь на вас.'},
  biz:{n:'Бизнес и инвестиции',s:u=>'Зависит от капитала: '+fmtM(wealth())+'. Очки карьеры +'+Math.min(30,Math.round(wealth()/2e6)),pts:u=>Math.min(30,Math.round(wealth()/2e6)),d:'Вы вложили заработанное в собственные проекты.'},
  coach:{n:'Тренерская лицензия',s:u=>'Продолжить путь тренером (кнопка ниже). Очки карьеры +5',pts:u=>5,d:'Вы получили лицензию и готовы тренировать.'}};
+
+// ---------- тренировочные дни: 10 за сезон — тренировка (очки развития, риск травмы) или личное время (мораль) ----------
+const TR_SLOTS=10;
+function trAvail(){const u=G.user;if(!G.season||!u||u.retired||seasonOver())return 0;const opened=Math.min(TR_SLOTS,1+Math.floor(G.slot/8));return Math.max(0,opened-(u.trUsed||0));}
+function trLeft(){return Math.max(0,TR_SLOTS-(G.user.trUsed||0));}
+const TR_INT={light:{n:'Лёгкая',d:'Меньше прибавка, почти без риска',ok:.85,pts:[1,2],inj:.01},norm:{n:'Обычная',d:'Обычная нагрузка',ok:.75,pts:[1,3],inj:.03},hard:{n:'Интенсивная',d:'Больше прибавка, но выше риск травмы',ok:.62,pts:[2,3],inj:.07}};
+function canTrain(){const u=G.user;const p=G.P[u.pid];if(trAvail()<=0)return 'Тренировочных дней сейчас нет.';if(p.inj>G.slot)return 'Вы травмированы — сейчас тренироваться нельзя.';return '';}
+// score — результат упражнения (0..1); без упражнения (автотесты) — случайный
+function doTraining(k,score,pre){const u=G.user;const p=G.P[u.pid];if(!pre){const why=canTrain();if(why)return {t:why};u.trUsed=(u.trUsed||0)+1;}const T=TR_INT[k];const t=u.trait;if(score===undefined)score=rnd()<T.ok?.5+rnd()*.5:rnd()*.5;
+ const need=.5+(t==='lazy'?.12:t==='workhorse'?-.1:t==='pro'?-.05:0)-(u.mor-50)/400;const inj=T.inj*injMult()*((u.attr.phy||70)<60?1.3:1);
+ if(rnd()<inj){const d=ri(1,4);p.inj=G.slot+d;userInjury(d);return {t:'Неудачное движение на тренировке — травма, пропуск '+d+' '+(d===1?'матча':'матчей')+'.',bad:1};}
+ if(score>=need){const n=clamp(Math.round(T.pts[0]+(T.pts[1]-T.pts[0])*clamp((score-need)/(1-need+.001),0,1)),T.pts[0],T.pts[1]);u.devPts+=n;u.trPts=(u.trPts||0)+n;modMor(1);return {t:'Отличная тренировка: +'+n+' '+(n===1?'очко':'очка')+' развития.',good:1};}
+ modMor(-1);return {t:'Тренировка не задалась — без прибавки.'};}
+const PERS={fam:{n:'Выходной с семьёй',d:'Отдых и время с близкими'},fans:{n:'Встреча с болельщиками',d:'Автографы и фото с фанатами'},coach:{n:'Разговор с тренером',d:'Обсудить свою роль в команде'},
+ psy:{n:'Сеанс с психологом',d:'Помогает справиться с давлением'},charity:{n:'Благотворительный вечер',d:'Помочь фонду и показать себя с лучшей стороны'}};
+function persCost(k){const u=G.user;const w=Math.max(u.contract.wage||0,30000);return k==='psy'?Math.round(Math.max(5000,w*.02)/1000)*1000:k==='charity'?Math.round(Math.max(10000,w*.05)/1000)*1000:0;}
+function doPersonal(k){const u=G.user;if(trAvail()<=0)return null;const c=persCost(k);if(c&&cash()<c)return {t:'Недостаточно свободных денег.'};u.trUsed=(u.trUsed||0)+1;if(c)u.spent=(u.spent||0)+c;
+ if(k==='fam'){modMor((u.life||{}).fam?8:6);return {t:'Вы отлично отдохнули и перезагрузились.',good:1};}
+ if(k==='fans'){modMor(4);modRep(1);return {t:'Болельщики в восторге, а вам приятно их внимание.',good:1};}
+ if(k==='coach'){if(rnd()<.7){ctrAdd(5);modMor(3);return {t:'Тренер услышал вас — доверие выросло.',good:1};}modMor(-2);ctrAdd(-1);return {t:'Разговор не получился, тренер остался при своём мнении.'};}
+ if(k==='psy'){modMor(10);return {t:'После сеанса стало заметно легче.',good:1};}
+ if(k==='charity'){modMor(5);modRep(2);return {t:'Вечер прошёл отлично, о вас пишут в новостях.',good:1};}return null;}
 
 // ===================== КАРЬЕРА ТРЕНЕРА: НОВЫЕ МЕХАНИКИ =====================
 // сыгранность стилей · характер правления и цель на полсезона · раздевалка · скаутинг · наставники · дедлайн-дэй · пресс-конференции · сборная · сценарии
@@ -2871,7 +2971,7 @@ function c4Check(){const C=G.coach;if(!C||!G.season||G.pending)return false;
   G.pending={type:'ntcall'};return true;}// турнир сборной всегда проматывается отдельно — даже из «до конца сезона»
  if(C.club===null)return false;
  if(G.ffwE){c4Silent();return false;}
- return relEvents();}
+ if(relEvents())return true;return typeof c4SubCheck==='function'&&c4SubCheck();}
 // промотка «до конца сезона»: события не показываются, решения принимаются без вас
 function c4Silent(){const C=G.coach;const s=G.slot;
  if(s>=WINTER_SLOT&&C.hg&&!C.hgDone){C.hgDone=1;const st=hgState();if(st.ok){trAdd(4);}else{trAdd(-8);mAdd('mor',-2);}}
@@ -3024,10 +3124,10 @@ function uCaptSeasonRep(){const u=G.user;const m=CAPT_REPM[u.trait]??1;let c=0,w
  if(u.capt){const k=u.capt==='c'?1:.5;c+=2*k*m;w+=1*k*m;}if(u.ntCapt){const k=u.ntCapt==='c'?1:.5;c+=2*k*m;w+=2*k*m;}
  if(c||w){u.rep=clamp(u.rep+c,1,100);uRepSync();wAddX(u,w);}}
 // уведомление о назначении
-function captCheckU(){const u=G.user;if(!u||u.retired||G.pending)return false;
+function captCheckU(){const u=G.user;if(!u||u.retired||G.pending||!evGate())return false;
  const t=u.captNew?['club',u.captNew]:u.ntCaptNew?['nt',u.ntCaptNew]:null;if(!t)return false;if(t[0]==='club')u.captNew=null;else u.ntCaptNew=null;
  const role=t[1]==='c'?'капитаном':'вице-капитаном';const where=t[0]==='club'?'В клубе «'+G.clubs[G.P[u.pid].cl].n+'»':'В сборной '+flagN(u.nat);
- G.pending=mkChoice('team','Вас назначили '+role,`${where} вам доверили роль ${t[1]==='c'?'капитана':'вице-капитана'}. Ваш характер — «${charName(u.trait||'none')}»: на команду это ${captWords(u.trait||'none')}.`,
+ evMark();G.pending=mkChoice('team','Вас назначили '+role,`${where} вам доверили роль ${t[1]==='c'?'капитана':'вице-капитана'}. Ваш характер — «${charName(u.trait||'none')}»: на команду это ${captWords(u.trait||'none')}.`,
   [{t:'Принять повязку',e:{mor:3},r:'Повязка ваша. Роль будет понемногу влиять на команду и на вашу репутацию.'}],{info:1});return true;}
 
 // ---------- интерфейс (тренер) ----------
@@ -3035,6 +3135,161 @@ function captCardHtml(K,list,sc){const opt=(sel)=>list.slice().sort((a,b)=>b.ovr
  const row=(r,n)=>{const p=G.P[K[r]];return `<label class="small muted">${n}<select data-cap="${sc}:${r}">${opt(K[r])}</select></label>${p?`<p class="small nh" style="margin:2px 0 8px">Характер: <b>${esc(charName(pChar(p)))}</b> — ${captWords(pChar(p))}${r==='v'?' (вдвое слабее капитана)':''}.</p>`:''}`;};
  return `<div class="card cat-card" style="--ec:${EVCAT.team.c}"><h3><i class="ic ic-users"></i> Капитан и вице-капитан</h3>${row('c','Капитан')}${row('v','Вице-капитан')}<p class="muted small nh">Влияние роли зависит от характера игрока: лидер заряжает команду, ленивый расхолаживает. Если снять с повязки лидера раздевалки, лидерам это не понравится.</p></div>`;}
 function bindCapt(){document.querySelectorAll('[data-cap]').forEach(s=>s.onchange=e=>{const [sc,r]=s.dataset.cap.split(':');const C=G.coach;const K=sc==='nt'?(C.ntCapt||(C.ntCapt={})):(C.capt||(C.capt={}));cCaptSet(K,r,+e.target.value);save();render();});}
+
+// ===================== МИНИ-ИГРЫ =====================
+// удар (пенальти, выход 1 на 1, издали, штрафной), вратарь на пенальти, пас вразрез, дриблинг, подкат,
+// тренировочные упражнения, переговоры по контракту, серия пенальти и замена в карьере тренера
+function mgA(k){const u=G.user;return (u&&u.attr&&u.attr[k])||60;}
+function mgP(x){return clamp(x,.03,.97);}
+let MG_CAT='moment';
+function mgShow(html){evModal(MG_CAT,`<div class="mg">${html}</div>`);}
+function mgDone(ok,txt,cb,delay){setTimeout(()=>cb(ok,txt),delay??1300);}
+
+// ---------- ворота ----------
+// зоны 0..8: ряд 0 — верх, колонка 0 — слева
+function mgZone(z){return {c:z%3,r:Math.floor(z/3)};}
+function mgGoalSvg(o){o=o||{};const W=290/3,H=115/3;let s=`<svg class="mgoal" viewBox="0 0 300 150" xmlns="http://www.w3.org/2000/svg">
+ <defs><pattern id="mgnet" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M0 0L10 10M10 0L0 10" stroke="rgba(255,255,255,.12)" stroke-width="1"/></pattern></defs>
+ <rect x="0" y="122" width="300" height="28" fill="rgba(46,160,90,.25)"/><rect x="5" y="5" width="290" height="117" fill="url(#mgnet)"/>`;
+ for(let z=0;z<9;z++){const {c,r}=mgZone(z);s+=`<rect class="mg-z${o.click?' on':''}${o.hit===z?' hit':''}" data-z="${z}" x="${5+c*W+2}" y="${5+r*H+2}" width="${W-4}" height="${H-4}" rx="4"/>`;}
+ s+=`<path d="M5 122V5H295V122" fill="none" stroke="#fff" stroke-width="5" stroke-linejoin="round"/>`;
+ if(o.wall)for(let i=0;i<4;i++)s+=`<g transform="translate(${112+i*22},92)"><circle cx="0" cy="0" r="5" fill="#ffd27a"/><rect x="-6" y="5" width="12" height="25" rx="4" fill="#d9a441"/></g>`;
+ if(o.gk!==false){const g=o.gk||{c:1,r:2,dive:0};const x=50+g.c*100,y=g.r===0?32:g.r===1?66:92;const rot=g.c===0?-55:g.c===2?55:0;
+  s+=`<g class="mg-gk" transform="translate(${x},${y}) rotate(${g.dive?rot:0})"><circle cx="0" cy="-16" r="7" fill="#ffcf9e"/><rect x="-9" y="-9" width="18" height="24" rx="5" fill="#2ed3c6"/><rect x="-24" y="-8" width="15" height="6" rx="3" fill="#2ed3c6"/><rect x="9" y="-8" width="15" height="6" rx="3" fill="#2ed3c6"/><rect x="-8" y="15" width="6" height="16" rx="3" fill="#1a1d25"/><rect x="2" y="15" width="6" height="16" rx="3" fill="#1a1d25"/></g>`;}
+ if(o.ball)s+=`<circle class="mg-ball" cx="${o.ball.x}" cy="${o.ball.y}" r="7" fill="#fff" stroke="#111" stroke-width="1.5"/>`;
+ return s+'</svg>';}
+function mgBallAt(z,miss){const {c,r}=mgZone(z);let x=50+c*100,y=r===0?24:r===1?62:100;if(miss){if(r===0)y=-2;else if(c===0)x=-2;else if(c===2)x=302;else y=-2;}return {x,y};}
+
+// удар: kind — pen | 1v1 | long | fk | open
+const SHOT_KIND={pen:{n:'Пенальти',acc:.9,gk:1},'1v1':{n:'Выход один на один',acc:.84,gk:1},long:{n:'Удар издали',acc:.6,gk:1.15},fk:{n:'Штрафной',acc:.6,gk:1},open:{n:'Добивание',acc:.93,gk:.25}};
+function mgShot(o,cb){const K=SHOT_KIND[o.kind]||SHOT_KIND.pen;const sho=o.sho??mgA('sho');let ftype=null;
+ const step2=()=>{mgShow(`<h2>${K.n}</h2><p class="evd">${o.kind==='fk'?'Выберите, куда бить.':'Выберите, куда бить. Углы труднее взять вратарю, но и попасть в них сложнее.'}</p>${mgGoalSvg({click:1,wall:o.kind==='fk'})}<p class="muted small c">Нажмите на зону ворот</p>`);
+  document.querySelectorAll('.mg-z').forEach(r=>r.onclick=()=>shoot(+r.dataset.z));};
+ const shoot=z=>{const {c,r}=mgZone(z);const corner=(c!==1);const zp=r===0?(corner?.24:.12):r===1?(corner?.07:0):(corner?.1:0);
+  let acc=K.acc+(sho-70)*.012-zp*(ftype==='curl'?.5:1)-(ftype==='power'?.06:0);
+  let blocked=o.kind==='fk'&&r===2&&ftype!=='under'&&rnd()<.7;
+  const miss=!blocked&&rnd()>mgP(acc);
+  const gkR=o.gk??75;let guess=rnd()<(o.kind==='long'?.5:.36)?c:[0,1,2].filter(x=>x!==c)[rnd()<.5?0:1];
+  let save=false;if(!miss&&!blocked){let p=0;if(guess===c)p=r===0?.22:r===1?.55:.7;else p=c===1?.3:.08;if(o.kind==='1v1'&&c===1)p+=.15;if(ftype==='power')p*=.75;if(ftype==='under'&&r===2)p+=.1;p*=K.gk*(1+(gkR-75)*.02);save=rnd()<mgP(p);}
+  if(save)guess=c;const ok=!miss&&!blocked&&!save;
+  const txt=blocked?'Мяч попал в стенку!':miss?'Мимо ворот!':save?'Вратарь отбил!':'ГОЛ!';
+  mgShow(`<h2>${K.n}</h2>${mgGoalSvg({wall:o.kind==='fk',gk:K.gk<.5?false:{c:guess,r:save?r:(guess===1?2:1),dive:guess!==1},ball:blocked?{x:150,y:98}:mgBallAt(z,miss),hit:ok?z:null})}<div class="mg-res ${ok?'ok':'bad'}">${txt}</div>`);
+  mgDone(ok,txt,cb,1500);};
+ if(o.kind==='fk'){mgShow(`<h2>Штрафной</h2><p class="evd">Как будете бить?</p>${mgGoalSvg({wall:1})}${[['curl','В обвод стенки','Легче попасть в углы'],['power','Мощно','Вратарю труднее, но точность ниже'],['under','Под стенку','Если стенка подпрыгнет — низом']].map(([k,n,d])=>`<button class="evopt" data-ft="${k}"><b>${n}</b><span>${d}</span></button>`).join('')}`);
+  document.querySelectorAll('[data-ft]').forEach(b=>b.onclick=()=>{ftype=b.dataset.ft;step2();});}
+ else step2();}
+
+// вратарь на пенальти
+function mgKeeper(o,cb){const ref=o.ref??mgA('ref');
+ mgShow(`<h2>Пенальти в ваши ворота</h2><p class="evd">Куда прыгнете? Можно ждать до последнего — так вы реагируете на любой удар, но хуже достаёте углы.</p>${mgGoalSvg({})}<div class="grid3">${[['0','← Влево'],['1','В центр'],['2','Вправо →']].map(([k,n])=>`<button class="btn sm" data-dv="${k}">${n}</button>`).join('')}</div><button class="btn sm ghost" data-dv="w" style="width:100%;margin-top:6px">Ждать до удара</button>`);
+ document.querySelectorAll('[data-dv]').forEach(b=>b.onclick=()=>{const d=b.dataset.dv;const z=wpick([0,1,2,3,4,5,6,7,8],x=>[3,1,3,3,1,3,4,2,4][x]);const {c,r}=mgZone(z);
+  const miss=rnd()<.08;let save=false;
+  if(!miss){let p;if(d==='w')p=(r===0&&c!==1?.12:.32)+(ref-70)*.01;else if(+d===c)p=(r===0?.45:r===1?.72:.82)*(1+(ref-70)*.015);else p=.03;save=rnd()<mgP(p);}
+  const ok=miss||save;const gc=d==='w'?(save?c:1):+d;const txt=miss?'Бьющий промахнулся!':save?'СЕЙВ!':'Гол — мяч в сетке.';
+  mgShow(`<h2>Пенальти в ваши ворота</h2>${mgGoalSvg({gk:{c:gc,r:save?r:2,dive:gc!==1},ball:mgBallAt(z,miss)})}<div class="mg-res ${ok?'ok':'bad'}">${txt}</div>`);mgDone(ok,txt,cb,1500);});}
+
+// пас вразрез: три партнёра, у каждого своя степень опеки
+function mgPass(o,cb){const pv=(mgA('pas')+mgA('vis'))/2;const risk=[.12,.35,.6].sort(()=>rnd()-.5);const T=[[55,38],[150,26],[245,40]];
+ const pitch=(sel,res)=>{let s=`<svg class="mgpitch" viewBox="0 0 300 175" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="300" height="175" rx="8" fill="rgba(46,160,90,.22)"/><rect x="95" y="0" width="110" height="34" fill="none" stroke="rgba(255,255,255,.35)"/><line x1="0" y1="174" x2="300" y2="174" stroke="rgba(255,255,255,.3)"/>`;
+  T.forEach(([x,y],i)=>{const r=risk[i];const t=.55,mx=150+(x-150)*t,my=150+(y-150)*t;const nx=-(y-150),ny=(x-150);const L=Math.hypot(nx,ny);const d=8+46*(1-r);
+   s+=`<line x1="150" y1="150" x2="${x}" y2="${y}" stroke="rgba(255,255,255,${sel===i?.8:.25})" stroke-dasharray="5 5"/><circle cx="${mx+nx/L*d}" cy="${my+ny/L*d}" r="8" fill="#ff5a6b"/>`;
+   s+=`<g class="mg-mate" data-pm="${i}"><circle cx="${x}" cy="${y}" r="13" fill="${sel===i?(res?'#3ccf86':'#ff5a6b'):'#5aa9ff'}"/><text x="${x}" y="${y+4}" text-anchor="middle" font-size="11" fill="#fff" font-weight="700">${i+9}</text></g>`;});
+  s+=`<circle cx="150" cy="152" r="12" fill="#ffd27a"/><text x="150" y="156" text-anchor="middle" font-size="10" fill="#111" font-weight="700">ВЫ</text>`;return s+'</svg>';};
+ mgShow(`<h2>Пас вразрез</h2><p class="evd">Красные — защитники соперника. Чем ближе защитник к линии паса, тем выше риск перехвата.</p>${pitch(-1)}<p class="muted small c">Нажмите на партнёра</p>`);
+ document.querySelectorAll('[data-pm]').forEach(g=>g.onclick=()=>{const i=+g.dataset.pm;const p=mgP(1-risk[i]+(pv-70)*.006);const ok=rnd()<p;const txt=ok?'Пас прошёл — партнёр забивает!':'Перехват!';
+  mgShow(`<h2>Пас вразрез</h2>${pitch(i,ok)}<div class="mg-res ${ok?'ok':'bad'}">${txt}</div>`);mgDone(ok,txt,cb,1400);});}
+
+// дриблинг: финты против защитника; затем удар
+function mgDribble(o,cb){const dri=mgA('dri');let lives=1+(dri>=76?1:0)+(dri>=86?1:0),wins=0,last=null;const log=[];
+ const N={l:'Влево',s:'Стоп-финт',r:'Вправо'};
+ const draw=msg=>{mgShow(`<h2>Обыграть соперника</h2><p class="evd">Нужно два удачных финта. Защитник пытается угадать ваше движение.</p><div class="mg-drib"><div>Удачных финтов: <b>${wins} / 2</b></div><div>Права на ошибку: <b>${lives}</b></div></div>${msg?`<p class="c">${msg}</p>`:''}<div class="grid3">${Object.keys(N).map(k=>`<button class="btn sm" data-fn="${k}">${N[k]}</button>`).join('')}</div>`);
+  document.querySelectorAll('[data-fn]').forEach(b=>b.onclick=()=>{const k=b.dataset.fn;const ks=Object.keys(N);const g=last&&rnd()<.45?last:ks[Math.floor(rnd()*3)];last=k;
+   if(g===k){lives--;if(lives<=0){const txt='Защитник отобрал мяч.';mgShow(`<h2>Обыграть соперника</h2><div class="mg-res bad">${txt}</div>`);mgDone(false,txt,cb,1100);return;}draw('Защитник угадал: '+N[k].toLowerCase()+'. Ещё попытка!');}
+   else{wins++;if(wins>=2){mgShow(`<h2>Обыграть соперника</h2><div class="mg-res ok">Прошли! Теперь удар.</div>`);setTimeout(()=>mgShot({kind:o.then||'1v1',gk:o.gk},cb),900);return;}draw('Финт «'+N[k]+'» удался!');}});};
+ draw('');}
+
+// подкат: нажать, когда метка в зелёной зоне
+function mgTackle(o,cb){const def=o.def??mgA('def');const w=clamp(9+(def-60)*.35,6,22);const st=40+rnd()*(55-w);let pos=0,done=false;const dur=o.fast?1050:1400;
+ mgShow(`<h2>${o.title||'Подкат'}</h2><p class="evd">Нажмите «Подкат», когда метка в зелёной зоне. Раньше — соперник уйдёт, позже — фол.</p><div class="mgbar"><i class="z" style="left:${st}%;width:${w}%"></i><i class="m" id="mgm"></i></div><button class="btn big" id="mgT" style="width:100%">Подкат</button>`);
+ const t0=performance.now();const tick=now=>{if(done)return;pos=Math.min(100,(now-t0)/dur*100);const m=$('#mgm');if(m)m.style.left=pos+'%';if(pos>=100){fin();return;}requestAnimationFrame(tick);};requestAnimationFrame(tick);
+ const fin=()=>{if(done)return;done=true;const ok=pos>=st&&pos<=st+w;const txt=ok?'Чистый отбор!':pos<st?'Рано — соперник ушёл.':'Поздно — фол.';
+  if(o.silent){cb(ok,txt);return;}mgShow(`<h2>${o.title||'Подкат'}</h2><div class="mgbar"><i class="z" style="left:${st}%;width:${w}%"></i><i class="m" style="left:${pos}%"></i></div><div class="mg-res ${ok?'ok':'bad'}">${txt}</div>`);mgDone(ok,txt,cb,1100);};
+ $('#mgT').onclick=fin;}
+
+// запуск по типу из ключевого момента
+function runMg(kind,ctx,cb){const gk=ctx&&ctx.gk;
+ if(kind==='pen')return mgShot({kind:'pen',gk},cb);if(kind==='1v1')return mgShot({kind:'1v1',gk},cb);if(kind==='long')return mgShot({kind:'long',gk},cb);if(kind==='fk')return mgShot({kind:'fk',gk},cb);
+ if(kind==='keeper')return mgKeeper({},cb);if(kind==='pass')return mgPass({},cb);if(kind==='dribble')return mgDribble({gk,then:ctx&&ctx.then},cb);if(kind==='tackle')return mgTackle({},cb);cb(rnd()<.5);}
+
+// ---------- тренировочные упражнения ----------
+// точность/реакция: цели загораются по очереди; таймер зависит от нагрузки
+function mgDrill(intensity,cb0){const u=G.user;MG_CAT='training';const cb=(...a)=>{MG_CAT='moment';cb0(...a);};const gk=u.pos==='GK',def=GROUP[u.pos]==='DEF';const T={light:1150,norm:900,hard:720}[intensity]||900;
+ if(def){let i=0,hit=0;const N=4;const next=()=>{if(i>=N){fin(hit/N);return;}i++;mgTackle({title:'Упражнение: отбор ('+i+' из '+N+')',fast:intensity==='hard',silent:1},ok=>{if(ok)hit++;next();});};next();return;}
+ const N=6;let i=0,hit=0,cur=-1,tm=null;
+ const draw=()=>{mgShow(`<h2>Упражнение: ${gk?'реакция':'точность'}</h2><p class="evd">${gk?'Ловите мяч — нажимайте на зону, где он появился.':'Попадите в загоревшуюся мишень, пока она горит.'}</p><div class="mg-tgt">${Array.from({length:9},(_,k)=>`<button data-tg="${k}" class="${k===cur?'on':''}"></button>`).join('')}</div><p class="c">Попаданий: <b>${hit}</b> · мишень ${Math.min(i,N)} из ${N}</p>`);
+  document.querySelectorAll('[data-tg]').forEach(b=>b.onclick=()=>{if(+b.dataset.tg===cur){hit++;cur=-1;clearTimeout(tm);setTimeout(step,250);draw();}});};
+ const step=()=>{if(i>=N){fin(hit/N);return;}i++;cur=Math.floor(rnd()*9);draw();tm=setTimeout(()=>{cur=-1;draw();setTimeout(step,250);},T);};
+ const fin=sc=>{mgShow(`<h2>Упражнение завершено</h2><div class="mg-res ${sc>=.5?'ok':'bad'}">Результат: ${Math.round(sc*100)}%</div>`);mgDone(sc,null,cb,900);};
+ step();}
+
+// ---------- переговоры по контракту ----------
+function negPrep(o){const u=G.user;if(o.negL===undefined){o.negL=1+.04+rnd()*.2+[0,.05,.1][u.agent||0]+clamp(((u.rep??30)-50)/400,-.05,.08);o.negP=3;}}
+function mgNegotiate(o,onExit){const u=G.user;negPrep(o);const base=o.wage0||(o.wage0=o.wage);let a=10;let msg='';let counter=null;
+ const hint=()=>{const d=o.negL-1;if(!(u.agent>0))return 'Без агента вы не знаете, сколько клуб готов добавить.';return 'Агент: '+(d>.22?'клуб очень хочет вас — можно просить много.':d>.12?'можно попросить заметно больше.':'запас у клуба небольшой.');};
+ const draw=()=>{showModal(`<h2>Переговоры: ${esc(G.clubs[o.club].n)}</h2><div class="row">Предложение клуба<span class="sp"></span><b>${money(base)}/год</b></div><p class="small hlt nh">${hint()}</p>
+  <label class="small muted">Ваш запрос: +${a}% · ${money(Math.round(base*(1+a/100)/1000)*1000)}/год<input type="range" id="ngA" min="0" max="50" value="${a}" style="width:100%"></label>
+  <div class="row small">Терпение клуба<span class="sp"></span><b>${'●'.repeat(o.negP)}${'○'.repeat(Math.max(0,3-o.negP))}</b></div>${msg?`<p class="${counter?'hlt':'bad'}">${msg}</p>`:''}
+  <div class="btns"><button class="btn" id="ngGo">Предложить</button>${counter?`<button class="btn ok" id="ngC">Согласиться на +${counter}%</button>`:''}<button class="btn ghost" id="ngX">Вернуться</button></div>`);
+  $('#ngA').oninput=e=>{a=+e.target.value;draw();};$('#ngX').onclick=()=>onExit();
+  if($('#ngC'))$('#ngC').onclick=()=>{o.wage=Math.round(base*(1+counter/100)/1000)*1000;o.neg=1;onExit('Договорились: +'+counter+'%');};
+  $('#ngGo').onclick=()=>{const q=1+a/100;if(q<=o.negL){o.wage=Math.round(base*q/1000)*1000;o.neg=1;onExit('Клуб согласился: '+money(o.wage)+'/год');return;}
+   o.negP-=q>o.negL+.15?2:1;if(o.negP<=0){o.gone=1;onExit('Клуб прекратил переговоры и отозвал предложение.');return;}
+   if(q<=o.negL+.08){counter=Math.max(0,Math.floor((o.negL-1)*100));msg='Клуб готов на +'+counter+'%, не больше.';}else{counter=null;msg='Клуб считает запрос завышенным.';}draw();};};
+ draw();}
+
+// ---------- карьера тренера: серия пенальти ----------
+function penTend(opp){const h=hsh((opp+7)*131+G.year*17);return h<.4?'L':h<.8?'R':'C';}
+function penHint(opp){const t=penTend(opp);const right=hsh((opp+3)*71+G.year*29)<.7;const s=right?t:(t==='L'?'R':'L');return s;}
+const PEN_RU={L:'влево',R:'вправо',C:'по центру'};
+function coachPenPlan(){const C=G.coach;const sq=squad(C.club).filter(p=>!p.ret&&!(p.inj>G.slot)&&p.pos!=='GK');const P=C.pens||(C.pens={t:[],gk:'an'});
+ P.t=P.t.filter(id=>sq.some(p=>p.id===id));const auto=sq.slice().sort((a,b)=>(b.ovr+(GROUP[b.pos]==='FWD'?3:GROUP[b.pos]==='MID'?1:0))-(a.ovr+(GROUP[a.pos]==='FWD'?3:GROUP[a.pos]==='MID'?1:0)));
+ for(const p of auto){if(P.t.length>=5)break;if(!P.t.includes(p.id))P.t.push(p.id);}return P;}
+function coachShootout(f,myRef){const C=G.coach;const P=coachPenPlan();const me=f.h===myRef?'h':'a';const opp=me==='h'?f.a:f.h;
+ const oppR=G.clubs[opp]?G.clubs[opp].r:75;const tend=penTend(opp);const guess=P.gk==='an'?penHint(opp):P.gk;
+ const takers=P.t.map(id=>G.P[id]).filter(Boolean);const gk=squad(C.club).filter(p=>p.pos==='GK'&&!(p.inj>G.slot)).sort((a,b)=>b.ovr-a.ovr)[0];
+ const oppConv=mgP(.74+(oppR-75)*.006-(gk?(gk.ovr-75)*.005:0)+(guess===tend?-.12:.03));
+ let a=0,b=0,i=0;const log=[];
+ for(;i<5;i++){const t=takers[i%Math.max(1,takers.length)];const pc=mgP(.72+((t?t.ovr:72)-75)*.007+(i===4?-.03:0));const x=rnd()<pc;a+=x;log.push(x?1:0);const y=rnd()<oppConv;b+=y;
+  if(a>b+(4-i)||b>a+(4-i))break;}
+ while(a===b&&i<20){const t=takers[i%Math.max(1,takers.length)];const x=rnd()<mgP(.7+((t?t.ovr:72)-75)*.007);const y=rnd()<oppConv;a+=x;b+=y;i++;}
+ f.so=a+':'+b;return a>b?myRef:opp;}
+function penDecide(f,rh,ra,comp){const C=G.coach;if(G.mode==='coach'&&C&&C.club!==null&&!comp.nat&&(f.h===C.club||f.a===C.club))return coachShootout(f,C.club);
+ return rnd()<.5+clamp((rh-ra)*.02,-.15,.15)?f.h:f.a;}
+function penPlanHtml(f){const C=G.coach;const P=coachPenPlan();const opp=f.h===C.club?f.a:f.h;const sq=squad(C.club).filter(p=>!p.ret&&p.pos!=='GK').sort((a,b)=>b.ovr-a.ovr);
+ return `<div class="card cat-card" style="--ec:${EVCAT.moment.c}"><h3><i class="ic ic-target"></i> Серия пенальти</h3><p class="muted small nh">Матч на вылет. Если дойдёт до пенальти, бьют игроки в этом порядке.</p>
+ ${P.t.map((id,i)=>`<label class="small muted">${i+1}-й удар<select data-pt="${i}">${sq.map(p=>`<option value="${p.id}" ${p.id===id?'selected':''}>${esc(p.n)} · ${POS_RU[p.pos]} · ${p.ovr}</option>`).join('')}</select></label>`).join('')}
+ <p class="small nh" style="margin-top:8px">Аналитик: бьющие соперника чаще бьют <b>${PEN_RU[penHint(opp)]}</b>.</p>
+ <div class="grid2"><label class="small muted">Подсказка вратарю<select id="pGk">${[['an','Как советует аналитик'],['L','Прыгать влево'],['R','Прыгать вправо'],['C','Стоять в центре']].map(([k,n])=>`<option value="${k}" ${P.gk===k?'selected':''}>${n}</option>`).join('')}</select></label></div></div>`;}
+function bindPenPlan(){const C=G.coach;document.querySelectorAll('[data-pt]').forEach(s=>s.onchange=e=>{const P=coachPenPlan();const i=+s.dataset.pt;const id=+e.target.value;const j=P.t.indexOf(id);if(j>=0)P.t[j]=P.t[i];P.t[i]=id;save();render();});
+ if($('#pGk'))$('#pGk').onchange=e=>{coachPenPlan().gk=e.target.value;save();};}
+
+// ---------- карьера тренера: решающая замена ----------
+function subCands(){const C=G.coach;const sq=squad(C.club).filter(p=>!p.ret&&!(p.inj>G.slot)&&p.pos!=='GK');const xi=new Set(deservedXI(C.tac.auto?bestForm(sq):C.tac.form));
+ const bench=sq.filter(p=>!xi.has(p.id)).sort((a,b)=>b.ovr-a.ovr);const pick=g=>bench.find(p=>GROUP[p.pos]===g);return ['FWD','MID','DEF'].map(pick).filter(Boolean);}
+function c4SubCheck(){const C=G.coach;if(C.club===null||G.ffwE||G.pending)return false;const f=G.season.fx.find(x=>x.s===G.slot&&!x.p&&(x.h===C.club||x.a===C.club));if(!f)return false;
+ const comp=G.season.comps[f.c];const opp=f.h===C.club?f.a:f.h;const big=f.ko||f.leg===2||(G.clubs[opp]&&G.clubs[opp].r>=G.clubs[C.club].r-1);
+ C.subN=C.subY===G.year?C.subN||0:0;C.subY=G.year;if(!big||C.subN>=3||rnd()>.3)return false;const cs=subCands();if(cs.length<2)return false;C.subN++;
+ G.pending={type:'csub',ids:cs.map(p=>p.id),opp};return true;}
+function mgCoachSub(pd,done){const C=G.coach;const cs=pd.ids.map(i=>G.P[i]);let pick=null,min=null;const xi=squad(C.club).filter(p=>!p.ret).sort((a,b)=>b.ovr-a.ovr).slice(0,11);const av=xi.reduce((a,p)=>a+p.ovr,0)/Math.max(1,xi.length);
+ const draw=()=>{evModal('tactic',`<h2>План на концовку</h2><p class="evd">Соперник — ${esc(G.clubs[pd.opp].n)}. Если к концовке будет ничья, кого и когда выпускаем?</p>
+  ${cs.map(p=>`<button class="evopt ${pick===p.id?'sel':''}" data-sb="${p.id}"><b>${esc(p.n)} · ${POS_RU[p.pos]} · ${p.ovr}</b><span>${charName(pChar(p))}</span></button>`).join('')}
+  <div class="grid3">${[60,70,80].map(m=>`<button class="btn sm ${min===m?'':'ghost'}" data-mn="${m}">${m}-я минута</button>`).join('')}</div>
+  <div class="btns"><button class="btn big" id="sbGo" ${pick&&min?'':'disabled'}>Утвердить</button></div>`);
+  document.querySelectorAll('[data-sb]').forEach(b=>b.onclick=()=>{pick=+b.dataset.sb;draw();});document.querySelectorAll('[data-mn]').forEach(b=>b.onclick=()=>{min=+b.dataset.mn;draw();});
+  $('#sbGo').onclick=()=>{const p=G.P[pick];const g=GROUP[p.pos];let pr=.4+(p.ovr-av)*.03+(g==='FWD'?.1:g==='MID'?.04:-.12)+(min===70?.08:min===60?.03:-.02)+(pChar(p)==='clutch'?.1:0);const ok=rnd()<mgP(pr);
+   C.mfx=C.mfx||{xr:0,opp:0};C.mfx.xr+=ok?1.6:-.3;const txt=ok?esc(p.n)+' готов взорвать концовку — команда получит преимущество в последние минуты.':'Сомнительный план: '+esc(p.n)+' вряд ли изменит игру, а перестройка может сбить команду.';
+   evModal('tactic',`<h2>План на концовку</h2><div class="tier ${ok?'t0':'t3'}">${ok?'Удачный выбор':'Сомнительный выбор'}</div><p>${txt}</p><div class="btns"><button class="btn big" id="sbOk">Продолжить</button></div>`);$('#sbOk').onclick=()=>done();};};
+ draw();}
 
 // ===================== ФЛАГИ (SVG в стиле интерфейса) =====================
 const CRES=(cx,c)=>`<path d="M${cx+2.5} 5.8A5 5 0 1 0 ${cx+2.5} 14.2A4 4 0 1 1 ${cx+2.5} 5.8Z" fill="${c}"/>`;
@@ -3279,10 +3534,10 @@ function render(){if(!G){startScreen();return;}
  app.innerHTML=`<header class="top"><div class="ovr ${oCls(p.ovr)}">${p.ovr}</div><div class="who"><b>${esc(u.name)}</b><span>${POS_RU[u.pos]} · ${crest(p.cl,'sm')} ${esc(c.n)}${u.loan?' (аренда)':''} · ${p.age} лет</span></div><div class="sp"></div><div class="date"><span>Сезон ${G.year}/${String(G.year+1).slice(2)}</span><b>${slotDate(Math.min(G.slot,lastSlot()))}</b></div><button class="icon" id="menu"><i class="ic ic-menu"></i></button></header>
  ${UI.saveErr?'<div class="warn">Сохранение не поместилось в память браузера. Скопируйте его через меню <i class="ic ic-menu"></i> → «Экспорт».</div>':''}
  <main id="main"></main>
- <nav class="tabs">${[['season','<i class="ic ic-ball"></i>','Сезон'],['tables','<i class="ic ic-cup"></i>','Таблицы'],['player','<i class="ic ic-user"></i>','Игрок'+(u.devPts>0?' •':'')],['career','<i class="ic ic-scroll"></i>','Карьера'],['world','<i class="ic ic-globe"></i>','Мир']].map(([k,i,t])=>`<button data-t="${k}" class="${UI.tab===k?'on':''}"><i>${i}</i>${t}</button>`).join('')}</nav>`;
+ <nav class="tabs">${[['season','<i class="ic ic-ball"></i>','Сезон'],['tables','<i class="ic ic-cup"></i>','Таблицы'],['player','<i class="ic ic-user"></i>','Игрок'+(u.devPts>0?' •':'')],['life','<i class="ic ic-brief"></i>','Карьера'+(trAvail()>0?' •':'')],['career','<i class="ic ic-scroll"></i>','Статистика'],['world','<i class="ic ic-globe"></i>','Мир']].map(([k,i,t])=>`<button data-t="${k}" class="${UI.tab===k?'on':''}"><i>${i}</i>${t}</button>`).join('')}</nav>`;
  document.querySelectorAll('.tabs button').forEach(b=>b.onclick=()=>{UI.tab=b.dataset.t;render();window.scrollTo(0,0);});
  $('#menu').onclick=menuDialog;
- ({season:tabSeason,tables:tabTables,player:tabPlayer,career:tabCareer,world:tabWorld})[UI.tab]();
+ ({season:tabSeason,tables:tabTables,player:tabPlayer,life:tabLife,career:tabCareer,world:tabWorld})[UI.tab]();
  if(G.pending)showPending();
  if(UI.toast){const t=document.createElement('div');t.className='toast';t.textContent=UI.toast;document.body.appendChild(t);setTimeout(()=>t.remove(),2600);UI.toast=null;}}
 
@@ -3300,6 +3555,7 @@ function tabSeason(){const u=G.user,p=G.P[u.pid];const m=$('#main');const nf=nex
   <div class="vs"><span class="${home?'me':''}">${esc(teamN(comp,nf.h))} ${tLogo(comp,nf.h)}</span><b>—</b><span class="${!home?'me':''}">${tLogo(comp,nf.a)} ${esc(teamN(comp,nf.a))}</span></div>${inj?'<div class="bad small">Вы травмированы (ещё ~'+Math.ceil((p.inj-G.slot)/2)+' нед.)</div>':''}</div>`;}
  else if(over)html+=`<div class="card next"><div class="comp">Сезон завершён</div><p class="muted">Все матчи сыграны. Пора подвести итоги.</p></div>`;
  else html+=`<div class="card next"><div class="comp">Матчей вашей команды больше нет</div><p class="muted">Можно промотать сезон до конца.</p></div>`;
+ if(!over&&nf&&GROUP[u.pos]!=='GK')html+=`<div class="card"><h3><i class="ic ic-target"></i> Установка на матч</h3><div class="grid2">${Object.keys(FOCUS).map(k=>`<button class="btn sm ${(u.focus||'auto')===k?'':'ghost'}" data-fc="${k}">${FOCUS[k].n}</button>`).join('')}</div></div>`;
  html+=`<div class="btns3">${!over?`<button class="btn" id="bNext"><i class="ic ic-play"></i> Следующий матч</button>${G.slot<WINTER_SLOT?'<button class="btn ghost" id="bMid"><i class="ic ic-ff"></i> До середины</button>':''}<button class="btn ghost" id="bEnd"><i class="ic ic-skip"></i> До конца сезона</button>`:'<button class="btn big" id="bSum">Подвести итоги сезона</button>'}</div>`;
  if(last)html+=matchCard(last,true);
  html+=`<div class="pills"><span class="pill">Статус: <b>${userStatus()}</b></span><span class="pill">Форма: <b class="${formAvg!=='—'?rCls(formAvg):''}">${formAvg}</b></span><span class="pill">Мораль: <b>${Math.round(u.mor)}</b></span>${u.capt?`<span class="pill hlt">${u.capt==='c'?'Капитан':'Вице-капитан'}</span>`:''}${u.ntCapt?`<span class="pill hlt">${u.ntCapt==='c'?'Капитан':'Вице-капитан'} сборной</span>`:''}<span class="pill">Репутация: <b>${Math.round(u.rep)}</b> в стране · <b>${Math.round(u.wrep??u.rep)}</b> в мире</span>${inj?'<span class="pill bad">Травма</span>':''}</div>`;
@@ -3307,7 +3563,7 @@ function tabSeason(){const u=G.user,p=G.P[u.pid];const m=$('#main');const nf=nex
  if(u.log.length>1)html+=`<div class="card"><h3>Матчи сезона</h3>${u.log.slice().reverse().slice(1,60).map(e=>matchRow(e)).join('')}</div>`;
  m.innerHTML=html;
  const run=mode=>{const res=advance(mode);UI.resume=(res==='event'&&mode!=='match')?mode:null;save();render();if(mode==='match')tgResult();};
- if($('#bNext'))$('#bNext').onclick=()=>run('match');
+ if($('#bNext'))$('#bNext').onclick=()=>run('match');m.querySelectorAll('[data-fc]').forEach(b=>b.onclick=()=>{u.focus=b.dataset.fc;save();render();});
  if($('#bMid'))$('#bMid').onclick=()=>run('mid');
  if($('#bEnd'))$('#bEnd').onclick=()=>{$('#bEnd').textContent='Симуляция…';setTimeout(()=>run('end'),20);};
  if($('#bSum'))$('#bSum').onclick=()=>{endSeason();G.pending.step=0;save();render();};}
@@ -3366,10 +3622,10 @@ function tabPlayer(){const u=G.user,p=G.P[u.pid];const c=G.clubs[p.cl];const [pl
  <div class="kv"><span>Рейтинг клуба</span><b>${Math.round(c.r)}</b></div><div class="kv"><span>Статус</span><b>${userStatus()}</b></div>
  <div class="kv"><span>Потенциал</span><b>скрыт${mentalBreak()?' · <span class="hlt">ментальный прорыв: потолок растёт</span>':''}</b></div><div class="kv"><span>Тип развития</span><b>${dtShown}</b></div>
  <div class="kv"><span>Контракт</span><b>${money(u.contract.wage)}/год · ещё ${u.contract.yrs} ${u.contract.yrs===1?'год':u.contract.yrs<5&&u.contract.yrs>1?'года':'лет'}</b></div>
- <div class="kv"><span>Трансферная стоимость</span><b>${money(valueFor(p))}</b></div><div class="kv"><span>Мораль</span><b>${Math.round(u.mor)}/100</b></div><div class="kv"><span>Репутация в стране</span><b>${Math.round(u.rep)}/100</b></div><div class="kv"><span>Мировая репутация</span><b>${Math.round(u.wrep??u.rep)}/100</b></div><p class="muted small nh">В стране репутация растёт от игры в клубе. Мировая — от выступлений в топ-5 лигах, за сборную, в еврокубках и от Золотого мяча. Падение в стране тянет вниз и мировую, а рост мировой поднимает и репутацию в стране.</p><div class="kv"><span>Характер</span><b>${TRAITS[u.trait][0]}<br><small class="muted">${TRAITS[u.trait][1]}</small></b></div><div class="kv"><span>Риск травм</span><b>${injRiskLabel()}${u.serious?' · серьёзных травм: '+u.serious:''}</b></div>
+ <div class="kv"><span>Трансферная стоимость</span><b>${money(valueFor(p))}</b></div><div class="kv"><span>Мораль</span><b>${Math.round(u.mor)}/100</b></div><div class="kv"><span>Репутация в стране</span><b>${Math.round(u.rep)}/100</b></div><div class="kv"><span>Мировая репутация</span><b>${Math.round(u.wrep??u.rep)}/100</b></div><div class="kv"><span>Характер</span><b>${TRAITS[u.trait][0]}</b></div><div class="kv"><span>Риск травм</span><b>${injRiskLabel()}${u.serious?' · серьёзных травм: '+u.serious:''}</b></div>
  <div class="kv"><span>Матчи за сборную</span><b>${u.caps} (голов: ${u.ig})</b></div></div>
  ${p2Cards()}
- ${u.devPts>0?`<div class="card hl">Очки развития: <b>${u.devPts}</b> — нажимайте «+», чтобы улучшить навыки.<span class="hint">  Цена растёт с уровнем навыка и утраивается, когда вы упираетесь в свой потолок развития. Потолок можно преодолеть: если футбольный IQ, психология, агрессия и баланс все выше 87, потенциал начинает расти.</span></div>`:''}
+ ${u.devPts>0?`<div class="card hl">Очки развития: <b>${u.devPts}</b> — нажимайте «+», чтобы улучшить навыки.<span class="hint">  Цена растёт с уровнем навыка и утраивается, когда вы упираетесь в свой потолок развития. Потолок можно преодолеть: если футбольный IQ, психология, агрессия и баланс все выше 87, потенциал начинает расти.${capMul()>1?' Вы переросли уровень своей лиги — в более сильной лиге развиваться будет легче.':''}</span></div>`:''}
  <div class="card"><h3>Ключевые навыки позиции</h3>${keys.map(ar).join('')}</div>
  ${others.length?`<div class="card"><h3>Другие навыки</h3>${others.map(ar).join('')}</div>`:''}
  <div class="card small muted hintcard">Скорость, дриблинг, физика и ловкость падают с возрастом. Чем выше «Психология» и «Физика», тем позже начнётся спад: при слабых значениях — с 30 лет, при сильных — только к 36–37.</div>`;
@@ -3442,9 +3698,9 @@ function menuDialog(){const coach=G&&G.mode==='coach'&&G.coach&&!G.coach.retired
  $('#mNew').onclick=()=>{showModal(`<h2>Новая карьера?</h2><p>Текущая карьера будет удалена из памяти браузера. Выберите режим:</p><div class="btns"><button class="btn bad" id="y1">Карьера игрока</button><button class="btn bad" id="y2">Карьера тренера</button></div><div class="btns"><button class="btn ghost" id="n">Отмена</button></div>`);
   $('#n').onclick=closeModal;const wipe=()=>{try{localStorage.removeItem(KEY);}catch(e){}G=null;closeModal();};$('#y1').onclick=()=>{wipe();createScreen();};$('#y2').onclick=()=>{wipe();coachCreateScreen();};};}
 
-function offerCard(o,i,label){const c=G.clubs[o.club];
+function offerCard(o,i,label,neg){const c=G.clubs[o.club];
  return `<div class="offer"><div><b>${crest(o.club)} ${esc(c.n)}</b> <span class="muted small">${lgName(c.lg)} · рейтинг ${Math.round(c.r)}</span>${o.note?`<div class="small hlt">${esc(o.note)}</div>`:''}
- <div class="small">Роль: <b>${o.role}</b> · ${o.type==='loan'?'зарплату платит ваш клуб':money(o.wage)+'/год · '+o.yrs+' '+(o.yrs<5?'года':'лет')}</div></div><button class="btn sm" data-o="${i}">${label}</button></div>`;}
+ <div class="small">Роль: <b>${o.role}</b> · ${o.type==='loan'?'зарплату платит ваш клуб':money(o.wage)+'/год · '+o.yrs+' '+(o.yrs<5?'года':'лет')}${o.neg?' <b class="ok">· после торга</b>':''}</div></div><div class="invb" style="margin-top:0;flex-direction:column">${neg&&o.type!=='loan'&&!o.neg?`<button class="btn sm ghost" data-ng="${i}">Торговаться</button>`:''}<button class="btn sm" data-o="${i}">${label}</button></div></div>`;}
 
 function showPending(){const pd=G.pending;const u=G.user,p=G.P[u.pid];
  if(pd.type==='choice'){showChoice();return;}
@@ -3476,7 +3732,7 @@ function showPending(){const pd=G.pending;const u=G.user,p=G.P[u.pid];
   ${s.mental?`<div class="row hlt">Ментальный прорыв: ваш потолок развития вырос</div>`:''}${s.rep?`<div class="row">Репутация в стране<span class="sp"></span><b>${s.rep[0]} → ${s.rep[1]}</b></div>${s.wrep?`<div class="row">Мировая репутация<span class="sp"></span><b>${s.wrep[0]} → ${s.wrep[1]}</b></div>`:''}`:''}
   ${s.buyout?`<div class="row hlt">${esc(s.buyout)} выкупил вас после аренды!</div>`:''}${s.noBuy?`<div class="row muted">${esc(s.noBuy)} не стал выкупать вас — вы вернулись в свой клуб.</div>`:''}
   ${p2SumHtml(s)}
-  ${s.devB?`<h3>Очки развития: +${s.dev}</h3>${s.devB.map(x=>`<div class="row small">${esc(x[0])}<span class="sp"></span><b>+${x[1]}</b></div>`).join('')}${(s.devM||[]).map(x=>`<div class="row small">${esc(x[0])}<span class="sp"></span><b class="${x[1]<1?'bad':''}">×${x[1]}</b></div>`).join('')}${(s.devAw||[]).map(x=>`<div class="row small">${esc(x[0])}<span class="sp"></span><b>${x[1]>=0?'+':''}${x[1]}</b></div>`).join('')}${s.devRaw>DEV_CAP?`<div class="row small bad">Лимит за сезон: ${DEV_CAP} (набрано ${s.devRaw})</div>`:''}`:''}<div class="row small muted">Травм за сезон: ${s.injN||0}</div><div class="btns"><button class="btn big" id="nx">Дальше: развитие (+${s.dev} очков)</button></div>`,'wide');
+  ${s.devB?`<h3>Очки развития: +${s.dev}${s.trPts?` <span class="muted small">(и ещё +${s.trPts} за тренировки по ходу сезона)</span>`:''}</h3>${s.devB.map(x=>`<div class="row small">${esc(x[0])}<span class="sp"></span><b>+${x[1]}</b></div>`).join('')}${(s.devM||[]).map(x=>`<div class="row small">${esc(x[0])}<span class="sp"></span><b class="${x[1]<1?'bad':''}">×${x[1]}</b></div>`).join('')}${(s.devAw||[]).map(x=>`<div class="row small">${esc(x[0])}<span class="sp"></span><b>${x[1]>=0?'+':''}${x[1]}</b></div>`).join('')}${s.devRaw>DEV_CAP?`<div class="row small bad">Лимит за сезон: ${DEV_CAP} (набрано ${s.devRaw})</div>`:''}`:''}<div class="row small muted">Травм за сезон: ${s.injN||0}</div><div class="btns"><button class="btn big" id="nx">Дальше: развитие (+${s.dev} очков)</button></div>`,'wide');
   $('#nx').onclick=()=>{pd.step=1;save();showPending();};return;}
  if(step===1){const w=WEIGHTS[u.pos];const keys=Object.keys(w).sort((a,b)=>w[b]-w[a]);const others=u.pos==='GK'?[]:OUT_ATTRS.filter(k=>!w[k]);
   const ch=s.ch||{};const ar=k=>{const v=u.attr[k];const cost=upgradeCost(k);const d=ch[k];return `<div class="attr"><div class="an"><span>${ATTR_RU[k]}${w[k]?` <i class="kw">★</i>`:''}</span>${d?`<i class="age ${d>0?'pos':'neg'}">${d>0?'+':''}${d} за лето</i>`:''}</div><div class="bar"><i class="${oCls(v)}" style="width:${v}%"></i></div><b>${v}</b>${u.devPts<cost||v>=99?`<span class="upc">${v>=99?'макс':cost+' оч.'}</span>`:`<button class="up" data-k="${k}">+<small>${cost}</small></button>`}</div>`;};
@@ -3490,10 +3746,11 @@ function showPending(){const pd=G.pending;const u=G.user,p=G.P[u.pid];
  let msg='';if(pd.forced)msg='<p class="bad">Вам 42 года — пора завершать карьеру.</p>';
  else if(st.listed)msg=`<p class="bad">${esc(c.n)} выставил вас на трансфер${st.rotation?': вы игрок ротации, а ваша зарплата выше, чем у других игроков ротации':': уровень игрока не устраивает клуб'}. ${yrs<=0?'Контракт закончился и продлевать его не будут.':''}</p>`;
  else msg=`<p>${esc(c.n)} ${st.ext?'предлагает продлить контракт.':'рассчитывает на вас.'}</p>`;
- const opts=[];if(!pd.forced){if(st.ext)opts.push(st.ext);if(yrs>0)opts.push({type:'stay'});pd.offers.forEach(o=>opts.push(o));}
+ const opts=[];if(!pd.forced){if(st.ext&&!st.ext.gone)opts.push(st.ext);if(yrs>0)opts.push({type:'stay'});pd.offers.forEach(o=>{if(!o.gone)opts.push(o);});}
  showModal(`<h2>Контракт и трансферы</h2>${msg}<div class="row">Текущий контракт<span class="sp"></span><b>${money(u.contract.wage)}/год · ${yrs>0?'ещё '+yrs+' '+(yrs===1?'год':yrs<5?'года':'лет'):'истёк'}</b></div>
- ${opts.map((o,i)=>o.type==='stay'?`<div class="offer"><div><b>Остаться в ${esc(c.n)}</b><div class="small muted">Контракт действует ещё ${yrs} ${yrs===1?'год':yrs<5?'года':'лет'}${st.listed?' · мораль снизится':''}</div></div><button class="btn sm" data-o="${i}">Остаться</button></div>`:offerCard(o,i,o.type==='extend'?'Продлить':o.type==='loan'?'В аренду':'Подписать')).join('')}
+ ${opts.map((o,i)=>o.type==='stay'?`<div class="offer"><div><b>Остаться в ${esc(c.n)}</b><div class="small muted">Контракт действует ещё ${yrs} ${yrs===1?'год':yrs<5?'года':'лет'}${st.listed?' · мораль снизится':''}</div></div><button class="btn sm" data-o="${i}">Остаться</button></div>`:offerCard(o,i,o.type==='extend'?'Продлить':o.type==='loan'?'В аренду':'Подписать',1)).join('')}
  ${pd.canRetire||pd.forced?`<div class="btns"><button class="btn bad" id="ret">Завершить карьеру</button></div>`:''}`,'wide');
+ document.querySelectorAll('[data-ng]').forEach(b=>b.onclick=()=>{mgNegotiate(opts[+b.dataset.ng],msg=>{save();if(msg)UI.toast=msg;showPending();render2();});});
  document.querySelectorAll('[data-o]').forEach(b=>b.onclick=()=>{applyDecision(opts[+b.dataset.o]);save();closeModal();UI.tab='season';UI.toast='Новый сезон '+G.year+'/'+String(G.year+1).slice(2)+' начался';render();});
  if($('#ret'))$('#ret').onclick=()=>{showModal(`<h2>Завершить карьеру?</h2><p>Итог: <b>${u.score}</b> очков и <b>${money(u.earn)}</b>.</p><div class="btns"><button class="btn bad" id="y">Да, завершить</button><button class="btn ghost" id="n">Назад</button></div>`);
   $('#n').onclick=()=>showPending();$('#y').onclick=()=>{applyDecision('retire');const H=hof();H.push({name:u.name,nat:flagN(u.nat),pos:POS_RU[u.pos],score:u.score,earn:u.earn,years:u.career.length,tr:u.trophies.length,aw:u.awards.length});try{localStorage.setItem(HOF_KEY,JSON.stringify(H));}catch(e){}save();closeModal();render();};};}
@@ -3559,26 +3816,53 @@ function p2Cards(){const u=G.user,p=G.P[u.pid];let h='';
   h+=`<div class="card cat-card" style="--ec:${EVCAT.rival.c}"><h3><i class="ic ic-chart"></i> Соперник-ровесник</h3><div class="rivalgrid"><div><b>${esc(u.name)}</b><span class="muted small">${p.age} лет · ${esc(G.clubs[p.cl].n)}</span><div class="big ${oCls(p.ovr)}">${p.ovr}</div><span class="small">${t.ap} матчей · ${grp==='DEF'||grp==='GK'?t.cs+' сухих':t.g+' г. + '+t.a+' п.'} · ${t.ap?t.avg.toFixed(2):'—'}</span></div><div class="vsx">VS</div><div><b>${esc(r.n)}</b><span class="muted small">${r.age} лет · ${esc(r.cl>=0?G.clubs[r.cl].n:'—')}</span><div class="big ${oCls(r.ovr)}">${r.ovr}</div><span class="small">${S[0]} матчей · ${grp==='DEF'||grp==='GK'?S[5]+' сухих':S[2]+' г. + '+S[3]+' п.'} · ${S[0]?(S[7]/S[0]).toFixed(2):'—'}</span></div></div><p class="muted small">Сравнение в конце сезона: обошли — +2 очка развития, мораль и репутация; уступили — мораль падает.</p></div>`;}
  // специализации
  const P=myPerks();h+=`<div class="card cat-card" style="--ec:${EVCAT.goal.c}"><h3><i class="ic ic-star"></i> Специализации</h3>${P.length?P.map(x=>`<div class="kv"><span>${esc(x.n)}</span><b class="small">${esc(x.d)}</b></div>`).join(''):'<p class="muted small nh">Первая специализация откроется при рейтинге 75, вторая — при 85.</p>'}</div>`;
+ return h;}
+function p2LifeCards(){const u=G.user,p=G.P[u.pid];let h='';
  // агент и бренд
  const A=AGENTS[u.agent||0],So=SOCIAL[u.social??1];
  h+=`<div class="card cat-card" style="--ec:${EVCAT.brand.c}"><h3><i class="ic ic-brief"></i> Агент и бренд</h3>
   <div class="kv"><span>Агент</span><b>${A.n}</b></div><div class="seg">${AGENTS.map((x,i)=>`<button class="btn sm ${(u.agent||0)===i?'':'ghost'}" data-ag="${i}">${x.n}</button>`).join('')}</div><p class="muted small nh">${esc(A.d)}</p>
   <div class="kv" style="margin-top:8px"><span>Соцсети</span><b>${So.n}</b></div><div class="seg">${SOCIAL.map((x,i)=>`<button class="btn sm ${(u.social??1)===i?'':'ghost'}" data-so="${i}">${x.n.replace(' соцсети','')}</button>`).join('')}</div><p class="muted small nh">${esc(So.d)}</p></div>`;
  // жизнь вне поля
- const L=u.life||{};h+=`<div class="card cat-card" style="--ec:${EVCAT.personal.c}"><h3><i class="ic ic-home"></i> Жизнь вне поля</h3><div class="kv"><span>Капитал</span><b>${money(wealth())}</b></div>${u.inv?`<div class="kv"><span>В инвестициях</span><b>${money(u.inv)}</b></div>`:''}
+ const L=u.life||{};const I=invMig();
+ h+=`<div class="card cat-card" style="--ec:${EVCAT.personal.c}"><h3><i class="ic ic-home"></i> Жизнь вне поля</h3><div class="kv"><span>Свободные деньги</span><b>${money(cash())}</b></div><div class="kv"><span>Капитал с вложениями</span><b>${money(wealth())}</b></div>
   <div class="kv"><span>Семья</span><b>${L.fam===2?'Женаты, есть дети':L.fam===1?'Женаты':'Не женаты'}</b></div>
-  <div class="life">${[['house','Дом','Мораль выше сразу и каждый сезон, развитие чуть лучше'],['car','Машина мечты','Репутация понемногу растёт каждый сезон'],['inv','Инвестировать 25% капитала','Доходность каждый год разная — можно и потерять']].map(([k,n,d])=>{const own=k!=='inv'&&L[k];return `<div class="offer"><div><b>${n}</b><div class="small muted">${d}</div></div>${own?'<b class="ok small">Куплено</b>':`<button class="btn sm" data-buy="${k}" ${wealth()<lifeCost(k)?'disabled':''}>${money(lifeCost(k))}</button>`}</div>`;}).join('')}</div></div>`;
+  <div class="life">${[['house','Дом','Мораль выше сразу и каждый сезон, развитие чуть лучше'],['car','Машина мечты','Репутация понемногу растёт каждый сезон']].map(([k,n,d])=>{const own=L[k];return `<div class="offer"><div><b>${n}</b><div class="small muted">${d}</div></div>${own?'<b class="ok small">Куплено</b>':`<button class="btn sm" data-buy="${k}" ${cash()<lifeCost(k)?'disabled':''}>${money(lifeCost(k))}</button>`}</div>`;}).join('')}</div></div>`;
+ h+=`<div class="card cat-card" style="--ec:${EVCAT.contract.c}"><h3><i class="ic ic-coin"></i> Инвестиции</h3>
+  ${Object.keys(INV).map(k=>{const A=INV[k];const v=(I[k]||{}).v||0;return `<div class="inv"><div><b>${A.n}</b> <span class="small muted">· риск ${A.risk}</span><div class="small muted">${A.d}</div>${v?`<div class="small">Вложено сейчас: <b>${money(v)}</b></div>`:''}</div><div class="invb">${[[.1,'10%'],[.25,'25%'],[.5,'50%']].map(([f,t])=>`<button class="btn sm ghost" data-inv="${k}:${f}" ${cash()*f<10000?'disabled':''}>+${t}</button>`).join('')}${v?`<button class="btn sm ghost" data-ivs="${k}">Забрать</button>`:''}</div></div>`;}).join('')}
+  ${Object.keys(ASSET).map(k=>{const A=ASSET[k];const x=I[k]||{};const lv=x.lv||0;const nx=assetNext(k);return `<div class="inv"><div><b>${A.n}</b>${lv?` <span class="small hlt">· ${esc(A.lv[lv-1][0])} (уровень ${lv} из ${A.lv.length})</span>`:''}<div class="small muted">${A.d}</div>${x.v?`<div class="small">Стоимость: <b>${money(x.v)}</b></div>`:''}</div><div class="invb">${nx?`<button class="btn sm" data-ast="${k}" ${cash()<nx[1]?'disabled':''}>${lv?'Улучшить':'Купить'}: ${esc(nx[0])} · ${money(nx[1])}</button>`:'<b class="ok small">Максимум</b>'}${x.v?`<button class="btn sm ghost" data-ivs="${k}">Продать</button>`:''}</div></div>`;}).join('')}</div>`;
  return h;}
 function p2Bind(){const u=G.user;
  document.querySelectorAll('[data-ag]').forEach(b=>b.onclick=()=>{u.agent=+b.dataset.ag;save();render();});
+ document.querySelectorAll('[data-inv]').forEach(b=>b.onclick=()=>{const [k,f]=b.dataset.inv.split(':');UI.toast=invPut(k,+f);save();render();});
+ document.querySelectorAll('[data-ivs]').forEach(b=>b.onclick=()=>{UI.toast=invTake(b.dataset.ivs);save();render();});
+ document.querySelectorAll('[data-ast]').forEach(b=>b.onclick=()=>{UI.toast=assetBuy(b.dataset.ast);save();render();});
  document.querySelectorAll('[data-so]').forEach(b=>b.onclick=()=>{u.social=+b.dataset.so;save();render();});
  document.querySelectorAll('[data-buy]').forEach(b=>b.onclick=()=>{UI.toast=buyLife(b.dataset.buy);save();render();});}
 function p2SumHtml(s){const x=s.p2||{};let h='';
  if(x.goals)h+=`<h3>Цели сезона: ${x.goals.met} из ${x.goals.n}</h3>${x.goals.L.map(g=>`<div class="row small"><span>${GOAL_RU[g.k]}: ${g.k==='avg'?Number(g.have).toFixed(1):g.have} из ${g.need}</span><span class="sp"></span><b class="${g.ok?'ok':'bad'}">${g.ok?'выполнено':'нет'}</b></div>`).join('')}`;
  if(x.rival)h+=`<div class="row ${x.rival.win?'hlt':''}">Соперник ${esc(x.rival.n)}: ${x.rival.win?'вы его обошли':'он оказался сильнее'}<span class="sp"></span><b>${x.rival.me} : ${x.rival.him}</b></div>`;
  if(s.agentFee)h+=`<div class="row small">Агенту ушло<span class="sp"></span><b class="bad">−${money(s.agentFee)}</b></div>`;
- if(s.invD)h+=`<div class="row small">Инвестиции за год<span class="sp"></span><b class="${s.invD>0?'ok':'bad'}">${s.invD>0?'+':'−'}${money(Math.abs(s.invD))}</b></div>`;
+ if(s.invD)h+=`<div class="row small">Стоимость вложений за год<span class="sp"></span><b class="${s.invD>0?'ok':'bad'}">${s.invD>0?'+':'−'}${money(Math.abs(s.invD))}</b></div>`;if(s.invEv)h+=s.invEv.map(t=>`<div class="row small bad">${esc(t)}</div>`).join('');if(s.invInc)h+=`<div class="row small">Доход от недвижимости и бизнеса<span class="sp"></span><b class="${s.invInc>0?'ok':'bad'}">${s.invInc>0?'+':'−'}${money(Math.abs(s.invInc))}</b></div>`;
  return h;}
+
+// ---------- тренировочные дни ----------
+function trainCard(){const u=G.user;const av=trAvail(),left=trLeft();
+ if(!left)return `<div class="card cat-card" style="--ec:${EVCAT.training.c}"><h3><i class="ic ic-run"></i> Тренировочные дни</h3><p class="muted small nh">Все дни этого сезона использованы. Получено очков развития: ${u.trPts||0}.</p></div>`;
+ const open=UI.trOpen;let h=`<div class="card cat-card" style="--ec:${EVCAT.training.c}"><h3><i class="ic ic-run"></i> Тренировочные дни</h3><div class="kv"><span>Доступно сейчас</span><b>${av}</b></div><div class="kv"><span>Осталось в сезоне</span><b>${left} из 10</b></div>
+ `;
+ if(!av)return h+'<p class="small muted nh">Следующий день откроется позже.</p></div>';
+ if(!open)return h+`<div class="grid2"><button class="btn sm" data-tro="tr"><i class="ic ic-run"></i> Тренировка</button><button class="btn sm ghost" data-tro="pe"><i class="ic ic-home"></i> Личное время</button></div></div>`;
+ if(open==='tr')h+=Object.keys(TR_INT).map(k=>`<button class="evopt" data-trn="${k}"><b>${TR_INT[k].n} тренировка</b><span>${TR_INT[k].d}</span></button>`).join('');
+ else h+=Object.keys(PERS).map(k=>{const c=persCost(k);return `<button class="evopt" data-prs="${k}" ${c&&cash()<c?'disabled':''}><b>${PERS[k].n}${c?' · '+money(c):''}</b><span>${PERS[k].d}</span></button>`;}).join('');
+ return h+'<button class="btn sm ghost" data-tro="">Назад</button></div>';}
+function bindTrain(){document.querySelectorAll('[data-tro]').forEach(b=>b.onclick=()=>{UI.trOpen=b.dataset.tro||null;render();});
+ const fin=r=>{UI.trOpen=null;if(r){UI.toast=r.t;}save();render();};
+ document.querySelectorAll('[data-trn]').forEach(b=>b.onclick=()=>{const k=b.dataset.trn;const why=canTrain();if(why){fin({t:why});return;}G.user.trUsed=(G.user.trUsed||0)+1;save();mgDrill(k,sc=>{closeModal();fin(doTraining(k,sc,1));});});
+ document.querySelectorAll('[data-prs]').forEach(b=>b.onclick=()=>fin(doPersonal(b.dataset.prs)));}
+
+// ---------- вкладка «Карьера»: тренировки, агент и бренд, жизнь вне поля, инвестиции ----------
+function tabLife(){const u=G.user;const m=$('#main');m.innerHTML=(seasonOver()||u.retired?'':trainCard())+p2LifeCards();bindTrain();p2Bind();}
 
 const ISO2={FRA:'FR',ESP:'ES',GER:'DE',ITA:'IT',POR:'PT',NED:'NL',BEL:'BE',TUR:'TR',RUS:'RU',KAZ:'KZ',NOR:'NO',POL:'PL',CZE:'CZ',CRO:'HR',SRB:'RS',DEN:'DK',SWE:'SE',SUI:'CH',AUT:'AT',IRL:'IE',UKR:'UA',GEO:'GE',SVK:'SK',SVN:'SI',HUN:'HU',ROU:'RO',GRE:'GR',BIH:'BA',ALB:'AL',KOS:'XK',ISL:'IS',ARM:'AM',BRA:'BR',ARG:'AR',URU:'UY',COL:'CO',ECU:'EC',PAR:'PY',CHI:'CL',PER:'PE',VEN:'VE',BOL:'BO',USA:'US',MEX:'MX',CAN:'CA',PAN:'PA',JAM:'JM',CRC:'CR',MAR:'MA',SEN:'SN',NGA:'NG',CIV:'CI',GHA:'GH',CMR:'CM',ALG:'DZ',EGY:'EG',TUN:'TN',MLI:'ML',COD:'CD',GUI:'GN',BFA:'BF',GAB:'GA',RSA:'ZA',JPN:'JP',KOR:'KR',IRN:'IR',AUS:'AU',KSA:'SA',QAT:'QA',UZB:'UZ',IRQ:'IQ',UAE:'AE',JOR:'JO',CHN:'CN',NZL:'NZ'};
 const SUBFLAG={ENG:'gbeng',SCO:'gbsct',WAL:'gbwls'};
@@ -3641,11 +3925,12 @@ function cTabSeason(){const C=G.coach;const m=$('#main');const over=seasonOver()
  if(!over&&nf){const comp=G.season.comps[nf.c];const my=comp.nat?C.nt:C.club;const home=nf.h===my;
   h+=`<div class="card next"><div class="muted small">Следующий матч · ${slotDate(nf.s)}</div><div class="comp">${esc(comp.n)} <span class="muted">${esc(stageOf(nf))}</span></div><div class="vs"><span class="${home?'me':''}">${esc(teamN(comp,nf.h))} ${tLogo(comp,nf.h)}</span><b>—</b><span class="${!home?'me':''}">${tLogo(comp,nf.a)} ${esc(teamN(comp,nf.a))}</span></div><div class="muted small" style="margin-top:8px">${esc(tacSummary(comp))}${(()=>{const os=npcStyle(comp,home?nf.a:nf.h);if(!os)return "";const mu=C.tac.auto||comp.nat?0:matchupAdj(C.tac.style,os);return `<br>Стиль соперника: <b>${STYLES[os]}</b>${C.tac.auto||comp.nat?"":` · ваш «${STYLES[C.tac.style]}» — <b class="${mu>0?"ok":mu<0?"bad":""}">${mu>0?"преимущество":mu<0?"уязвимость":"на равных"}</b>`}`;})()}</div></div>`;}
  h+=`<div class="btns3">${!over?`<button class="btn" id="bNext"><i class="ic ic-play"></i> Следующий матч</button>${nf?'<button class="btn ghost" id="bLine" style="grid-column:1/-1"><i class="ic ic-clip"></i> Изменить состав перед матчем</button>':''}${G.slot<WINTER_SLOT?'<button class="btn ghost" id="bMid"><i class="ic ic-ff"></i> До середины</button>':''}<button class="btn ghost" id="bEnd"><i class="ic ic-skip"></i> ${nf&&G.season.comps[nf.c].nat&&G.slot>=LAST_CLUB_SLOT?'До конца турнира':'До конца сезона'}</button>`:'<button class="btn big" id="bSum">Подвести итоги сезона</button>'}</div>${!over&&C.club!==null&&G.slot<LAST_CLUB_SLOT?'<p class="muted small nh" style="margin-top:6px"><i class="ic ic-eye"></i> «До конца сезона» — без событий и ваших решений. Команда играет без вашего участия: мораль, мотивация и доверие игроков падают, поэтому результаты будут хуже обычного.</p>':''}${!over&&C.nt&&G.season.nat&&G.slot<=LAST_CLUB_SLOT&&ntTourName()?`<p class="muted small nh"><i class="ic ic-flag"></i> После клубного сезона — ${esc(ntTourName())}. Перед турниром нужно утвердить заявку сборной (вкладка «Команда» → «Сборная»).</p>`:''}`;
+ if(!over&&nf&&C.club!==null&&!G.season.comps[nf.c].nat&&(nf.ko||nf.leg===2)&&(nf.h===C.club||nf.a===C.club))h+=penPlanHtml(nf);
  const last=C.log[C.log.length-1];if(last)h+=cMatchCard(last);
  if(C.log.length>1)h+=`<div class="card"><h3>Матчи сезона</h3>${C.log.slice().reverse().slice(1,60).map(cMatchRow).join('')}</div>`;
  m.innerHTML=h;
  const run=mode=>{const res=advance(mode);UI.resume=((res==='pending'||res==='event')&&mode!=='match')?mode:null;save();render();if(mode==='match')tgResult();};
- if($('#bNext'))$('#bNext').onclick=()=>run('match');
+ if($('#bNext'))$('#bNext').onclick=()=>run('match');bindPenPlan();
  if($('#bLine'))$('#bLine').onclick=()=>preMatch(()=>run('match'));if($('#bMid'))$('#bMid').onclick=()=>run('mid');
  if($('#bEnd'))$('#bEnd').onclick=()=>{$('#bEnd').textContent='Симуляция…';setTimeout(()=>run('end'),20);};
  if($('#bSum'))$('#bSum').onclick=()=>{endSeason();save();render();};}
@@ -3654,7 +3939,7 @@ function cMatchRow(e){const comp=G.season.comps[e.c];const r=resOf(e);return `<d
 function cMatchCard(e){const C=G.coach;const comp=G.season.comps[e.c];const r=resOf(e);const me=e.nt?flagN(C.nt):(C.ss.team[e.c]!==undefined&&!e.nt?G.clubs[C.ss.team[e.c]].n:'');
  const H=e.h?me:cOpp(e),A=e.h?cOpp(e):me;const myL=e.nt?flagE(C.nt):crest(C.ss.team[e.c]),opL=e.nt?flagE(e.opp):crest(e.opp);const HL=e.h?myL:opL,AL=e.h?opL:myL;const hg=e.h?e.gf:e.ga,ag=e.h?e.ga:e.gf;
  return `<div class="card last ${r}"><div class="muted small">Последний матч · ${esc(comp?comp.n:'')} · ${slotDate(e.s)}</div><div class="score"><span class="${e.h?'me':''}">${esc(H)} ${HL}</span><b>${hg}:${ag}</b><span class="${!e.h?'me':''}">${AL} ${esc(A)}</span></div>
- ${e.agg?`<div class="muted small c">Сумма двух матчей ${e.h?e.agg:e.agg.split(':').reverse().join(':')}</div>`:''}${e.pen?`<div class="small c">${e.pen===1?'Победа':'Поражение'} по пенальти</div>`:''}
+ ${e.agg?`<div class="muted small c">Сумма двух матчей ${e.h?e.agg:e.agg.split(':').reverse().join(':')}</div>`:''}${e.pen?`<div class="small c">${e.pen===1?'Победа':'Поражение'} по пенальти${e.so?' '+e.so:''}</div>`:''}
  <div class="mystat"><span>${e.form} · ${STYLES[e.style]}</span>${e.sc?`<span><i class="ic ic-ball"></i> ${esc(e.sc)}</span>`:''}${e.best?`<span>Лучший: ${esc(e.best)}</span>`:''}</div></div>`;}
 
 // ---------- команда ----------
@@ -3949,6 +4234,7 @@ function finHtml(){const C=G.coach;const sq=squad(C.club).filter(p=>!p.ret);cons
  ${finTable(sq,'fin')}<p class="muted small">По арендованным игрокам в итог входит только ваша доля зарплаты. Нажмите на игрока, чтобы продлить контракт, продать или отдать в аренду.</p></div>`;}
 function cShowPending2(pd){const C=G.coach;
  if(pd.type==='choice'){showChoice();return true;}
+ if(pd.type==='csub'){mgCoachSub(pd,()=>{G.pending=null;save();closeModal();contAfter();});return true;}
  if(pd.type==='ntcall'){ntClean();const v=ntValid(C.ntSq);const sug=ntSuggest();const ps=C.ntSq.map(i=>G.P[i]);const ch=ntChem(C.ntSq,ntForm(ps));const sch=ntChem(sug,ntForm(sug.map(i=>G.P[i])));
   const xr=ps.length>=11?Math.round(xiRating(ps,FORMS[ntForm(ps)])):0,sr=Math.round(xiRating(sug.map(i=>G.P[i]),FORMS[ntForm(sug.map(i=>G.P[i]))]));
   evModal('nt',`<h2>Заявка сборной: ${esc(ntTourName())}</h2><p class="evd">Клубный сезон заканчивается. Федерация футбола ждёт окончательный список игроков на турнир: от 18 до 26 человек, минимум 2 вратаря.</p>
@@ -4084,7 +4370,7 @@ function m38SaveBest(){const B=m38Best();const k=M.lg;const r=M.rec;const o=B[k]
 function m38Setup(){G=null;M={lg:M&&M.lg||'ENG1',form:M&&M.form||'4-3-3',name:M&&M.name||'Мой клуб'};
  const B=m38Best();
  const draw=()=>{app.innerHTML=`<div class="page m38"><div class="m38head"><button class="icon" id="mBack" title="Назад">${ic('menu')}</button><b>38-0-0</b><span class="sp"></span></div>
- <div class="card hl"><h2>Собери непобедимых</h2><p class="nh">11 раз тебе выпадают 3 игрока лиги примерно одного уровня — забираешь одного. Чаще всего выпадают середняки и крепкие игроки, звёзды — редкость. Не выбранные больше не появятся. Игрок встаёт только на свою позицию; исключения со штрафом: ЦАП→ЦП, ЦП→ЦОП или ЦАП, ЛВ↔ПВ — игрок не на родной позиции заметно ослабляет команду. Скрытая сыгранность весит столько же, сколько рейтинг: игроки из одного клуба сыграны сильнее всего, из одной сборной — слабее. Сильные игроки без связей могут оказаться внизу таблицы. Твой клуб занимает место самого слабого в лиге и играет один сезон. Цель — выиграть все матчи.</p></div>
+ <div class="card hl"><h2>Собери непобедимых</h2><p class="nh">11 раз тебе выпадают 3 игрока лиги примерно одного уровня — забираешь одного. Твой клуб занимает место самого слабого в лиге и играет один сезон. Цель — выиграть все матчи.</p></div>
  <h3>1. Лига</h3><div class="m38grid">${M38_LG.map(id=>{const b=B[id];return `<button class="btn ghost m38opt${M.lg===id?' on':''}" data-lg="${id}">${flagE(LG[id].c)} <span>${esc(LG[id].n)}</span><i class="small muted">цель ${2*(LG[id].cl.split('|').length-1)}-0-0</i>${b?`<i class="small muted">рекорд ${b.w}-${b.d}-${b.l}</i>`:''}</button>`;}).join('')}</div>
  <h3>2. Схема</h3><div class="m38grid f">${Object.keys(FORMS).map(f=>`<button class="btn ghost m38opt${M.form===f?' on':''}" data-f="${f}">${f}</button>`).join('')}</div>
  <p class="small muted m38slots">${M38_FORMS[M.form].slice().sort((a,b)=>M38_ORD.indexOf(a)-M38_ORD.indexOf(b)).map(s=>m38P(s)).join(' · ')}</p>
