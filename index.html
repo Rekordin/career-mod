@@ -338,6 +338,60 @@ b.ok,.ok{color:var(--good)}
 .mg-tgt button{aspect-ratio:1;border-radius:50%;border:2px solid rgba(255,255,255,.15);background:rgba(255,255,255,.04);cursor:pointer}
 .mg-tgt button.on{background:radial-gradient(circle,#fff 0 18%,#ff3b4e 19% 45%,#fff 46% 55%,#ff3b4e 56%);border-color:#ff3b4e;box-shadow:0 0 16px rgba(255,59,78,.7)}
 .evopt.sel{outline:2px solid #ff3b4e !important;background:rgba(255,59,78,.18) !important}
+.lock{font-style:normal;font-size:11px;font-weight:700;color:#ffd27a;background:rgba(255,210,122,.12);border:1px solid rgba(255,210,122,.35);border-radius:6px;padding:1px 6px;margin-left:6px;vertical-align:middle}
+.netbar{margin-top:10px}
+.shop{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px;border:1px solid rgba(255,255,255,.08);border-radius:12px;margin:8px 0;background:rgba(255,255,255,.03)}
+.shop.focus{border-color:#ffd27a;box-shadow:0 0 0 1px rgba(255,210,122,.4)}
+.shop>div:first-child{flex:1;min-width:0}
+.shop .pr{display:flex;flex-direction:column;align-items:center;gap:4px;flex:0 0 auto}
+.shop.col{flex-direction:column;align-items:stretch}.shop.col .invb{margin-top:6px}
+
+.crest img{display:block}
+
+/* битва составов */
+.btcards{grid-template-columns:repeat(5,1fr);gap:5px}.btcards .m38c{padding:9px 6px 24px}.btcards .m38o b{font-size:22px}.btcards .m38n{font-size:12px}.btcards .m38m{font-size:10px}
+@media(max-width:520px){.btcards{grid-template-columns:repeat(3,1fr)}}
+.btp.off{cursor:default}.btp.off .m38c{opacity:.55}.m38c.gone{opacity:.35;filter:grayscale(.7)}
+.bttk{position:absolute;left:6px;bottom:6px;font-style:normal;font-size:10px;font-weight:700;padding:1px 5px;background:rgba(0,0,0,.45)}.bttk.me{color:var(--good)}.bttk.op{color:var(--bad)}.bttk.no{color:var(--mu);font-weight:500}
+.btturn{text-align:center;font-weight:700;padding:8px;margin-bottom:6px;background:rgba(255,255,255,.05)}.btturn.me{background:linear-gradient(135deg,var(--ac2),var(--ac));color:#fff}
+.btbar{height:4px;background:rgba(255,255,255,.1);margin:-2px 0 8px;overflow:hidden}.btbar i{display:block;height:100%;background:var(--gold);animation:btbar linear forwards}
+@keyframes btbar{to{width:0}}
+.btsum{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:10px 0 4px}.btsum div{display:flex;flex-direction:column;font-size:12px}.btsum span{color:var(--mu)}
+.btboards{display:grid;grid-template-columns:1fr 1fr;gap:8px;align-items:start}
+.btpitch{aspect-ratio:3/3.8;margin:0}.btpitch .pp{width:62px}.btpitch .pp b{font-size:11px;padding:2px 5px}.btpitch .pp span{font-size:10px}.btpitch .pp i{font-size:8.5px}
+@media(max-width:520px){.btpitch .pp{width:48px}.btpitch .pp b{font-size:9.5px;padding:1px 4px}.btpitch .pp span{font-size:8.5px}.btpitch .pp i{font-size:7.5px}}
+.btpitch.me{border:2px solid var(--good);box-shadow:0 0 14px rgba(63,209,122,.35),inset 0 0 60px rgba(0,0,0,.5)}.btpitch.op{border:2px solid var(--bad);box-shadow:0 0 14px rgba(255,90,110,.3),inset 0 0 60px rgba(0,0,0,.5)}
+.btname{text-align:center;font-weight:700;font-size:13px;margin-bottom:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.btname.me{color:var(--good)}.btname.op{color:var(--bad)}
+.btscore .btname{font-size:15px;margin:0}
+.btpitch .neg{color:var(--bad);font-style:normal;font-weight:700}
+.btscore{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;text-align:center;margin:10px 0}.btscore>div{display:flex;flex-direction:column;gap:3px}
+.btscore>.sc{display:block;white-space:nowrap;font-size:30px}.btscore .sc b{font-family:var(--hf);font-size:42px;font-weight:600}.btscore .sc div{font-size:12px}
+.btfeed{max-height:52vh;overflow:auto;display:flex;flex-direction:column;gap:4px}.btev{font-size:13px;padding:5px 8px;border-left:3px solid transparent}.btev .m{font-style:normal;color:var(--mu);margin-right:4px;font-size:11px}
+.btev{max-width:82%}.btev.me{border-color:var(--good);align-self:flex-start;text-align:left}.btev.op{border-left-color:transparent;border-right:3px solid var(--bad);align-self:flex-end;text-align:right}.btev.sys{align-self:stretch;max-width:none}.btev.goal{background:rgba(255,255,255,.07)}.btev.sys{color:var(--mu);text-align:center}.btev.miss{opacity:.7}
+.bfin{text-align:center}.bfin.win h2{color:var(--good)}.bfin.lose h2{color:var(--bad)}
+.btboards{max-width:640px;margin:0 auto}.btsum{max-width:640px;margin-left:auto;margin-right:auto}
+.btopts{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:6px}.btopts .btn{flex:1 1 30%;min-width:96px;font-size:12px;padding:9px 6px}
+.btboards.one{grid-template-columns:1fr;max-width:340px}
+.bttac{display:grid;grid-template-columns:1fr 1fr;gap:8px;max-width:640px;margin:10px auto 6px;font-size:12px;text-align:center}
+.btsl{cursor:pointer;z-index:2}.btsl.sel b{outline:2px solid var(--gold);outline-offset:2px}
+.m38o small{font-size:10px;font-weight:500}
+.btopts .btn{white-space:normal;line-height:1.2;overflow:visible;text-overflow:clip}
+.bttc{min-height:74px}.bttc .m38n{font-size:13px}.btnof{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--mu);font-size:12px;text-align:center;padding:8px}
+.bttm{font-size:11px;color:var(--mu);line-height:1.3}
+.mode.ghost:has(.mlogo),.mode:has(.mlogo){display:flex!important;align-items:center;gap:14px}
+.mlogo{flex:none;width:56px;height:56px;display:grid;place-items:center;border-radius:14px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.18),0 6px 16px rgba(0,0,0,.35)}
+.mlogo svg{width:40px;height:40px}
+.ml-player{background:linear-gradient(145deg,#e8394d,#8e1426)}.ml-coach{background:linear-gradient(145deg,#2f7d5a,#123d2b)}
+.ml-m38{background:linear-gradient(145deg,#3a5bd9,#152a6e)}.ml-bt{background:linear-gradient(145deg,#4a2d7a,#1c1236)}
+.mode>div{min-width:0}
+.m38head .mlogo{width:34px;height:34px;border-radius:9px}.m38head .mlogo svg{width:24px;height:24px}
+h2.mh{display:flex;align-items:center;gap:12px}h2.mh .mlogo{width:40px;height:40px;border-radius:11px}h2.mh .mlogo svg{width:28px;height:28px}
+.btmb{margin:6px auto 8px}.btmb .btpitch{aspect-ratio:3/3.3}
+.btm .btfeed{height:30vh;min-height:150px;max-height:none;overflow-y:auto}
+.btmk{position:absolute;top:-6px;right:2px;display:flex;gap:2px;text-decoration:none;font-size:9px;line-height:1;pointer-events:none}
+.btmk b{background:#fff;color:#111;border-radius:7px;padding:1px 3px;font-weight:700}.btmk i{font-style:normal;background:var(--gold);color:#111;border-radius:7px;padding:1px 3px;font-weight:700}
+.btmk em{width:6px;height:9px;background:#ffd400;border-radius:1px;display:inline-block}
+.pp.flash b.ovr-s{animation:btfl .9s ease-out}@keyframes btfl{0%{box-shadow:0 0 0 0 rgba(255,255,255,.9)}100%{box-shadow:0 0 0 10px rgba(255,255,255,0)}}
 
 .ic{display:inline-block;width:1.1em;height:1.1em;vertical-align:-.18em;background:currentColor;-webkit-mask:var(--i) center/contain no-repeat;mask:var(--i) center/contain no-repeat;font-style:normal}
 .ic-ball{--i:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22black%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22square%22%20stroke-linejoin%3D%22miter%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%229%22%2F%3E%3Cpath%20d%3D%22M12%207.6l4.2%203-1.6%204.9H9.4L7.8%2010.6z%22%2F%3E%3Cpath%20d%3D%22M12%203v4.6M16.2%2010.6l4.4-1.5M14.6%2015.5l2.7%203.8M9.4%2015.5l-2.7%203.8M7.8%2010.6L3.4%209.1%22%2F%3E%3C%2Fsvg%3E")}
@@ -383,6 +437,8 @@ b.ok,.ok{color:var(--good)}
 body{padding-top:env(safe-area-inset-top)}</style></head>
 <body><div id="app"></div>
 <script>
+const MONET=false;
+const ALT_NAMES=false;
 // ===================== ДАННЫЕ МИРА =====================
 // Составы топ-5 лиг — по официальной базе рейтингов EA SPORTS FC 27 (состояние на 06.11.2026).
 // Остальные лиги — ключевые реальные игроки, часть составов генерируется.
@@ -1084,6 +1140,19 @@ function winterOffers(){const u=G.user;if(!u||u.retired)return null;const share=
 const DT_NAMES=['ранний расцвет','обычное развитие','поздний расцвет'];
 function calcOvr(attr,pos){const w=WEIGHTS[pos];let s=0;for(const k in w)s+=w[k]*attr[k];return Math.round(s);}
 function syncUser(){const u=G.user,p=G.P[u.pid];p.ovr=calcOvr(u.attr,u.pos);u.att=p.ovr;}
+// ---------- телосложение: рост и вес меняют стартовые навыки и цену прокачки ----------
+// рост: высокий — сильнее физика, баланс, защита и агрессия; низкий — лучше дриблинг, видение, контроль мяча и ловкость
+// вес относительно роста: тяжёлый — медленнее и менее ловкий, но мощнее; лёгкий — быстрее, но слабее физически и менее агрессивен
+function bodyRel(h,wt){return {hk:clamp(((h||182)-182)/10,-2.2,2.3),wk:clamp(((wt||76)-((h||182)-105))/10,-2,2)};}
+function bodyMods(h,wt){const {hk,wk}=bodyRel(h,wt);
+ return {phy:3*hk+2.5*wk,bal:2*hk,def:2*hk,agg:2*hk+2*wk,dri:-2.5*hk,vis:-1.5*hk,bc:-2*hk,agi:-3*hk-3*wk,pac:-3*wk};}
+function bodyCostMul(k){const u=G.user;if(!u)return 1;const {hk,wk}=bodyRel(u.h,u.wt);
+ if(wk>=.6&&(k==='pac'||k==='agi'))return 1.3;if(wk<=-.6&&(k==='phy'||k==='agg'))return 1.3;
+ if(hk>=.8&&(k==='agi'||k==='dri'))return 1.25;if(hk<=-1&&(k==='phy'||k==='bal'))return 1.25;return 1;}
+function bodyText(h,wt){const {hk,wk}=bodyRel(h,wt);const a=[];
+ if(hk>=.6)a.push('высокий: сильнее в борьбе, защите и балансе, хуже дриблинг и ловкость');else if(hk<=-.6)a.push('невысокий: лучше дриблинг, видение, контроль мяча и ловкость, слабее физически');
+ if(wk>=.6)a.push('тяжёлый: мощнее, но медленнее и менее ловкий — скорость и ловкость прокачиваются дороже');else if(wk<=-.6)a.push('лёгкий: быстрее и ловчее, но меньше физики и агрессии — их прокачка дороже');
+ return a.length?a.join('; '):'сбалансированное телосложение';}
 function createUser(o){
  const startOvr=clamp(Math.round(55+(o.age-16)*1.6+ri(0,4)),55,68);
  const attr={};const keys=o.pos==='GK'?GK_ATTRS:OUT_ATTRS;const all=[...new Set([...OUT_ATTRS,...GK_ATTRS])];
@@ -1094,7 +1163,7 @@ function createUser(o){
  const pr=PR[{RW:'LW',RM:'LM',RB:'LB'}[o.pos]||o.pos]||{};
  for(const k of all){if(OUT_ATTRS.includes(k))attr[k]=base[k]+(pr[k]||0)+ri(-3,3);else attr[k]=o.pos==='GK'?startOvr+ri(-3,3):ri(8,20);}
  // физика по росту/весу
- if(o.h>=188){attr.phy+=3;attr.agi-=2;}if(o.h<=174){attr.agi+=3;attr.bal+=2;attr.phy-=2;}
+ {const B=bodyMods(o.h,o.wt);for(const k in B)if(attr[k]!==undefined)attr[k]=clamp(Math.round(attr[k]+B[k]),20,99);}
  const PHYS=['pac','phy','agi','bal'];const fit=Object.keys(w).filter(k=>!PHYS.includes(k));const fw=fit.reduce((a,k)=>a+w[k],0);
  for(let it=0;it<8;it++){const d=startOvr-calcOvr(attr,o.pos);if(!d)break;for(const k of fit)attr[k]=clamp(attr[k]+Math.round(d/fw),20,99);if(Math.abs(d)<=1){attr[fit[0]]+=d;break;}}
  const pot=clamp(Math.round(80+gauss()*5),70,94);
@@ -1117,7 +1186,7 @@ function leagueCap(){const u=G.user,p=G.P[u.pid];if(p.cl<0)return 99;const ids=G
 function capMul(){const p=G.P[G.user.pid];const c=leagueCap();return p.ovr>=c+6?4:p.ovr>=c+3?3:p.ovr>=c?2:1;}
 function capGrow(){const p=G.P[G.user.pid];const c=leagueCap();return p.ovr>=c+3?.25:p.ovr>=c?.5:1;}
 function mentalBreak(){const a=G.user.attr;return a.iq>=87&&a.men>=87&&a.agg>=87&&a.bal>=87;}
-function upgradeCost(k){const u=G.user,p=G.P[u.pid];return attrCost(u.attr[k])*Math.min(4,(p.ovr>=u.pot&&!mentalBreak()?3:1)*capMul());}
+function upgradeCost(k){const u=G.user,p=G.P[u.pid];return Math.max(1,Math.round(attrCost(u.attr[k])*bodyCostMul(k)))*Math.min(4,(p.ovr>=u.pot&&!mentalBreak()?3:1)*capMul());}
 function upgrade(k){const u=G.user;const c=upgradeCost(k);if(u.devPts<c||u.attr[k]>=99)return false;u.devPts-=c;u.attr[k]++;syncUser();return true;}
 
 function natGrowthFactor(age,dt){
@@ -1550,7 +1619,8 @@ function repOf(p){if(p.u)return G.user.wrep??G.user.rep;if(p.ret||!(p.cl>=0))ret
  return clamp(clamp((c.rep-58)/28,0,1)*60+clamp((p.ovr-70)*2,0,40),1,100)*(.4+.6*sh);}
 
 // --------- неожиданные события (2-3 за карьеру) ---------
-const LEGENDS={ARG:'Месси',BRA:'Пеле',POR:'Роналду',FRA:'Зиданом',ENG:'Бекхэмом',ESP:'Иньестой',ITA:'Тотти',GER:'Беккенбауэром',NED:'Кройфом',BEL:'Азаром',CRO:'Модричем',NOR:'Холандом',POL:'Левандовским',URU:'Суаресом',EGY:'Салахом',KOR:'Сон Хын Мином'};
+// в сборке без лицензии имена легенд подменяются (LEGENDS_ALT создаёт tools/alt.js)
+const LEGENDS=typeof LEGENDS_ALT!=='undefined'?LEGENDS_ALT:{ARG:'Месси',BRA:'Пеле',POR:'Роналду',FRA:'Зиданом',ENG:'Бекхэмом',ESP:'Иньестой',ITA:'Тотти',GER:'Беккенбауэром',NED:'Кройфом',BEL:'Азаром',CRO:'Модричем',NOR:'Холандом',POL:'Левандовским',URU:'Суаресом',EGY:'Салахом',KOR:'Сон Хын Мином'};
 const SHOCKS={
  accuse:{t:'Скандал в СМИ',c:u=>!u.accused&&u.rep>=20,run:u=>{u.accused=1;modMor(-20);u.rep=clamp(u.rep*.7,1,100);return 'В СМИ появились слухи, что неизвестная девушка выдвинула против вас обвинения в суде. Мораль −20, репутация −30%.';}},
  cleared:{t:'Вы оправданы',c:u=>u.accused===1,run:u=>{u.accused=2;modMor(20);u.rep=clamp(u.rep*1.4,1,100);return 'С вас сняли все обвинения и признали невиновным. Мораль +20, репутация +40%.';}},
@@ -3291,6 +3361,97 @@ function mgCoachSub(pd,done){const C=G.coach;const cs=pd.ids.map(i=>G.P[i]);let 
    evModal('tactic',`<h2>План на концовку</h2><div class="tier ${ok?'t0':'t3'}">${ok?'Удачный выбор':'Сомнительный выбор'}</div><p>${txt}</p><div class="btns"><button class="btn big" id="sbOk">Продолжить</button></div>`);$('#sbOk').onclick=()=>done();};};
  draw();}
 
+// ===================== СЕРВЕР: покупки, Premium, облачные сохранения, топ месяца, реклама =====================
+// Работает только в сборке для Telegram (MONET=true). В веб-версии игра полностью офлайн и бесплатна.
+// Реклама и покупки не дают никаких преимуществ в карьерах — только доступ к режимам, слоты и отсутствие рекламы.
+const NET={me:null,err:null,lastAd:Date.now(),busy:false,lastSync:0};
+function netOn(){return typeof MONET!=='undefined'&&MONET&&typeof TG!=='undefined'&&!!TG;}
+async function api(p,opt){opt=opt||{};const r=await fetch('/api'+p,{method:opt.method||'GET',headers:{'Content-Type':'application/json','X-Init-Data':TG.initData},body:opt.body?JSON.stringify(opt.body):undefined});
+ const j=await r.json().catch(()=>({}));if(!r.ok)throw Object.assign(new Error(j.error||('Ошибка '+r.status)),{code:j.code,status:r.status,mode:j.mode});return j;}
+async function netMe(){if(!netOn())return null;try{NET.me=await api('/me');NET.err=null;}catch(e){NET.err=e.message;}return NET.me;}
+function isPrem(){return !netOn()||!!(NET.me&&NET.me.premium);}
+const MODE_ITEM={coach:'coach',m38:'m38'};
+function modeOk(m){if(!netOn())return true;const me=NET.me;if(!me)return m==='player';return me.premium||me.freeModes.includes(m)||!!me.modes[m];}
+function starsRub(n){return '≈ '+Math.round(n*1.7)+'–'+Math.round(n*2.2)+' ₽';}
+function netToast(t){UI.toast=t;if(typeof render2==='function')render2();}
+
+// ---------- магазин ----------
+function storeModal(focus){if(!netOn())return;const me=NET.me;if(!me){netToast('Нет связи с сервером. Попробуйте позже.');netMe();return;}
+ const C=me.catalog;const until=k=>(me.subs||{})[k]||0;const own=k=>k==='premium'?me.premium:(!!me.modes[k]||me.premium);
+ const card=k=>{const it=C[k];const has=own(k);return `<div class="shop ${focus===k?'focus':''}"><div><b>${esc(it.title)}</b><div class="small muted">${esc(it.desc)}</div></div>
+  ${has?`<b class="ok small">${k!=='premium'&&me.premium&&until(k)<Date.now()?'Входит в Premium':'Активно до '+new Date(until(k)).toLocaleDateString('ru-RU')}</b>`:`<div class="pr"><button class="btn sm" data-buy="${k}">★ ${it.stars}${it.kind==='sub'?' / 30 дн.':''}</button><div class="small muted">${starsRub(it.stars)}</div></div>`}</div>`;};
+ showModal(`<h2>Магазин</h2><p class="muted small">Карьера игрока и 38-0-0 бесплатны, «Битва составов» — 5 матчей в день бесплатно. Подписки открывают режимы, слоты сохранений и убирают рекламу — и ничего не дают в самих карьерах.</p>
+  ${card('premium')}${card('coach')}
+  <div class="btns"><button class="btn ghost" id="shX">Закрыть</button></div>`);
+ $('#shX').onclick=()=>{closeModal();};
+ document.querySelectorAll('[data-buy]').forEach(b=>b.onclick=()=>netBuy(b.dataset.buy));}
+async function netBuy(item){try{b0();const {link}=await api('/buy',{method:'POST',body:{item}});
+  TG.openInvoice(link,async st=>{if(st==='paid'){netToast('Оплата прошла — спасибо!');for(let i=0;i<6;i++){await new Promise(r=>setTimeout(r,1200));await netMe();const me=NET.me;if(me&&(me.modes[item]||(item==='premium'&&me.premium)))break;}closeModal();if(typeof NET.after==='function'){const f=NET.after;NET.after=null;f();}else if(!G||document.querySelector('.start'))startScreen();else render();}
+   else if(st==='failed')netToast('Оплата не прошла');});}
+ catch(e){netToast(e.message);}finally{b1();}}
+function b0(){NET.busy=true;}function b1(){NET.busy=false;}
+
+// ---------- топ месяца ----------
+async function topModal(){showModal('<h2>Топ месяца</h2><p class="muted">Загрузка…</p>');let t;try{t=await api('/top');}catch(e){showModal(`<h2>Топ месяца</h2><p class="bad">${esc(e.message)}</p>`);return;}
+ const mn=new Date(t.month+'-01T00:00:00Z').toLocaleDateString('ru-RU',{month:'long',year:'numeric'});
+ showModal(`<h2>Топ месяца</h2><p class="small muted">${esc(mn)}. Считаются очки лучшей карьеры игрока, набранные в этом месяце. Лидер месяца получает Premium на ${t.prizeDays} дней.</p>
+  ${t.lastWinner?`<div class="row small"><span>Победитель прошлого месяца</span><span class="sp"></span><b>${esc(t.lastWinner.name)} · ${t.lastWinner.pts}</b></div>`:''}
+  <div class="card" style="padding:6px 10px">${t.rows.length?t.rows.map(r=>`<div class="row ${r.me?'hlt':''}"><b style="width:28px">${r.rank}</b><div><b>${esc(r.name)}</b><div class="small muted">${esc(r.career||'')}${r.club?' · '+esc(r.club):''}</div></div><span class="sp"></span><b>${r.pts}</b></div>`).join(''):'<p class="muted">В этом месяце пока никто не набрал очков. Ваш шанс!</p>'}</div>
+  ${t.me?`<p class="c">Ваше место: <b>${t.me.rank}</b> · ${t.me.pts} очк.</p>`:'<p class="small muted c">Сыграйте сезон в карьере игрока, чтобы попасть в топ.</p>'}
+  <div class="btns"><button class="btn ghost" id="tpX">Закрыть</button></div>`);$('#tpX').onclick=closeModal;}
+
+// ---------- облачные сохранения ----------
+function b64(buf){const a=new Uint8Array(buf);let s='';for(let i=0;i<a.length;i+=0x8000)s+=String.fromCharCode.apply(null,a.subarray(i,i+0x8000));return btoa(s);}
+function unb64(s){const b=atob(s);const a=new Uint8Array(b.length);for(let i=0;i<b.length;i++)a[i]=b.charCodeAt(i);return a;}
+async function gz(str){const st=new Blob([str]).stream().pipeThrough(new CompressionStream('gzip'));return b64(await new Response(st).arrayBuffer());}
+async function ungz(s){const st=new Blob([unb64(s)]).stream().pipeThrough(new DecompressionStream('gzip'));return await new Response(st).text();}
+function gameMeta(){if(!G)return null;const mode=G.mode==='coach'?'coach':G.user?'player':null;if(!mode)return null;
+ const name=mode==='coach'?G.coach.name+(G.coach.club!==null?' · '+G.clubs[G.coach.club].n:''):G.user.name+(G.P[G.user.pid].cl>=0?' · '+G.clubs[G.P[G.user.pid].cl].n:'');return {mode,name,year:G.year,careerId:G.cid||''};}
+async function cloudPut(slot,quiet){if(!netOn()||!G)return false;const m=gameMeta();if(!m)return false;
+ try{const data=await gz(packGame());await api('/save/'+slot,{method:'PUT',body:Object.assign({data},m)});G.cslot=slot;NET.lastSync=Date.now();save();if(!quiet)netToast('Сохранено в облако: слот '+slot);await netMe();return true;}
+ catch(e){if(!quiet)netToast(e.code==='premium'?'Этот слот доступен с Premium':e.message);return false;}}
+async function cloudGet(slot){try{const r=await api('/save/'+slot);const txt=await ungz(r.data);unpackGame(txt);G.cslot=slot;save();closeModal();render();netToast('Загружено из облака');}
+ catch(e){if(e.code==='mode'){storeModal(MODE_ITEM[e.mode]);return;}netToast(e.message);}}
+async function cloudDel(slot){try{await api('/save/'+slot,{method:'DELETE'});await netMe();slotsModal();}catch(e){netToast(e.message);}}
+function slotsModal(){const me=NET.me;if(!me){netToast('Нет связи с сервером');return;}let has=false;try{has=!!localStorage.getItem(KEY);}catch(e){}
+ if(has&&!G){try{loadSave();}catch(e){}}const m=has&&G?gameMeta():null;
+ let h=`<h2>Сохранения в облаке</h2><p class="small muted">Текущая игра автоматически сохраняется в свой слот в конце каждого сезона. ${me.premium?'С Premium доступно 5 слотов.':'Бесплатно — 1 слот, с Premium — 5.'}</p>`;
+ for(let s=1;s<=me.maxSlots;s++){const x=me.slotMeta[s];const locked=s>me.slots;
+  h+=`<div class="shop ${locked?'':'col'}"><div><b>Слот ${s}${G&&G.cslot===s?' · текущий':''}</b><div class="small muted">${x?esc((x.mode==='coach'?'Тренер ':'Игрок ')+x.name)+' · сезон '+x.year+'/'+String(x.year+1).slice(2)+' · '+new Date(x.at).toLocaleDateString('ru-RU'):'Пусто'}</div></div>
+  ${locked?`<button class="btn sm ghost" data-prem="1">Premium</button>`:`<div class="invb" style="margin-top:0">${x?`<button class="btn sm" data-cl="${s}">Загрузить</button>`:''}${m?`<button class="btn sm ghost" data-cs="${s}">Сохранить сюда</button>`:''}${x?`<button class="btn sm ghost" data-cd="${s}">Удалить</button>`:''}</div>`}</div>`;}
+ h+=`<div class="btns"><button class="btn ghost" id="slX">Закрыть</button></div>`;showModal(h);$('#slX').onclick=closeModal;
+ document.querySelectorAll('[data-prem]').forEach(b=>b.onclick=()=>storeModal('premium'));
+ document.querySelectorAll('[data-cl]').forEach(b=>b.onclick=()=>cloudGet(+b.dataset.cl));
+ document.querySelectorAll('[data-cs]').forEach(b=>b.onclick=async()=>{await cloudPut(+b.dataset.cs);slotsModal();});
+ document.querySelectorAll('[data-cd]').forEach(b=>b.onclick=()=>{showModal(`<h2>Удалить слот ${b.dataset.cd}?</h2><div class="btns"><button class="btn bad" id="y">Удалить</button><button class="btn ghost" id="n">Отмена</button></div>`);$('#n').onclick=slotsModal;$('#y').onclick=()=>cloudDel(+b.dataset.cd);});}
+
+// ---------- регистрация карьеры и итоги сезонов ----------
+async function netCareerStart(){if(!netOn()||!G)return;const m=gameMeta();if(!m)return;G.cid=null;G.cn=0;G.netQ=[];G.cslot=G.cslot||1;
+ const grp=m.mode==='player'?GROUP[G.user.pos]:'';const club=m.mode==='coach'?(G.coach.club!==null?G.clubs[G.coach.club].n:''):(G.P[G.user.pid].cl>=0?G.clubs[G.P[G.user.pid].cl].n:'');
+ try{const r=await api('/career/start',{method:'POST',body:{mode:m.mode,grp,name:m.mode==='coach'?G.coach.name:G.user.name,club}});G.cid=r.id;save();}catch(e){}}
+function seasonRec(sum){if(G.mode==='coach'){const s=sum||(G.pending&&G.pending.sum)||{};return {y:G.year,pts:Math.round((s.pts||0)*10)/10,tr:(s.tr||[]).map(t=>({n:t.n,p:t.p})),aw:(s.aw||[]).map(t=>({n:t.n,p:t.p}))};}
+ const u=G.user;return {y:sum.y,age:sum.age,pts:sum.pts,T:sum.T,tr:sum.tr.map(t=>({n:t.n,p:t.p})),aw:sum.aw.map(t=>({n:t.n,p:t.p})),ovr:G.P[u.pid].ovr,attrSum:Object.values(u.attr).reduce((a,b)=>a+b,0)};}
+async function netFlush(){if(!netOn()||!G||!G.cid||!G.netQ||!G.netQ.length)return;
+ while(G.netQ.length){const q=G.netQ[0];try{const r=await api('/career/season',{method:'POST',body:{id:G.cid,n:q.n,rec:q.rec}});G.netQ.shift();G.netLast=r;
+  if(r.ok&&r.ranked===false&&!G.netWarn){G.netWarn=1;netToast('Эта карьера больше не участвует в топе месяца');}}catch(e){break;}}save();}
+function netSeasonEnd(sum){if(!netOn()||!G||!G.cid)return;if(G.mode!=='coach'&&(!G.user||G.user.retired&&!sum))return;
+ G.cn=(G.cn||0)+1;(G.netQ=G.netQ||[]).push({n:G.cn,rec:seasonRec(sum)});save();netFlush().then(()=>cloudPut(G.cslot||1,true));}
+
+// ---------- реклама (только межстраничная, без наград; Premium — без рекламы) ----------
+let ADS=null;
+function netAd(){if(!netOn()||!NET.me||!NET.me.ads||isPrem())return;if(Date.now()-NET.lastAd<4*60e3)return;NET.lastAd=Date.now();
+ const go=()=>{try{if(!ADS)ADS=window.Adsgram.init({blockId:NET.me.ads});ADS.show().catch(()=>{});}catch(e){}};
+ if(window.Adsgram)go();else{const s=document.createElement('script');s.src='https://sad.adsgram.ai/js/sad.min.js';s.onload=go;document.head.appendChild(s);}}
+
+// ---------- подключение к игре ----------
+(function netHooks(){if(typeof MONET==='undefined'||!MONET)return;
+ const _cu=createUser;createUser=function(){const r=_cu.apply(this,arguments);setTimeout(netCareerStart,0);return r;};
+ const _cc=createCoach;createCoach=function(){const r=_cc.apply(this,arguments);setTimeout(netCareerStart,0);return r;};
+ const _es=endSeason;endSeason=function(){const r=_es.apply(this,arguments);try{if(G.mode==='coach'||r)netSeasonEnd(r);}catch(e){}return r;};
+ const _ss=startSeason;startSeason=function(){const r=_ss.apply(this,arguments);try{if(G&&G.year>(G.y0??(G.y0=G.year)))netAd();}catch(e){}return r;};
+ document.addEventListener('visibilitychange',()=>{if(document.hidden&&G&&G.cid&&Date.now()-NET.lastSync>120e3)cloudPut(G.cslot||1,true);});
+})();
+
 // ===================== ФЛАГИ (SVG в стиле интерфейса) =====================
 const CRES=(cx,c)=>`<path d="M${cx+2.5} 5.8A5 5 0 1 0 ${cx+2.5} 14.2A4 4 0 1 1 ${cx+2.5} 5.8Z" fill="${c}"/>`;
 const STAR=(x,y,r,c)=>{let d='';for(let i=0;i<10;i++){const a=-Math.PI/2+i*Math.PI/5;const rr=i%2?r*.42:r;d+=(i?'L':'M')+(x+Math.cos(a)*rr).toFixed(2)+' '+(y+Math.sin(a)*rr).toFixed(2);}return `<path d="${d}Z" fill="${c}"/>`;};
@@ -3413,7 +3574,7 @@ const CREST_CACHE={};
 function strH(s,k){let h=2166136261^k;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619);}return (h>>>0)/4294967296;}
 function crestInit(n){const w=n.replace(/[«»"()]/g,'').split(/[\s\-]+/).filter(x=>x&&!/^(ФК|FC|CF|СК|АФК|AC|SC|CD|1\.)$/i.test(x));
  if(!w.length)return n[0]||'?';return (w.length>1&&w[1].length>2?w[0][0]+w[1][0]:w[0].slice(0,w[0].length>5?2:1)).toUpperCase();}
-function crestSvg(id){if(CREST_CACHE[id])return CREST_CACHE[id];const c=G.clubs[id];if(!c)return '';const n=c.n;
+function crestSvg(id){if(CREST_CACHE[id])return CREST_CACHE[id];const c=G.clubs[id];if(!c)return '';const n=typeof modBaseC==='function'?modBaseC(c.n):c.n;
  const [a,b]=CREST_PAL[Math.floor(strH(n,1)*CREST_PAL.length)];const sh=CREST_SH[Math.floor(strH(n,2)*CREST_SH.length)];const pt=Math.floor(strH(n,3)*6);
  const cid='cr'+id;let fill=`<rect width="40" height="46" fill="${a}"/>`;
  if(pt===1)fill+=[8,20,32].map(x=>`<rect x="${x-3}" width="6" height="46" fill="${b}"/>`).join('');
@@ -3421,7 +3582,7 @@ function crestSvg(id){if(CREST_CACHE[id])return CREST_CACHE[id];const c=G.clubs[
  else if(pt===3)fill+=`<rect y="15" width="40" height="11" fill="${b}"/>`;
  else if(pt===4)fill+=`<path d="M-4 8L8 -4 48 36 36 48z" fill="${b}"/>`;
  else if(pt===5)fill+=`<path d="M0 30L20 14 40 30V46H0z" fill="${b}"/>`;
- const ini=crestInit(n);const lt=pt===0?b:'#ffffff';const st=pt===0?a:'rgba(0,0,0,.55)';
+ const ini=crestInit(c.n);const lt=pt===0?b:'#ffffff';const st=pt===0?a:'rgba(0,0,0,.55)';
  const svg=`<svg viewBox="0 0 40 46" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="${cid}"><path d="${sh}"/></clipPath></defs><g clip-path="url(#${cid})">${fill}</g><path d="${sh}" fill="none" stroke="rgba(0,0,0,.35)" stroke-width="2"/><path d="${sh}" fill="none" stroke="rgba(255,255,255,.35)" stroke-width=".8"/>`+
   `<text x="20" y="${ini.length>1?27:28.5}" text-anchor="middle" font-family="Exo 2,Arial,sans-serif" font-weight="800" font-size="${ini.length>1?13:16}" fill="${lt}" stroke="${st}" stroke-width="2.2" paint-order="stroke">${ini.replace(/[<&]/g,'')}</text></svg>`;
  return CREST_CACHE[id]=svg;}
@@ -3458,6 +3619,98 @@ function tgResult(){if(!TG||typeof G==='undefined'||!G)return;let e=null;
  new MutationObserver(()=>{const n=tgUserName();if(!n)return;['fName','cName'].forEach(id=>{const el=document.getElementById(id);if(el&&!el.dataset.tg){el.dataset.tg=1;el.value=n;}});}).observe(document.documentElement,{childList:true,subtree:true});
 })();
 
+// ---------- гражданство по умолчанию ----------
+// Telegram не сообщает страну пользователя. Берём часовой пояс устройства, а если он ничего не говорит — язык Telegram.
+const TZ_NAT={Almaty:'KAZ',Qostanay:'KAZ',Aqtobe:'KAZ',Aqtau:'KAZ',Atyrau:'KAZ',Oral:'KAZ',Qyzylorda:'KAZ',
+ Moscow:'RUS',Kaliningrad:'RUS',Samara:'RUS',Volgograd:'RUS',Saratov:'RUS',Ulyanovsk:'RUS',Astrakhan:'RUS',Kirov:'RUS',Yekaterinburg:'RUS',Omsk:'RUS',Novosibirsk:'RUS',Barnaul:'RUS',Tomsk:'RUS',Novokuznetsk:'RUS',Krasnoyarsk:'RUS',Irkutsk:'RUS',Chita:'RUS',Yakutsk:'RUS',Khandyga:'RUS',Vladivostok:'RUS',Sakhalin:'RUS',Magadan:'RUS',Srednekolymsk:'RUS',Kamchatka:'RUS',Anadyr:'RUS',
+ Kiev:'UKR',Kyiv:'UKR',Tashkent:'UZB',Samarkand:'UZB',Tbilisi:'GEO',Yerevan:'ARM',London:'ENG',Madrid:'ESP',Berlin:'GER',Paris:'FRA',Rome:'ITA',Lisbon:'POR',Istanbul:'TUR',Amsterdam:'NED',Brussels:'BEL',Warsaw:'POL',Prague:'CZE',
+ Belgrade:'SRB',Zagreb:'CRO',Athens:'GRE',Zurich:'SUI',Vienna:'AUT',Stockholm:'SWE',Oslo:'NOR',Copenhagen:'DEN',Dublin:'IRL',Dubai:'UAE',Riyadh:'KSA',Cairo:'EGY',Casablanca:'MAR',Tokyo:'JPN',Seoul:'KOR',Shanghai:'CHN',Tehran:'IRN',Jerusalem:'ISR',Bucharest:'ROU',Budapest:'HUN',Sofia:'BUL',Bratislava:'SVK',Ljubljana:'SVN',Helsinki:'FIN',
+ Sao_Paulo:'BRA',Buenos_Aires:'ARG',Mexico_City:'MEX',New_York:'USA',Chicago:'USA',Denver:'USA',Los_Angeles:'USA'};
+const LANG_NAT={kk:'KAZ',ru:'RUS',uk:'UKR',uz:'UZB',ka:'GEO',hy:'ARM',en:'ENG',es:'ESP',de:'GER',fr:'FRA',it:'ITA',pt:'POR','pt-br':'BRA',tr:'TUR',nl:'NED',pl:'POL',cs:'CZE',sr:'SRB',hr:'CRO',el:'GRE',sv:'SWE',nb:'NOR',da:'DEN',ar:'KSA',ja:'JPN',ko:'KOR',zh:'CHN',fa:'IRN',he:'ISR',ro:'ROU',hu:'HUN',bg:'BUL',sk:'SVK',sl:'SVN',fi:'FIN'};
+function guessNat(){const ok=k=>k&&NATIONS[k]?k:null;let tz='';try{tz=Intl.DateTimeFormat().resolvedOptions().timeZone||'';}catch(e){}
+ const byTz=ok(TZ_NAT[tz.split('/').pop()]);if(byTz)return byTz;
+ const lc=String((TG&&TG.initDataUnsafe&&TG.initDataUnsafe.user&&TG.initDataUnsafe.user.language_code)||navigator.language||'').toLowerCase();
+ return ok(LANG_NAT[lc])||ok(LANG_NAT[lc.split('-')[0]])||'KAZ';}
+// лига для старта: самая младшая лига своей страны, если она есть в игре
+function guessLeague(nat){const L=LEAGUES.filter(l=>l.c===nat).sort((a,b)=>b.t-a.t);return L.length?L[0].id:'KAZ1';}
+
+// ===================== МОДЫ: свои названия клубов, имена игроков и эмблемы =====================
+// Мод — JSON-файл: {format:'career-mod',version:1,id,title,clubs:{'Название в игре':{n:'Новое',logo:'data:image/png;base64,...'|'https://...'}},players:{'Имя в игре':{n:'Новое'}}}
+// Устанавливается из файла, по ссылке или по ссылке на бота (t.me/бот?startapp=mod_ИМЯ — файл /mods/ИМЯ.json на сервере игры).
+const MOD_KEY='career_mods_v1';
+const MOD_REAL_URL='/mods/real-names.json';
+let MODS=[];let MOD_IDX=null;
+// хранение: IndexedDB (вмещает моды с эмблемами), если недоступна — localStorage
+function modDb(){return new Promise((ok,no)=>{try{const r=indexedDB.open('career_mods',1);r.onupgradeneeded=()=>r.result.createObjectStore('m');r.onsuccess=()=>ok(r.result);r.onerror=()=>no(r.error);}catch(e){no(e);}});}
+async function modsLoad(){try{const db=await modDb();const v=await new Promise((ok,no)=>{const q=db.transaction('m').objectStore('m').get('all');q.onsuccess=()=>ok(q.result);q.onerror=()=>no(q.error);});
+  if(Array.isArray(v)){MODS=v;MOD_IDX=null;return;}}catch(e){}
+ try{MODS=JSON.parse(localStorage.getItem(MOD_KEY)||'[]');}catch(e){MODS=[];}MOD_IDX=null;}
+async function modsStore(){try{const db=await modDb();await new Promise((ok,no)=>{const t=db.transaction('m','readwrite');t.objectStore('m').put(MODS,'all');t.oncomplete=ok;t.onerror=()=>no(t.error);t.onabort=()=>no(t.error);});
+  try{localStorage.removeItem(MOD_KEY);}catch(e){}return true;}catch(e){}
+ try{localStorage.setItem(MOD_KEY,JSON.stringify(MODS));return true;}catch(e){return false;}}
+const MODS_READY=modsLoad().then(()=>{try{if(!MODS.length)return;if(typeof G!=='undefined'&&G&&G.clubs){modApplyWorld(1);if(typeof render==='function')render();}else if(document.querySelector('.start'))startScreen();}catch(e){}});
+// индекс: и по названию «в игре», и по новому — чтобы эмблемы и цвет кожи работали после замены имён
+function modIdx(){if(MOD_IDX)return MOD_IDX;const I={club:{},pl:{},rc:{},rp:{}};
+ for(const m of MODS){for(const k in m.clubs||{}){const v=m.clubs[k];I.club[k]=v;if(v.n)I.club[v.n]=v;I.rc[v.n||k]=k;}
+  for(const k in m.players||{}){const v=m.players[k];I.pl[k]=v;if(v.n)I.pl[v.n]=v;I.rp[v.n||k]=k;}}
+ return MOD_IDX=I;}
+function modLogo(name){const v=modIdx().club[name];return v&&v.logo&&/^(data:image\/(png|jpe?g|webp|svg\+xml);base64,|https:\/\/)/.test(v.logo)?v.logo:null;}
+function modCheck(o){if(!o||o.format!=='career-mod'||o.version!==1)return 'Это не файл мода для этой игры';
+ if(typeof o.title!=='string'||!o.title.trim())return 'У мода нет названия';
+ if(o.clubs&&typeof o.clubs!=='object'||o.players&&typeof o.players!=='object')return 'Неверный формат мода';
+ for(const k in o.clubs||{}){const v=o.clubs[k];if(!v||typeof v!=='object'||v.n!==undefined&&typeof v.n!=='string')return 'Ошибка в клубе «'+k+'»';}
+ for(const k in o.players||{}){const v=o.players[k];if(!v||typeof v!=='object'||v.n!==undefined&&typeof v.n!=='string')return 'Ошибка в игроке «'+k+'»';}
+ return '';}
+// применить моды к текущему миру (dir=1) или вернуть названия обратно (dir=-1)
+function modApplyWorld(dir,clr){if(!G||!G.clubs)return;const I=modIdx();
+ for(const c of G.clubs){if(!c)continue;if(dir>0){const v=I.club[c.n];if(v&&v.n&&I.rc[v.n]===c.n)c.n=v.n;}else{const a=I.rc[c.n];if(a&&a!==c.n)c.n=a;}}
+ for(const p of G.P){if(!p||p.u)continue;if(dir>0){const v=I.pl[p.n];if(v&&v.n&&I.rp[v.n]===p.n)p.n=v.n;}else{const a=I.rp[p.n];if(a&&a!==p.n)p.n=a;}}
+ if(clr!==0&&typeof CREST_CACHE!=='undefined')for(const k in CREST_CACHE)delete CREST_CACHE[k];}
+function modBaseC(n){return modIdx().rc[n]||n;}
+function modBaseP(n){return modIdx().rp[n]||n;}
+async function modInstall(o){const err=modCheck(o);if(err)return err;o.id=String(o.id||o.title).slice(0,40);
+ if(G)modApplyWorld(-1);MODS=MODS.filter(m=>m.id!==o.id).concat([o]);MOD_IDX=null;
+ if(!await modsStore()){MODS=MODS.filter(m=>m.id!==o.id);MOD_IDX=null;if(G)modApplyWorld(1);return 'Не хватает места в памяти устройства';}
+ if(G){modApplyWorld(1);save();}return '';}
+async function modRemove(id){if(G)modApplyWorld(-1);MODS=MODS.filter(m=>m.id!==id);MOD_IDX=null;await modsStore();if(G){modApplyWorld(1);save();}}
+function modCount(m){return {c:Object.keys(m.clubs||{}).length,p:Object.keys(m.players||{}).length,l:Object.values(m.clubs||{}).filter(v=>v.logo).length};}
+// подключение: новый мир и загрузка сохранения сразу получают названия из модов
+(function(){const _cw=createWorld;createWorld=function(){const r=_cw.apply(this,arguments);try{if(MODS.length)modApplyWorld(1);}catch(e){}return r;};
+ const _ug=unpackGame;unpackGame=function(){const r=_ug.apply(this,arguments);try{if(MODS.length)modApplyWorld(1);}catch(e){}return r;};
+ const _cs=crestSvg;crestSvg=function(id){const c=G&&G.clubs[id];if(!c)return '';const lg=modLogo(c.n);if(lg)return `<img src="${lg.replace(/"/g,'')}" alt="" style="width:100%;height:100%;object-fit:contain">`;
+  return _cs(id);};
+ // в сохранение всегда пишутся исходные названия — мод можно удалить даже без загруженной карьеры
+ const _pg=packGame;packGame=function(){if(!MODS.length||!G)return _pg.apply(this,arguments);modApplyWorld(-1,0);try{return _pg.apply(this,arguments);}finally{modApplyWorld(1,0);}};})();
+
+// ---------- окно «Моды» ----------
+function modsModal(msg){let h=`<h2>Моды</h2><p class="small muted">Мод меняет названия клубов, имена игроков и эмблемы. Его можно в любой момент удалить — названия вернутся.</p>${msg?`<p class="${msg.ok?'ok':'bad'}">${esc(msg.t)}</p>`:''}`;
+ const realOn=MODS.some(x=>x.id==='real-names');
+ if(typeof ALT_NAMES==='undefined'||ALT_NAMES)h+=`<div class="shop ${realOn?'':'focus'}"><div><b>Настоящие названия и имена</b><div class="small muted">Реальные названия клубов и имена футболистов во всех режимах: карьера игрока, карьера тренера, 38-0-0 и битва составов.</div></div>${realOn?'<button class="btn sm ghost" data-mrm="real-names">Выключить</button>':'<button class="btn sm" id="modReal">Включить</button>'}</div>`;
+ const others=MODS.filter(x=>x.id!=='real-names');
+ h+=others.length?others.map(m=>{const k=modCount(m);return `<div class="shop"><div><b>${esc(m.title)}</b><div class="small muted">${m.author?esc(m.author)+' · ':''}клубов ${k.c}${k.l?' (эмблем '+k.l+')':''} · игроков ${k.p}</div></div><button class="btn sm ghost" data-mrm="${esc(m.id)}">Удалить</button></div>`;}).join(''):'';
+ h+=`<h3>Установить мод</h3><label class="btn" style="display:block;text-align:center;cursor:pointer">Выбрать файл мода<input type="file" id="modF" accept=".json,application/json" style="display:none"></label>
+ <div class="grid2" style="margin-top:8px"><input id="modU" placeholder="Или ссылка на файл .json" style="grid-column:1/3"></div><button class="btn ghost" id="modUgo" style="width:100%;margin-top:6px">Установить по ссылке</button>
+ <p class="small muted nh">Файл мода можно скачать из Telegram-канала или чата и выбрать здесь. Ссылка должна вести прямо на файл .json.</p>
+ <div class="btns"><button class="btn ghost" id="mdX">Закрыть</button></div>`;
+ showModal(h);$('#mdX').onclick=()=>{closeModal();if(document.querySelector('.start')||!G)startScreen();else render();};
+ document.querySelectorAll('[data-mrm]').forEach(b=>b.onclick=async()=>{await modRemove(b.dataset.mrm);modsModal({ok:1,t:b.dataset.mrm==='real-names'?'Настоящие названия выключены':'Мод удалён'});});
+ $('#modF').onchange=e=>{const f=e.target.files[0];if(!f)return;if(f.size>30e6){modsModal({t:'Файл слишком большой'});return;}const r=new FileReader();r.onload=()=>modConfirm(r.result);r.readAsText(f);};
+ $('#modUgo').onclick=()=>modFromUrl($('#modU').value.trim());
+ if($('#modReal'))$('#modReal').onclick=()=>modReal();}
+// мод с настоящими названиями лежит на сервере игры: /mods/real-names.json
+async function modReal(){const b=$('#modReal');if(b){b.disabled=true;b.textContent='Загрузка…';}
+ try{const r=await fetch(MOD_REAL_URL);if(!r.ok)throw new Error('ошибка '+r.status);const o=JSON.parse(await r.text());const e=await modInstall(o);modsModal(e?{t:e}:{ok:1,t:'Готово: настоящие названия и имена включены во всех режимах'});}
+ catch(e){modsModal({t:'Не удалось загрузить мод'+(location.protocol.startsWith('http')?': '+e.message:'')+'. В версии для Telegram он скачивается с сервера игры.'});}}
+async function modFromUrl(u){if(!/^https?:\/\//.test(u)&&!u.startsWith('/')){modsModal({t:'Нужна ссылка, которая начинается с https://'});return;}
+ try{const r=await fetch(u);if(!r.ok)throw new Error('ошибка '+r.status);modConfirm(await r.text());}catch(e){modsModal({t:'Не удалось скачать мод: '+e.message+'. Проверьте ссылку или скачайте файл и выберите его.'});}}
+function modConfirm(txt){let o;try{o=JSON.parse(txt);}catch(e){modsModal({t:'Файл повреждён или это не JSON'});return;}const err=modCheck(o);if(err){modsModal({t:err});return;}const k=modCount(o);
+ showModal(`<h2>Установить мод?</h2><div class="shop"><div><b>${esc(o.title)}</b><div class="small muted">${o.author?esc(o.author)+' · ':''}клубов ${k.c}${k.l?' (эмблем '+k.l+')':''} · игроков ${k.p}</div>${o.desc?`<p class="small">${esc(o.desc)}</p>`:''}</div></div>
+ <div class="btns"><button class="btn" id="miY">Установить</button><button class="btn ghost" id="miN">Отмена</button></div>`);
+ $('#miN').onclick=()=>modsModal();$('#miY').onclick=async()=>{$('#miY').disabled=true;const e=await modInstall(o);modsModal(e?{t:e}:{ok:1,t:'Мод «'+o.title+'» установлен'});};}
+// ссылка на бота вида t.me/бот?startapp=mod_ИМЯ открывает игру и предлагает установить /mods/ИМЯ.json
+function modStartParam(){try{const sp=TG&&TG.initDataUnsafe&&TG.initDataUnsafe.start_param;if(sp&&/^mod_[A-Za-z0-9_-]{1,40}$/.test(sp)&&!modStartParam.done){modStartParam.done=1;modFromUrl('/mods/'+sp.slice(4)+'.json');}}catch(e){}}
+function modClubName(n){const v=modIdx().club[n];return v&&v.n&&modIdx().rc[v.n]===n?v.n:n;}
+
 // ===================== ИНТЕРФЕЙС =====================
 const KEY='fcCareerSave1',HOF_KEY='fcCareerHOF1';
 const $=s=>document.querySelector(s);
@@ -3477,39 +3730,54 @@ function loadSave(){try{const s=localStorage.getItem(KEY);if(s){unpackGame(s);re
 function hof(){try{return JSON.parse(localStorage.getItem(HOF_KEY)||'[]');}catch(e){return [];}}
 
 // ---------- стартовый экран ----------
+// ---------- логотипы режимов (оригинальные, рисуются кодом) ----------
+const MODE_LOGO={
+ player:`<svg viewBox="0 0 48 48"><path d="M17 8l-9 5 3 9 4-2v20h18V20l4 2 3-9-9-5c-1 3-4 5-7 5s-6-2-7-5z" fill="rgba(255,255,255,.14)" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><text x="24" y="34" text-anchor="middle" font-family="Unbounded,Exo 2,Arial" font-weight="700" font-size="11" fill="#fff">10</text><path d="M37 3l1.3 2.7 3 .4-2.2 2 .6 3-2.7-1.5-2.7 1.5.6-3-2.2-2 3-.4z" fill="#ffd27a"/></svg>`,
+ coach:`<svg viewBox="0 0 48 48"><rect x="6" y="8" width="36" height="28" rx="3" fill="rgba(255,255,255,.12)" stroke="#fff" stroke-width="2"/><path d="M24 8v28M24 22m-5 0a5 5 0 1 0 10 0a5 5 0 1 0-10 0" fill="none" stroke="rgba(255,255,255,.45)" stroke-width="1.4"/><path d="M11 14l4 4M15 14l-4 4" stroke="#ffd27a" stroke-width="2" stroke-linecap="round"/><circle cx="35" cy="29" r="3" fill="none" stroke="#fff" stroke-width="2"/><path d="M15 21c3 7 9 9 15 8" fill="none" stroke="#fff" stroke-width="1.8" stroke-dasharray="3 2.5"/><path d="M28 26l3 3-4 1.5" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 36l-3 7M30 36l3 7" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg>`,
+ m38:`<svg viewBox="0 0 48 48"><path d="M24 4l17 6v12c0 11-7 18-17 22C14 40 7 33 7 22V10z" fill="rgba(255,255,255,.12)" stroke="#fff" stroke-width="2" stroke-linejoin="round"/><text x="24" y="26" text-anchor="middle" font-family="Unbounded,Exo 2,Arial" font-weight="700" font-size="14" fill="#fff">38</text><text x="24" y="35" text-anchor="middle" font-family="Exo 2,Arial" font-weight="700" font-size="7.5" fill="#ffd27a" letter-spacing=".5">0-0</text></svg>`,
+ bt:`<svg viewBox="0 0 48 48"><rect x="5" y="10" width="17" height="24" rx="2.5" transform="rotate(-12 13.5 22)" fill="rgba(63,209,122,.25)" stroke="#3fd17a" stroke-width="2"/><rect x="26" y="10" width="17" height="24" rx="2.5" transform="rotate(12 34.5 22)" fill="rgba(255,90,110,.25)" stroke="#ff5a6e" stroke-width="2"/><path d="M26 6l-6 15h6l-3 15 9-19h-6l3-11z" fill="#ffd27a" stroke="#1a1a1a" stroke-width="1" stroke-linejoin="round"/><text x="24" y="45" text-anchor="middle" font-family="Unbounded,Exo 2,Arial" font-weight="700" font-size="7" fill="#fff" letter-spacing="1">VS</text></svg>`,
+};
+const mLogo=k=>`<i class="mlogo ml-${k}">${MODE_LOGO[k]}</i>`;
 function startScreen(){let has=false;try{has=!!localStorage.getItem(KEY);}catch(e){}
+ const lock=m=>typeof netOn==='function'&&netOn()&&!modeOk(m)?` <i class="lock">★ ${NET.me&&NET.me.catalog[m]?NET.me.catalog[m].stars+' / мес.':''}</i>`:'';let smode='';
  const H=hof();
- let info='';if(has){try{const o=JSON.parse(localStorage.getItem(KEY));info=o.mode==='coach'&&o.coach?'Тренер '+o.coach.name+' · сезон '+o.year+'/'+String(o.year+1).slice(2):o.user?'Игрок '+o.user.name+' · сезон '+o.year+'/'+String(o.year+1).slice(2):'';}catch(e){}}
+ let info='';if(has){try{const o=JSON.parse(localStorage.getItem(KEY));smode=o.mode==='coach'?'coach':'player';info=o.mode==='coach'&&o.coach?'Тренер '+o.coach.name+' · сезон '+o.year+'/'+String(o.year+1).slice(2):o.user?'Игрок '+o.user.name+' · сезон '+o.year+'/'+String(o.year+1).slice(2):'';}catch(e){}}
  app.innerHTML=`<div class="start"><div class="logo"><i class="ic ic-ball"></i></div><h1>Карьера</h1><p class="muted">Футбольный менеджер</p>
  <div class="col modes">${has?`<button class="btn mode" id="cont"><b>Продолжить</b><span>${esc(info||'Сохранённая игра')}</span></button>`:''}
  <h3>Выберите режим</h3>
- <button class="btn ghost mode" id="new"><b>Карьера игрока</b><span>Создайте футболиста и пройдите путь от молодого таланта до легенды: матчи, развитие, трансферы, сборная, Золотой мяч.</span></button>
- <button class="btn ghost mode" id="newC"><b>Карьера тренера</b><span>Возглавьте реальный клуб: состав, тактика и стили, трансферы, академия, правление и задачи. До 25 сезонов.</span></button>
- <button class="btn ghost mode" id="m38"><b>38-0-0</b><span>Быстрый режим: 11 раз выбираешь одну из трёх случайных карточек и играешь один сезон. Цель — сезон без единой потери очков.</span></button>
- <button class="btn ghost" id="imp">Загрузить сохранение</button></div>
+ <button class="btn ghost mode" id="new">${mLogo('player')}<div><b>Карьера игрока</b><span>Создайте футболиста и пройдите путь от молодого таланта до легенды: матчи, развитие, трансферы, сборная, Золотой мяч.</span></div></button>
+ <button class="btn ghost mode" id="newC">${mLogo('coach')}<div><b>Карьера тренера${lock('coach')}</b><span>Возглавьте реальный клуб: состав, тактика и стили, трансферы, академия, правление и задачи. До 25 сезонов.</span></div></button>
+ <button class="btn ghost mode" id="bt">${mLogo('bt')}<div><b>Битва составов${typeof netOn==='function'&&netOn()&&NET.me&&!NET.me.premium?' <i class="lock">5 матчей в день бесплатно</i>':''}</b><span>Онлайн-драфт против соперника: по очереди забираете игроков из одной пятёрки, собираете 11 и играете быстрый матч. Победа — очко в рейтинг.</span></div></button>
+ <button class="btn ghost mode" id="m38">${mLogo('m38')}<div><b>38-0-0${lock('m38')}</b><span>Быстрый режим: 11 раз выбираешь одну из трёх случайных карточек и играешь один сезон. Цель — сезон без единой потери очков.</span></div></button>
+ ${typeof netOn==='function'&&netOn()?`<div class="grid3 netbar"><button class="btn ghost sm" id="nTop"><i class="ic ic-cup"></i> Топ месяца</button><button class="btn ghost sm" id="nCloud"><i class="ic ic-save"></i> Облако</button><button class="btn ${NET.me&&NET.me.premium?'ghost ':''}sm" id="nShop">${NET.me&&NET.me.premium?'Premium ✓':'★ Premium'}</button></div>${NET.me&&NET.me.monthRank?`<p class="small muted c">Вы ${NET.me.monthRank}-й в топе месяца · ${NET.me.monthPts} очк.</p>`:''}${NET.err?`<p class="small bad c">Нет связи с сервером: ${esc(NET.err)}</p>`:''}`:`<button class="btn ghost" id="imp">Загрузить сохранение</button>`}<button class="btn ghost sm" id="mods"><i class="ic ic-save"></i> Моды${typeof MODS!=='undefined'&&MODS.length?' · '+MODS.length:''}</button></div>
  ${H.length?`<h3>Зал славы</h3><div class="card">${H.sort((a,b)=>b.score-a.score).slice(0,10).map((x,i)=>`<div class="row"><b>${i+1}. ${esc(x.name)}</b><span class="muted">${esc(x.pos)} · ${esc(x.nat)} · ${x.years} сез.</span><span class="sp"></span><span><b>${x.score}</b> очк. · ${money(x.earn)}</span></div>`).join('')}</div>`:''}${chof().length?`<h3>Зал славы тренеров</h3><div class="card">${chof().sort((a,b)=>b.score-a.score).slice(0,10).map((x,i)=>`<div class="row"><b>${i+1}. ${esc(x.name)}</b><span class="muted">${esc(x.nat)} · ${x.years} сез. · трофеев ${x.tr}</span><span class="sp"></span><span><b>${x.score}</b> очк. · ${money(x.earn)}</span></div>`).join('')}</div>`:''}</div>`;
  const nw=fn=>()=>{if(has){showModal(`<h2>Начать новую игру?</h2><p>Сохранённая игра будет заменена после старта новой.</p><div class="btns"><button class="btn bad" id="y">Начать</button><button class="btn ghost" id="n">Отмена</button></div>`);$('#n').onclick=closeModal;$('#y').onclick=()=>{closeModal();fn();};}else fn();};
  if(has)$('#cont').onclick=()=>{if(loadSave())render();else{UI.toast='Не удалось загрузить сохранение';startScreen();}};
- $('#new').onclick=nw(()=>createScreen());$('#newC').onclick=nw(()=>coachCreateScreen());$('#imp').onclick=()=>importDialog();$('#m38').onclick=()=>m38Setup();}
+ const gate=(m,fn)=>()=>{if(typeof netOn==='function'&&netOn()&&!modeOk(m)){storeModal(m);return;}fn();};
+ $('#new').onclick=nw(()=>createScreen());$('#newC').onclick=gate('coach',nw(()=>coachCreateScreen()));if($('#imp'))$('#imp').onclick=()=>importDialog();$('#m38').onclick=gate('m38',()=>m38Setup());$('#bt').onclick=()=>btLobby();
+ if(has&&smode==='coach')$('#cont').onclick=gate('coach',$('#cont').onclick);
+ if($('#mods'))$('#mods').onclick=()=>modsModal();if(typeof modStartParam==='function')modStartParam();
+ if($('#nTop'))$('#nTop').onclick=()=>topModal();if($('#nCloud'))$('#nCloud').onclick=()=>slotsModal();if($('#nShop'))$('#nShop').onclick=()=>storeModal('premium');
+ if(typeof netOn==='function'&&netOn()&&!NET.me&&!NET.err&&!startScreen.loading){startScreen.loading=1;netMe().then(()=>{startScreen.loading=0;if(document.querySelector('.start'))startScreen();});}}
 
 function importDialog(){showModal(`<h2>Загрузить сохранение</h2><p class="muted">Вставьте текст сохранения, который вы скопировали ранее.</p><textarea id="impT" rows="6"></textarea><div class="btns"><button class="btn" id="impGo">Загрузить</button><button class="btn ghost" id="impX">Отмена</button></div><p id="impE" class="bad"></p>`);
  $('#impGo').onclick=()=>{try{unpackGame($('#impT').value.trim());save();closeModal();render();}catch(e){$('#impE').textContent='Сохранение повреждено или неполное.';}};$('#impX').onclick=closeModal;}
 
 // ---------- создание игрока ----------
-function createScreen(){
+function createScreen(){const N0=guessNat(),L0=guessLeague(N0);
  const nats=Object.keys(NATIONS).sort((a,b)=>NATIONS[a][0].localeCompare(NATIONS[b][0],'ru'));
- let cid=0;const clubsBy={};LEAGUES.forEach(l=>{clubsBy[l.id]=l.cl.split('|').map(e=>{const [n,r]=e.split(':');return {id:cid++,n,r:+r};});});
+ let cid=0;const clubsBy={};LEAGUES.forEach(l=>{clubsBy[l.id]=l.cl.split('|').map(e=>{const [n,r]=e.split(':');return {id:cid++,n:typeof modClubName==='function'?modClubName(n):n,r:+r};});});
  const opt=(v,t,sel)=>`<option value="${v}" ${sel?'selected':''}>${esc(t)}</option>`;
- app.innerHTML=`<div class="page"><h2>Новый игрок</h2><div class="card form">
+ app.innerHTML=`<div class="page"><h2 class="mh">${mLogo('player')}Новый игрок</h2><div class="card form">
  <label>Имя и фамилия<input id="fName" maxlength="40" value="Ярослав Иванов"></label>
  <div class="grid2"><label>Возраст<select id="fAge">${[16,17,18,19,20,21].map(a=>opt(a,a+' лет',a===17)).join('')}</select></label>
- <label>Сборная<select id="fNat">${nats.map(n=>opt(n,NATIONS[n][0],n==='KAZ')).join('')}</select></label></div>
+ <label>Сборная<select id="fNat">${nats.map(n=>opt(n,NATIONS[n][0],n===N0)).join('')}</select></label></div>
  <label>Позиция<select id="fPos">${POS.map(p=>opt(p,POS_FULL[p]+' ('+POS_RU[p]+')',p==='ST')).join('')}</select></label>
  <div class="grid2"><label>Ведущая нога<select id="fFoot">${opt('R','Правая',1)}${opt('L','Левая')}</select></label>
  <label>Номер<input id="fNum" type="number" min="1" max="99" value="9"></label></div>
  <div class="grid2"><label>Рост, см<input id="fH" type="number" min="160" max="205" value="182"></label>
- <label>Вес, кг<input id="fW" type="number" min="55" max="100" value="76"></label></div>
- <label>Лига<select id="fLg">${LEAGUES.map(l=>opt(l.id,flagN(l.c)+' — '+l.n,l.id==='KAZ1')).join('')}</select></label>
+ <label>Вес, кг<input id="fW" type="number" min="55" max="100" value="76"></label></div><p class="small muted nh" id="fBody"></p>
+ <label>Лига<select id="fLg">${LEAGUES.map(l=>opt(l.id,flagN(l.c)+' — '+l.n,l.id===L0)).join('')}</select></label>
  <label>Клуб<select id="fClub"></select></label>
  <label class="chk"><input type="checkbox" id="fRus" checked> Сборная и клубы России отстранены от турниров (как в реальности)</label>
  <p class="muted small">Стартовый рейтинг зависит от возраста (≈55–68). В сильном клубе молодой игрок начнёт запасным — выбирайте клуб под себя. Потенциал скрыт и меняется по ходу карьеры.</p>
@@ -3517,6 +3785,7 @@ function createScreen(){
  const fillClubs=()=>{const l=$('#fLg').value;$('#fClub').innerHTML=clubsBy[l].slice().sort((a,b)=>b.r-a.r).map(c=>opt(c.id,c.n+' · рейтинг '+c.r)).join('');};
  $('#fLg').onchange=fillClubs;fillClubs();
  $('#back').onclick=startScreen;
+ const bt=()=>{$('#fBody').textContent='Телосложение: '+bodyText(+$('#fH').value||182,+$('#fW').value||76)+'.';};$('#fH').oninput=bt;$('#fW').oninput=bt;bt();
  $('#go').onclick=()=>{const name=$('#fName').value.trim()||'Игрок';
   const o={name,age:clamp(+$('#fAge').value||17,16,21),nat:$('#fNat').value,pos:$('#fPos').value,foot:$('#fFoot').value,num:clamp(+$('#fNum').value||9,1,99),h:clamp(+$('#fH').value||182,160,205),wt:clamp(+$('#fW').value||76,55,100),club:+$('#fClub').value};const rus=$('#fRus').checked;
   app.innerHTML='<div class="start"><div class="logo spin"><i class="ic ic-ball"></i></div><p>Создаём футбольный мир…</p></div>';
@@ -3765,7 +4034,7 @@ function finalScreen(){const u=G.user;const tot=u.career.reduce((a,s)=>{s.T.forE
  <div class="btns"><button class="btn big" id="toC">Начать карьеру тренера</button></div><div class="btns"><button class="btn ghost" id="nn">Новая карьера</button></div></div></div>`;
  document.querySelectorAll('[data-af]').forEach(b=>b.onclick=()=>{const k=b.dataset.af;const A=AFTER[k];u.after=k;u.score=Math.round((u.score+A.pts(u))*10)/10;save();finalScreen();});
  $('#nn').onclick=()=>{try{localStorage.removeItem(KEY);}catch(e){}G=null;startScreen();};
- $('#toC').onclick=()=>{coachFromPlayer();save();UI.tab='cseason';render();};}
+ $('#toC').onclick=()=>{const go=()=>{coachFromPlayer();save();UI.tab='cseason';render();};if(typeof netOn==='function'&&netOn()&&!modeOk('coach')){NET.after=()=>{if(modeOk('coach'))go();else render();};storeModal('coach');return;}go();};}
 
 
 
@@ -3875,16 +4144,16 @@ const CHOF_KEY='fcCoachHOF1';
 function chof(){try{return JSON.parse(localStorage.getItem(CHOF_KEY)||'[]');}catch(e){return [];}}
 function mln(v){return Math.round(v/1e5)/10;}
 
-function coachCreateScreen(){
+function coachCreateScreen(){const N0=guessNat(),L0=guessLeague(N0);
  const nats=Object.keys(NATIONS).sort((a,b)=>NATIONS[a][0].localeCompare(NATIONS[b][0],'ru'));
- let cid=0;const clubsBy={};LEAGUES.forEach(l=>{clubsBy[l.id]=l.cl.split('|').map(e=>{const [n,r]=e.split(':');return {id:cid++,n,r:+r};});});
+ let cid=0;const clubsBy={};LEAGUES.forEach(l=>{clubsBy[l.id]=l.cl.split('|').map(e=>{const [n,r]=e.split(':');return {id:cid++,n:typeof modClubName==='function'?modClubName(n):n,r:+r};});});
  const opt=(v,t,sel)=>`<option value="${v}" ${sel?'selected':''}>${esc(t)}</option>`;
- app.innerHTML=`<div class="page"><h2>Новый тренер</h2><div class="card form">
+ app.innerHTML=`<div class="page"><h2 class="mh">${mLogo('coach')}Новый тренер</h2><div class="card form">
  <label>Имя и фамилия<input id="cName" maxlength="40" value="Ярослав Иванов"></label>
  <div class="grid2"><label>Возраст<select id="cAge">${[30,33,35,38,40,45,50,55,60].map(a=>opt(a,a+' лет',a===38)).join('')}</select></label>
- <label>Гражданство<select id="cNat">${nats.map(n=>opt(n,NATIONS[n][0],n==='KAZ')).join('')}</select></label></div>
+ <label>Гражданство<select id="cNat">${nats.map(n=>opt(n,NATIONS[n][0],n===N0)).join('')}</select></label></div>
  <label>Тренерская лицензия<select id="cLic">${Object.keys(LICENSES).map(k=>opt(k,LICENSES[k][0]+' — '+LICENSES[k][1],k==='B')).join('')}</select></label>
- <label>Лига<select id="cLg">${LEAGUES.map(l=>opt(l.id,flagN(l.c)+' — '+l.n,l.id==='KAZ1')).join('')}</select></label>
+ <label>Лига<select id="cLg">${LEAGUES.map(l=>opt(l.id,flagN(l.c)+' — '+l.n,l.id===L0)).join('')}</select></label>
  <label>Клуб<select id="cClub"></select></label>
  <label class="chk"><input type="checkbox" id="cRus" checked> Сборная и клубы России отстранены от турниров (как в реальности)</label>
  <p class="muted small">Чем выше лицензия, тем сильнее клубы доступны на старте и тем выше стартовая репутация. Сценарий карьеры выбрать нельзя — его ставит правление клуба исходя из положения команды. Дальше всё зависит от результатов: сильные клубы и сборные сами начнут звать вас.</p>
@@ -3995,7 +4264,7 @@ function cTabMarket(){const C=G.coach;const m=$('#main');if(C.club===null){m.inn
  <h4 style="margin-top:12px">Перераспределить бюджет (1 млн трансферного = 1 млн годовых зарплат)</h4><div class="grid2"><input id="bsX" type="number" step="0.5" value="1" placeholder="млн €"><div class="grid2"><button class="btn sm" id="bsW">→ в зарплаты</button><button class="btn sm ghost" id="bsT">→ в трансферы</button></div></div></div>`;
  if(ms==='in')h+=C.win?(C.inbox.length?'':'<div class="card"><p class="muted">Предложений по вашим игрокам пока нет.</p></div>'):'<div class="card"><p class="muted">Предложения приходят, когда открыто трансферное окно.</p></div>';
  if(ms==='in'&&C.win&&C.inbox.length)h+=`<div class="card"><h3>Входящие предложения</h3>${C.inbox.map((b,i)=>{const p=G.P[b.pid];return `<div class="offer"><div><b>${esc(G.clubs[b.club].n)}</b> хочет купить <b>${esc(p.n)}</b> (${p.ovr})<div class="small">${money(b.fee)}</div></div><div class="col"><button class="btn sm" data-ib="${i}">Продать</button><button class="btn sm ghost" data-id="${i}">Отказать</button></div></div>`;}).join('')}</div>`;
- if(ms==='mk')h+=`<div class="card"><h3>Поиск игроков</h3><label class="small muted">Имя или фамилия<input id="fQ" placeholder="Например: Мбаппе" value="${esc(F.q||'')}"></label><p class="muted small" style="margin:2px 0 8px">При поиске по имени остальные фильтры, кроме типа, не учитываются.</p><div class="grid2"><label class="small muted">Позиция<select id="fP"><option value="">Любая</option>${POS.map(p=>`<option value="${p}" ${F.pos===p?'selected':''}>${POS_FULL[p]}</option>`).join('')}</select></label>
+ if(ms==='mk')h+=`<div class="card"><h3>Поиск игроков</h3><label class="small muted">Имя или фамилия<input id="fQ" placeholder="Например: Иванов" value="${esc(F.q||'')}"></label><p class="muted small" style="margin:2px 0 8px">При поиске по имени остальные фильтры, кроме типа, не учитываются.</p><div class="grid2"><label class="small muted">Позиция<select id="fP"><option value="">Любая</option>${POS.map(p=>`<option value="${p}" ${F.pos===p?'selected':''}>${POS_FULL[p]}</option>`).join('')}</select></label>
  <label class="small muted">Лига<select id="fL"><option value="">Любая</option>${LEAGUES.map(l=>`<option value="${l.id}" ${F.lg===l.id?'selected':''}>${esc(l.n)}</option>`).join('')}</select></label>
  <label class="small muted">Сборная<select id="fN"><option value="">Любая</option>${Object.keys(NATIONS).sort((a,b)=>NATIONS[a][0].localeCompare(NATIONS[b][0],'ru')).map(k=>`<option value="${k}" ${F.nat===k?'selected':''}>${NATIONS[k][0]}</option>`).join('')}</select></label><label class="small muted">Возраст от / до<div class="grid2"><input id="fA0" type="number" value="${F.a0??15}"><input id="fA" type="number" value="${F.age}"></div></label><label class="small muted">Рейтинг от / до<div class="grid2"><input id="fO" type="number" value="${F.ovr}"><input id="fO1" type="number" value="${F.o1??99}"></div></label>
  <label class="small muted">Цена от / до, млн €<div class="grid2"><input id="fC0" type="number" step="0.5" value="${F.p0??0}"><input id="fC" type="number" step="0.5" value="${F.price}"></div></label><label class="small muted">Тип<select id="fT"><option value="" ${!F.t?'selected':''}>Все игроки</option><option value="fa" ${F.t==='fa'?'selected':''}>Свободные агенты</option><option value="loan" ${F.t==='loan'?'selected':''}>Доступные к аренде</option><option value="ll" ${F.t==='ll'?'selected':''}>Выставлены в аренду</option><option value="tl" ${F.t==='tl'?'selected':''}>Выставлены на трансфер</option></select></label></div><div class="btns"><button class="btn" id="fGo">Искать</button></div><div id="fRes"></div></div>`;
@@ -4369,7 +4638,7 @@ function m38SaveBest(){const B=m38Best();const k=M.lg;const r=M.rec;const o=B[k]
 // ---------- экран настройки ----------
 function m38Setup(){G=null;M={lg:M&&M.lg||'ENG1',form:M&&M.form||'4-3-3',name:M&&M.name||'Мой клуб'};
  const B=m38Best();
- const draw=()=>{app.innerHTML=`<div class="page m38"><div class="m38head"><button class="icon" id="mBack" title="Назад">${ic('menu')}</button><b>38-0-0</b><span class="sp"></span></div>
+ const draw=()=>{app.innerHTML=`<div class="page m38"><div class="m38head"><button class="icon" id="mBack" title="Назад">${ic('menu')}</button>${mLogo('m38')}<b>38-0-0</b><span class="sp"></span></div>
  <div class="card hl"><h2>Собери непобедимых</h2><p class="nh">11 раз тебе выпадают 3 игрока лиги примерно одного уровня — забираешь одного. Твой клуб занимает место самого слабого в лиге и играет один сезон. Цель — выиграть все матчи.</p></div>
  <h3>1. Лига</h3><div class="m38grid">${M38_LG.map(id=>{const b=B[id];return `<button class="btn ghost m38opt${M.lg===id?' on':''}" data-lg="${id}">${flagE(LG[id].c)} <span>${esc(LG[id].n)}</span><i class="small muted">цель ${2*(LG[id].cl.split('|').length-1)}-0-0</i>${b?`<i class="small muted">рекорд ${b.w}-${b.d}-${b.l}</i>`:''}</button>`;}).join('')}</div>
  <h3>2. Схема</h3><div class="m38grid f">${Object.keys(FORMS).map(f=>`<button class="btn ghost m38opt${M.form===f?' on':''}" data-f="${f}">${f}</button>`).join('')}</div>
@@ -4532,6 +4801,595 @@ function m38Season(){const r=M.rec;const pos=m38Order().indexOf(M.me)+1;const st
  $('#mBack').onclick=M.done?()=>{G=null;M=null;startScreen();}:m38Quit;
  if(M.done){$('#mAgain').onclick=()=>m38Setup();$('#mMenu').onclick=()=>{G=null;M=null;startScreen();};}
  else{$('#mOne').onclick=()=>{m38Round();m38Season();};$('#mAll').onclick=()=>{while(!M.done)m38Round();m38Season();window.scrollTo(0,0);};}}
+
+// ===================== «БИТВА СОСТАВОВ»: общее ядро (работает и в игре, и на сервере) =====================
+// 1) Тактика: каждый тайно выбирает схему, тренера и стиль (по 3 случайных варианта).
+// 2) Драфт: 11 раундов, общая пятёрка карточек ≈ одного рейтинга; первым выбирает то один, то другой.
+//    Игрока можно переставить на любую позицию — чем она дальше от родной, тем больше минус к рейтингу.
+// 3) Матч на 90 минут (+ доп. время и пенальти). Влияют рейтинг, позиции, химия и тактика (скрыто от игроков).
+const BT_ROUNDS = 11;
+const BT_FORMS = {
+  '4-3-3': [['GK', 50, 90], ['LB', 13, 70], ['CB', 37, 75], ['CB', 63, 75], ['RB', 87, 70], ['CDM', 50, 57], ['CM', 28, 46], ['CM', 72, 46], ['LW', 15, 20], ['ST', 50, 12], ['RW', 85, 20]],
+  '4-4-2': [['GK', 50, 90], ['LB', 13, 70], ['CB', 37, 75], ['CB', 63, 75], ['RB', 87, 70], ['LM', 13, 42], ['CM', 37, 48], ['CM', 63, 48], ['RM', 87, 42], ['ST', 35, 14], ['ST', 65, 14]],
+  '4-2-3-1': [['GK', 50, 90], ['LB', 13, 70], ['CB', 37, 75], ['CB', 63, 75], ['RB', 87, 70], ['CDM', 33, 56], ['CDM', 67, 56], ['LW', 15, 32], ['CAM', 50, 34], ['RW', 85, 32], ['ST', 50, 12]],
+  '3-5-2': [['GK', 50, 90], ['CB', 25, 74], ['CB', 50, 77], ['CB', 75, 74], ['LM', 10, 44], ['CM', 30, 46], ['CDM', 50, 57], ['CM', 70, 46], ['RM', 90, 44], ['ST', 35, 14], ['ST', 65, 14]],
+  '4-1-2-1-2': [['GK', 50, 90], ['LB', 13, 70], ['CB', 37, 75], ['CB', 63, 75], ['RB', 87, 70], ['CDM', 50, 58], ['CM', 27, 46], ['CM', 73, 46], ['CAM', 50, 33], ['ST', 35, 14], ['ST', 65, 14]],
+  '5-3-2': [['GK', 50, 90], ['LB', 9, 62], ['CB', 29, 75], ['CB', 50, 77], ['CB', 71, 75], ['RB', 91, 62], ['CM', 27, 45], ['CDM', 50, 52], ['CM', 73, 45], ['ST', 35, 14], ['ST', 65, 14]],
+  '3-4-3': [['GK', 50, 90], ['CB', 25, 74], ['CB', 50, 77], ['CB', 75, 74], ['LM', 11, 46], ['CM', 37, 50], ['CM', 63, 50], ['RM', 89, 46], ['LW', 15, 20], ['ST', 50, 12], ['RW', 85, 20]],
+};
+// стили закольцованы: каждый сильнее двух следующих по кругу и слабее двух предыдущих (игроки этого не видят)
+const BT_STYLES = ['Длинные передачи', 'Высокий прессинг', 'Владение мячом', 'Низкий блок', 'Атакующий футбол', 'Сбалансированный', 'Игра через фланги', 'Контрпрессинг', 'Контратаки', 'Тики-така'];
+function btStyleEdge(a, b) { const n = BT_STYLES.length, i = BT_STYLES.indexOf(a), j = BT_STYLES.indexOf(b); if (i < 0 || j < 0 || i === j) return 0; const d = (j - i + n) % n; return d === 1 || d === 2 ? 1 : d === n - 1 || d === n - 2 ? -1 : 0; }
+// одни схемы чуть сильнее других (в единицах рейтинга)
+const BT_FORM_Q = { '4-3-3': .45, '4-2-3-1': .4, '4-4-2': .2, '4-1-2-1-2': .15, '3-5-2': .1, '3-4-3': 0, '5-3-2': -.15 };
+// какие схемы подходят стилю
+const BT_SF = {
+  'Владение мячом': ['4-3-3', '4-2-3-1', '3-4-3'], 'Высокий прессинг': ['4-3-3', '4-2-3-1', '3-4-3'], 'Контратаки': ['4-4-2', '5-3-2', '3-5-2'],
+  'Низкий блок': ['5-3-2', '4-4-2', '3-5-2'], 'Атакующий футбол': ['3-4-3', '4-3-3', '4-1-2-1-2'], 'Сбалансированный': ['4-4-2', '4-2-3-1', '4-1-2-1-2'],
+  'Длинные передачи': ['4-4-2', '5-3-2', '3-5-2'], 'Игра через фланги': ['4-4-2', '3-4-3', '4-3-3'], 'Контрпрессинг': ['4-3-3', '4-2-3-1', '4-1-2-1-2'], 'Тики-така': ['4-3-3', '4-1-2-1-2', '4-2-3-1'],
+};
+// тренеры: [имя, любимые схемы, любимые стили, рейтинг, сборная, нынешняя команда («NT:XXX» — сборная, null — без работы)] — по состоянию на ноябрь 2026
+const BT_COACHES = [
+  ["Пеп Гвардиола", ["4-3-3", "4-2-3-1"], ["Владение мячом", "Тики-така"], 92, "ESP", null],
+  ["Карло Анчелотти", ["4-1-2-1-2", "4-3-3", "4-4-2"], ["Сбалансированный"], 91, "ITA", "NT:BRA"],
+  ["Юрген Клопп", ["4-3-3"], ["Контрпрессинг", "Высокий прессинг"], 90, "GER", "NT:GER"],
+  ["Луис Энрике", ["4-3-3"], ["Тики-така", "Высокий прессинг"], 89, "ESP", "ПСЖ"],
+  ["Зинедин Зидан", ["4-3-3", "4-1-2-1-2"], ["Сбалансированный", "Атакующий футбол"], 88, "FRA", "NT:FRA"],
+  ["Ханси Флик", ["4-2-3-1"], ["Высокий прессинг", "Атакующий футбол"], 88, "GER", "Барселона"],
+  ["Микель Артета", ["4-3-3"], ["Владение мячом", "Высокий прессинг"], 87, "ESP", "Арсенал"],
+  ["Томас Тухель", ["4-2-3-1", "3-4-3"], ["Высокий прессинг", "Сбалансированный"], 87, "GER", "NT:ENG"],
+  ["Антонио Конте", ["3-5-2", "3-4-3"], ["Контратаки", "Игра через фланги"], 87, "ITA", null],
+  ["Лионель Скалони", ["4-4-2", "4-3-3"], ["Сбалансированный", "Игра через фланги"], 87, "ARG", null],
+  ["Луис де ла Фуэнте", ["4-3-3"], ["Владение мячом", "Контрпрессинг"], 86, "ESP", "NT:ESP"],
+  ["Диего Симеоне", ["4-4-2", "5-3-2"], ["Низкий блок", "Контратаки"], 86, "ARG", "Атлетико Мадрид"],
+  ["Хаби Алонсо", ["3-4-3", "4-2-3-1"], ["Владение мячом", "Игра через фланги"], 86, "ESP", "Челси"],
+  ["Унаи Эмери", ["4-4-2", "4-2-3-1"], ["Сбалансированный", "Контратаки"], 86, "ESP", "Астон Вилла"],
+  ["Симоне Индзаги", ["3-5-2"], ["Контратаки", "Игра через фланги"], 86, "ITA", "Аль-Хиляль"],
+  ["Жозе Моуринью", ["4-2-3-1"], ["Низкий блок", "Контратаки"], 85, "POR", "Реал Мадрид"],
+  ["Венсан Компани", ["4-2-3-1"], ["Высокий прессинг", "Владение мячом"], 85, "BEL", "Бавария"],
+  ["Джан Пьеро Гасперини", ["3-4-3"], ["Высокий прессинг", "Атакующий футбол"], 85, "ITA", "Рома"],
+  ["Дидье Дешам", ["4-2-3-1", "4-4-2"], ["Низкий блок", "Контратаки"], 85, "FRA", null],
+  ["Арне Слот", ["4-2-3-1"], ["Владение мячом", "Контрпрессинг"], 84, "NED", null],
+  ["Роберто Де Дзерби", ["4-2-3-1"], ["Владение мячом", "Атакующий футбол"], 84, "ITA", "Тоттенхэм"],
+  ["Энцо Мареска", ["4-2-3-1"], ["Владение мячом"], 83, "ITA", "Манчестер Сити"],
+  ["Лучано Спаллетти", ["4-3-3"], ["Владение мячом", "Тики-така"], 83, "ITA", "Ювентус"],
+  ["Массимилиано Аллегри", ["3-5-2", "4-3-3"], ["Низкий блок", "Длинные передачи"], 83, "ITA", "Наполи"],
+  ["Юлиан Нагельсман", ["4-2-3-1", "3-4-3"], ["Высокий прессинг", "Контрпрессинг"], 83, "GER", null],
+  ["Андони Ираола", ["4-2-3-1", "4-4-2"], ["Высокий прессинг", "Контратаки"], 82, "ESP", "Ливерпуль"],
+  ["Маурисио Почеттино", ["4-2-3-1"], ["Высокий прессинг", "Атакующий футбол"], 82, "ARG", null],
+  ["Рубен Аморим", ["3-4-3"], ["Высокий прессинг", "Игра через фланги"], 81, "POR", "Милан"],
+  ["Оливер Гласнер", ["3-4-3", "3-5-2"], ["Контратаки", "Высокий прессинг"], 81, "AUT", "Ноттингем Форест"],
+  ["Маурицио Сарри", ["4-3-3"], ["Тики-така", "Владение мячом"], 81, "ITA", "Аталанта"],
+  ["Марсело Бьелса", ["3-4-3"], ["Высокий прессинг", "Игра через фланги"], 81, "ARG", null],
+  ["Марсело Гальярдо", ["4-1-2-1-2", "4-3-3"], ["Атакующий футбол", "Высокий прессинг"], 81, "ARG", null],
+  ["Кристиан Киву", ["3-5-2"], ["Сбалансированный", "Игра через фланги"], 80, "ROU", "Интер"],
+  ["Сеск Фабрегас", ["4-2-3-1", "4-3-3"], ["Владение мячом", "Тики-така"], 80, "ESP", "Комо"],
+  ["Мануэль Пеллегрини", ["4-2-3-1"], ["Владение мячом", "Атакующий футбол"], 80, "CHI", "Бетис"],
+  ["Марко Розе", ["4-2-3-1", "4-4-2"], ["Высокий прессинг", "Контрпрессинг"], 80, "GER", "Борнмут"],
+  ["Роберто Манчини", ["4-3-3", "3-5-2"], ["Владение мячом"], 80, "ITA", null],
+  ["Гарет Саутгейт", ["3-4-3", "4-2-3-1"], ["Сбалансированный", "Низкий блок"], 80, "ENG", null],
+  ["Фабиан Хюрцелер", ["4-2-3-1", "3-4-3"], ["Владение мячом", "Атакующий футбол"], 79, "GER", "Брайтон"],
+  ["Эрик тен Хаг", ["4-3-3"], ["Владение мячом", "Тики-така"], 79, "NED", null],
+  ["Роналд Куман", ["4-3-3", "4-4-2"], ["Сбалансированный", "Длинные передачи"], 79, "NED", null],
+  ["Анге Постекоглу", ["4-3-3"], ["Атакующий футбол"], 78, "AUS", null],
+  ["Сергей Семак", ["4-2-3-1"], ["Сбалансированный", "Игра через фланги"], 78, "RUS", "Зенит"],
+  ["Дэвид Мойес", ["4-4-2", "4-2-3-1"], ["Низкий блок", "Длинные передачи"], 77, "SCO", "Эвертон"],
+  ["Маттиас Яйссле", ["4-2-3-1", "4-4-2"], ["Высокий прессинг", "Контрпрессинг"], 77, "GER", "Ньюкасл"],
+  ["Режис Ле Бри", ["4-3-3", "4-2-3-1"], ["Сбалансированный", "Низкий блок"], 77, "FRA", "Сандерленд"],
+  ["Пьер Саж", ["3-4-3", "4-3-3"], ["Высокий прессинг", "Контратаки"], 76, "FRA", "Кристал Пэлас"],
+  ["Даниэль Фарке", ["4-3-3", "4-2-3-1"], ["Владение мячом", "Игра через фланги"], 76, "GER", "Лидс"],
+  ["Валерий Карпин", ["4-3-3"], ["Атакующий футбол", "Длинные передачи"], 76, "RUS", null],
+  ["Майкл Каррик", ["4-2-3-1", "4-3-3"], ["Сбалансированный", "Владение мячом"], 75, "ENG", "Манчестер Юнайтед"],
+  ["Фрэнк Лэмпард", ["4-2-3-1", "4-3-3"], ["Атакующий футбол", "Сбалансированный"], 75, "ENG", "Ковентри"],
+  ["Шон Дайч", ["4-4-2"], ["Длинные передачи", "Низкий блок"], 74, "ENG", null],
+  ["Альваро Арбелоа", ["4-3-3", "4-2-3-1"], ["Владение мячом", "Сбалансированный"], 74, "ESP", "Фулхэм"],
+  ["Кит Эндрюс", ["4-2-3-1", "4-4-2"], ["Длинные передачи", "Контратаки"], 74, "IRL", "Брентфорд"],
+  ["Гари О'Нил", ["4-2-3-1", "3-4-3"], ["Контратаки", "Сбалансированный"], 74, "ENG", "Ипсвич"],
+  ["Серджей Якирович", ["3-5-2", "4-4-2"], ["Контратаки", "Низкий блок"], 73, "CRO", "Халл Сити"],
+];
+// координаты позиций для штрафа «не на своей позиции»: x — фланг (-1 левый, 1 правый), y — высота
+const BT_PXY = { CB: [0, .15], LB: [-1, .2], RB: [1, .2], CDM: [0, .38], CM: [0, .5], CAM: [0, .65], LM: [-1, .62], RM: [1, .62], LW: [-1, .8], RW: [1, .8], ST: [0, .9] };
+function btPen(sl, c) {
+  if (sl === c.pos || (c.alt && c.alt.includes(sl))) return 0;
+  if (sl === 'GK' || c.pos === 'GK') return null;
+  const a = BT_PXY[sl], b = BT_PXY[c.pos]; if (!a || !b) return -4;
+  return -Math.min(8, Math.max(1, Math.round(Math.abs(a[1] - b[1]) * 8 + Math.abs(a[0] - b[0]) * 1.2)));
+}
+// ---------- пул карточек: все игроки из реальных составов ----------
+let BT_POOL = null, BT_BYPOS = null, BT_VER = 0, BT_TOP = null;
+const BT_CW = 2.6; // чем больше, тем сильнее карточки в драфте (средний рейтинг ≈ 80)
+const BT_TOP5 = { ENG1: 1, ESP1: 1, ITA1: 1, GER1: 1, FRA1: 1 };
+function btPool() {
+  if (BT_POOL) return BT_POOL;
+  const lgOf = {};
+  for (const l of LEAGUES) for (const e of l.cl.split('|')) lgOf[e.split(':')[0]] = l.id;
+  BT_POOL = []; BT_BYPOS = {};
+  for (const cl of Object.keys(REAL)) for (const e of REAL[cl].split(';')) {
+    if (!e) continue; const f = e.split(','); if (!BT_PXY[f[1]] && f[1] !== 'GK') continue;
+    const alt = f[5] ? f[5].split('/').filter(x => x && x !== f[1] && (BT_PXY[x])) : [];
+    const c = { i: BT_POOL.length, n: f[0], pos: f[1], ovr: +f[3], nat: f[4], cl, lg: lgOf[cl] || '', alt };
+    BT_POOL.push(c); (BT_BYPOS[c.pos] = BT_BYPOS[c.pos] || []).push(c);
+  }
+  BT_TOP = BT_POOL.filter(c => BT_TOP5[c.lg]);
+  let h = 7; for (const c of BT_POOL) h = (h * 31 + c.ovr + c.n.length + c.pos.length + c.alt.length) % 1000000007; BT_VER = h;
+  return BT_POOL;
+}
+// детерминированный генератор случайных чисел
+function btRng(seed) { let a = seed >>> 0; return () => { a = (a + 0x6D2B79F5) >>> 0; let t = a; t = Math.imul(t ^ (t >>> 15), t | 1); t ^= t + Math.imul(t ^ (t >>> 7), t | 61); return ((t ^ (t >>> 14)) >>> 0) / 4294967296; }; }
+const btPick = (r, arr) => arr[Math.floor(r() * arr.length)];
+function btWPick(r, arr, w) { const s = w.reduce((a, b) => a + b, 0); let x = r() * s; for (let i = 0; i < arr.length; i++) { x -= w[i]; if (x <= 0) return arr[i]; } return arr[arr.length - 1]; }
+function btSample(r, arr, n) { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a.slice(0, n); }
+
+// ---------- никнеймы соперников: имена, уменьшительные, латиница с цифрами и т. д. ----------
+const NK_M = 'Ержан Санжар Тимур Арсений Глеб Руслан Ильяс Нурлан Артём Егор Максим Алихан Дмитрий Кирилл Азамат Никита Бекзат Иван Алексей Мирас Даулет Роман Вадим Тамерлан Ринат Олег Павел Вячеслав Денис Сергей Андрей Михаил Ильдар Арман Асхат Данияр Марат Владислав Константин Степан Георгий Захар Тимофей Богдан Евгений Игорь Юрий Аслан Рамазан Шамиль Бауыржан Айдос Жандос Олжас Ерлан Нурсултан Темирлан Адиль Марсель Ренат Эмиль Лев Матвей Ярослав Святослав Антон Виктор Фёдор'.split(' ');
+const NK_F = 'Марина Алина Дарья Анна Мария Аружан Камила Диана Полина Софья Екатерина Виктория Айгерим Дана Жанна Ксения Ольга Татьяна Юлия Асель Динара Мадина Лейла Алия Карина Вероника Светлана Наталья Ангелина Милана Аделина Арина Злата Василиса Айша'.split(' ');
+const NK_D = 'Санек Димон Тёмыч Макс Лёха Серёга Вован Жека Колян Антоха Ромчик Вано Стас Тоха Игорёк Денчик Паша Миха Гоша Славик Ержик Тимоха Никитос Кирюха Димас Маратик Санжик Аня Маша Даша Катюша Лиза Настя Юля Оля'.split(' ');
+const NK_W = 'clipster sniper goalgetter tiki taka forward striker keeper pressing kontra winger wonderkid baller footy dribbler panenka rabona chip volley zidane maestro capitan ultras derby offside corner tactic regista libero bomber golazo nutmeg skiller freekick gegen boss coach scout draft pitch stadium legend rookie champion mamba wolf tiger falcon eagle shark storm ghost pixel neon cosmo astro'.split(' ');
+const NK_L = 'mariamso solnechniiiy ermek_kz dimasik ayaulym zhanik asylan nursik timka_07 kotik_mur marat_bek aidana dinara_s kamila kz_lion almaty_boy astana_fc steppe_wolf aru_zh daniyar_t sergo vanya_k lexa_pro tolik sasha_z nastyushka katyushka masha_m dashka_d yulek'.split(' ');
+const NK_LET = 'АБВГДЕЖЗИКЛМНОПРСТУФХЧШЯ';
+const NK_TR = 'erzhan sanzhar timur arseniy gleb ruslan ilyas nurlan artem egor maks alikhan dima kirill azamat nikita bekzat vanya lesha miras daulet roma vadim tamerlan rinat oleg pasha slava denis sergey andrey misha arman askhat daniyar marat vlad kostya stepan zakhar bogdan zhenya igor aslan ramazan aidos zhandos olzhas erlan adil emil lev matvey yarik anton vitya marina alina dasha anya masha aruzhan kamila diana polina sonya katya vika aigerim dana ksyusha olya tanya yulya asel dinara madina leila aliya karina nika sveta natasha angelina milana arina zlata'.split(' ');
+function btNick(r) {
+  r = r || Math.random; const n = x => String(Math.floor(r() * x)); const x = r(); const cap = w => w.replace(/^./, c => c.toUpperCase());
+  if (x < .18) return btPick(r, r() < .75 ? NK_M : NK_F) + ' ' + btPick(r, NK_LET) + '.';
+  if (x < .24) return btPick(r, r() < .75 ? NK_M : NK_F);
+  if (x < .30) return btPick(r, NK_D);
+  if (x < .48) return btPick(r, NK_W) + (r() < .5 ? '_' : '') + n(10000);
+  if (x < .64) return btPick(r, NK_TR) + btPick(r, ['_', '.', '', '']) + btPick(r, [n(100), n(10000), '20' + (String(Math.floor(r() * 12)).padStart(2, '0')), btPick(r, ['kz', 'pro', 'fc', 'xd', 'top', 'ok'])]);
+  if (x < .72) return btPick(r, NK_L) + (r() < .6 ? n(1000) : '');
+  if (x < .84) return btPick(r, NK_W) + cap(btPick(r, NK_W)) + (r() < .5 ? n(100) : '');
+  if (x < .92) return btPick(r, NK_TR) + btPick(r, ['ooo', 'iii', 'aaa', 'chik', 'ka', 'sha', 'ik']) + (r() < .5 ? n(100) : '');
+  return btPick(r, ['Mr', 'Real', 'The', 'Big', 'Lil', 'Super', 'Don', 'King']) + cap(btPick(r, r() < .5 ? NK_W : NK_TR)) + (r() < .5 ? n(99) : '');
+}
+
+// ---------- состав ----------
+function btSlots(b, side) { return BT_FORMS[b.form[side]] || BT_FORMS['4-3-3']; }
+function btIds(b, side) { return (b.lay[side] || []).filter(x => x !== null); }
+// лучшее свободное место для карточки
+function btPlace(b, side, i) {
+  const S = btSlots(b, side); const c = BT_POOL[i]; let best = -1, bv = -99;
+  b.lay[side].forEach((x, k) => { if (x !== null) return; const p = btPen(S[k][0], c); if (p !== null && p > bv) { bv = p; best = k; } });
+  return best;
+}
+function btFits(b, side, i) { return btPlace(b, side, i) >= 0; }
+// химия: одноклубники дают больше всего, затем одна сборная, затем одна лига. Максимум 3 на игрока, 33 на состав.
+function btChem(ids) {
+  btPool(); const pc = {}; ids.forEach(i => { pc[i] = { c: 0, n: 0, l: 0 }; });
+  for (let a = 0; a < ids.length; a++) for (let b = a + 1; b < ids.length; b++) {
+    const x = BT_POOL[ids[a]], y = BT_POOL[ids[b]];
+    if (x.cl === y.cl) { pc[ids[a]].c += 1.5; pc[ids[b]].c += 1.5; }
+    if (x.nat === y.nat) { pc[ids[a]].n += 1; pc[ids[b]].n += 1; }
+    if (x.lg && x.lg === y.lg && x.cl !== y.cl) { pc[ids[a]].l += .5; pc[ids[b]].l += .5; }
+  }
+  let sum = 0; for (const i of ids) { const p = pc[i]; sum += Math.min(3, p.c + Math.min(1.5, p.n) + Math.min(1, p.l)); }
+  return { sum: Math.round(sum) };
+}
+// тактика: тренер под схему +3, тренер под стиль +3, стиль под схему +2 (игроки этого не видят)
+function btTac(f, coach, style) {
+  const C = BT_COACHES.find(x => x[0] === coach); let t = 0;
+  if (C && C[1].includes(f)) t += 3; if (C && C[2].includes(style)) t += 3; if ((BT_SF[style] || []).includes(f)) t += 2;
+  return t;
+}
+// связь тренера с игроками: его нынешний клуб (или сборная) — сильнее всего, затем лига клуба, затем земляки. Максимум +1,5 за игрока.
+const BT_LGOF = {};
+function btCoachLink1(C, c) {
+  if (!C) return 0; const t = C[5];
+  if (t && t.startsWith('NT:')) { if (c.nat === t.slice(3)) return 1.5; return c.nat === C[4] ? .5 : 0; }
+  if (t && c.cl === t) return 1.5;
+  let v = 0; if (t) { if (!BT_LGOF[t]) { const x = BT_POOL.find(p => p.cl === t); BT_LGOF[t] = x ? x.lg || '-' : '-'; } if (BT_LGOF[t] !== '-' && c.lg === BT_LGOF[t]) v += .5; }
+  if (c.nat === C[4]) v += .5; return Math.min(1.5, v);
+}
+function btCoachLink(C, ids) { return Math.min(8, ids.reduce((a, i) => a + btCoachLink1(C, BT_POOL[i]), 0)); }
+function btStrength(b, side) {
+  const S = btSlots(b, side); let sum = 0;
+  b.lay[side].forEach((x, k) => { sum += x === null ? 40 : BT_POOL[x].ovr + (btPen(S[k][0], BT_POOL[x]) ?? -10); });
+  const avg = sum / 11; const ids = btIds(b, side); let ch = btChem(ids).sum; const tac = b.tac ? b.tac[side] : 0;
+  const C = BT_COACHES.find(x => x[0] === b.coach[side]);
+  // тренер: его рейтинг влияет на силу, земляки тренера лучше понимают его идеи (+0,5 к сыгранности за игрока, максимум +4)
+  const cOvr = C ? C[3] : 80; ch += btCoachLink(C, ids);
+  const fq = BT_FORM_Q[b.form[side]] || 0;
+  return { avg: Math.round(avg * 10) / 10, chem: Math.round(ch), tac, coach: cOvr, str: avg + (ch + tac * 1.6 - 18) * 0.16 + (cOvr - 84) * 0.12 + fq };
+}
+
+// ---------- партия ----------
+// раунды 0–2 — тактика (схема, тренер, стиль), раунды 3–13 — игроки. Первым выбирает то один, то другой.
+const BT_TAC = ['f', 'c', 's'];
+const BT_TAC_RU = { f: 'Схема', c: 'Тренер', s: 'Стиль игры' };
+const BT_TOTAL = BT_ROUNDS + 3;
+function btNew(seed, names, bots) {
+  btPool();
+  const b = { seed: seed >>> 0, names: names.slice(0, 2), bots: (bots || [0, 0]).slice(0, 2), phase: 'draft', rd: 0, step: 0,
+    form: [null, null], coach: [null, null], style: [null, null], tac: [0, 0], lay: [[], []], used: {}, offer: [], taken: [], res: null, log: [] };
+  btOffer(b); return b;
+}
+function btKind(b) { return b.rd < 3 ? BT_TAC[b.rd] : 'p'; }
+function btTacVal(b, side, k) { return k === 'f' ? b.form[side] : k === 'c' ? b.coach[side] : b.style[side]; }
+// какой вариант тактики выбрать: бот подбирает сочетание к уже выбранному (но иногда ошибается)
+function btTacBest(b, side, rand) {
+  const k = btKind(b); const opts = b.offer.map((x, i) => i).filter(i => !b.taken.some(t => t.i === i)); if (!opts.length) return null;
+  if (rand && rand() < .55) return btPick(rand, opts);
+  let best = opts[0], bv = -1;
+  for (const i of opts) {
+    const o = b.offer[i]; const f = k === 'f' ? o : b.form[side], c = k === 'c' ? o : b.coach[side], st = k === 's' ? o : b.style[side];
+    let v = 0; const C = BT_COACHES.find(x => x[0] === c);
+    if (C && f && C[1].includes(f)) v += 3; if (C && st && C[2].includes(st)) v += 3; if (f && st && (BT_SF[st] || []).includes(f)) v += 2;
+    if (k === 'f' && !c) v = Object.keys(BT_FORMS).indexOf(o) < 3 ? 1 : 0;
+    if (k === 'c' && C) v += (C[3] - 84) * .3 + btCoachLink(C, []) ;
+    v += rand ? rand() * 1.5 : 0; if (v > bv) { bv = v; best = i; }
+  }
+  return best;
+}
+// кто ходит: в нечётных раундах первым выбирает второй игрок
+function btTurn(b) { if (b.phase !== 'draft') return -1; const first = b.rd % 2; return b.step === 0 ? first : 1 - first; }
+function btOffer(b) {
+  const r = btRng(b.seed ^ Math.imul(b.rd + 1, 0x9E3779B1));
+  const kind = btKind(b);
+  if (kind === 'c') { // тренеры примерно одного уровня
+    const c0 = btPick(r, BT_COACHES)[3]; let pool = [];
+    for (const w of [2, 3, 4, 6, 20]) { pool = BT_COACHES.filter(c => Math.abs(c[3] - c0) <= w); if (pool.length >= 5) break; }
+    b.offer = btSample(r, pool.map(c => c[0]), 5); b.taken = []; b.step = 0; return; }
+  if (kind !== 'p') { b.offer = btSample(r, kind === 'f' ? Object.keys(BT_FORMS) : BT_STYLES, 5); b.taken = []; b.step = 0; return; }
+  const empty = [0, 1].map(s => btSlots(b, s).filter((x, k) => b.lay[s][k] === null).map(x => x[0]));
+  const first = b.rd % 2;
+  // уровень раунда: чаще игроки топ-5 лиг и сильнее среднего
+  const top = r() < .85; const src = top ? BT_TOP : BT_POOL;
+  const center = Math.max(75, btWPick(r, src, src.map(c => Math.pow(Math.max(1, c.ovr - 66), BT_CW))).ovr);
+  const pos = [];
+  const add = list => { const free = list.filter(p => !pos.includes(p)); pos.push(free.length ? btPick(r, free) : btPick(r, list)); };
+  // каждому — минимум 2 карточки ровно под его свободные позиции
+  for (const s of [first, 1 - first]) { let k = pos.filter(p => empty[s].includes(p)).length; while (k < 2 && empty[s].length) { add(empty[s]); k++; } }
+  const uni = [...new Set(empty[0].concat(empty[1]))];
+  while (pos.length < 5) add(uni.length ? uni : Object.keys(BT_PXY));
+  const all = btIds(b, 0).concat(btIds(b, 1));
+  const offer = [];
+  pos.forEach((p, k) => {
+    let cand = [];
+    for (const w of [2, 3, 4, 6, 9, 15, 40]) { cand = (BT_BYPOS[p] || []).filter(c => !b.used[c.i] && !offer.includes(c.i) && Math.abs(c.ovr - center) <= w); if (cand.length >= 3) break; }
+    let c;
+    if (top) { const tc = cand.filter(x => BT_TOP5[x.lg]); if (tc.length && r() < .8) cand = tc; }
+    if (all.length && k === 4 - (b.rd % 3) && r() < .45) { const link = cand.filter(x => all.some(i => BT_POOL[i].cl === x.cl || BT_POOL[i].nat === x.nat)); if (link.length) c = btPick(r, link); }
+    if (!c) c = btPick(r, cand);
+    offer.push(c.i);
+  });
+  for (let i = offer.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [offer[i], offer[j]] = [offer[j], offer[i]]; }
+  offer.forEach(i => { b.used[i] = 1; });
+  b.offer = offer; b.taken = []; b.step = 0;
+}
+function btCanPick(b, side, i) {
+  if (b.phase !== 'draft' || btTurn(b) !== side || b.taken.some(t => t.i === i)) return false;
+  if (btKind(b) !== 'p') return Number.isInteger(i) && i >= 0 && i < b.offer.length;
+  return b.offer.includes(i) && btFits(b, side, i);
+}
+function btDoPick(b, side, i, auto) {
+  if (!btCanPick(b, side, i)) return false;
+  const k = btKind(b);
+  if (k === 'f') b.form[side] = b.offer[i]; else if (k === 'c') b.coach[side] = b.offer[i]; else if (k === 's') b.style[side] = b.offer[i];
+  else b.lay[side][btPlace(b, side, i)] = i;
+  b.taken.push({ i, side, auto: auto ? 1 : 0 }); b.log.push([b.rd, side, k === 'p' ? i : b.offer[i]]);
+  if (b.step === 0) { b.step = 1; return true; }
+  b.rd++;
+  if (b.rd === 3) for (const sd of [0, 1]) { b.tac[sd] = btTac(b.form[sd], b.coach[sd], b.style[sd]); b.lay[sd] = BT_FORMS[b.form[sd]].map(() => null); }
+  if (b.rd >= BT_TOTAL) btPlay(b); else btOffer(b);
+  return true;
+}
+// перестановка: поменять местами два места своей схемы (вратарь — только в ворота)
+function btMove(b, side, a, c) {
+  if (b.phase !== 'draft' || a === c) return false; const L = b.lay[side], S = btSlots(b, side);
+  if (a < 0 || c < 0 || a >= L.length || c >= L.length || (L[a] === null && L[c] === null)) return false;
+  if (L[a] !== null && btPen(S[c][0], BT_POOL[L[a]]) === null) return false;
+  if (L[c] !== null && btPen(S[a][0], BT_POOL[L[c]]) === null) return false;
+  [L[a], L[c]] = [L[c], L[a]]; return true;
+}
+// автоматически расставить всех получше (используется ботом)
+function btArrange(b, side) {
+  for (let pass = 0; pass < 3; pass++) for (let a = 0; a < 11; a++) for (let c = a + 1; c < 11; c++) {
+    const L = b.lay[side], S = btSlots(b, side); if (L[a] === null && L[c] === null) continue;
+    const v = (k, x) => x === null ? 0 : (btPen(S[k][0], BT_POOL[x]) ?? -99);
+    if (v(c, L[a]) + v(a, L[c]) > v(a, L[a]) + v(c, L[c])) btMove(b, side, a, c);
+  }
+}
+// автовыбор (бот или истёк таймер): рейтинг + позиция + прирост химии
+function btBest(b, side, rand) {
+  if (btKind(b) !== 'p') return btTacBest(b, side, rand);
+  const opts = b.offer.filter(i => btCanPick(b, side, i)); if (!opts.length) return null;
+  const ids = btIds(b, side); const base = btChem(ids).sum; const S = btSlots(b, side);
+  let best = null, bv = -1e9;
+  for (const i of opts) {
+    const k = btPlace(b, side, i);
+    const v = BT_POOL[i].ovr + btPen(S[k][0], BT_POOL[i]) * 1.2 + (btChem(ids.concat(i)).sum - base) * (rand ? .4 : .9) + (rand ? rand() * 7.5 : 0);
+    if (v > bv) { bv = v; best = i; }
+  }
+  return best;
+}
+
+// ---------- матч: 90 минут, при ничьей — доп. время и пенальти ----------
+function btPlay(b) {
+  b.phase = 'done';
+  const r = btRng(b.seed ^ 0x51ED27);
+  const S = [btStrength(b, 0), btStrength(b, 1)];
+  const d = S[0].str - S[1].str + btStyleEdge(b.style[0], b.style[1]) * 0.6;  // стиль против стиля
+  const tempo = .7 + r() * .8; // темп матча: от закрытого 0:0 до перестрелки 4:3
+  const lam = [1.45 * tempo * Math.exp(d * 0.085), 1.45 * tempo * Math.exp(-d * 0.085)];
+  const pois = l => { let L = Math.exp(-l), k = 0, p = 1; do { k++; p *= r(); } while (p > L); return k - 1; };
+  const SW = { ST: 5, LW: 3.4, RW: 3.4, LM: 2.2, RM: 2.2, CAM: 2.8, CM: 1.5, CDM: .8, LB: .55, RB: .55, CB: .5, GK: .02 };
+  const AW = { ST: 1.8, LW: 3, RW: 3, LM: 2.8, RM: 2.8, CAM: 3.6, CM: 3, CDM: 1.3, LB: 1.6, RB: 1.6, CB: .35, GK: .1 };
+  const YW = { CB: 3, CDM: 3, LB: 2, RB: 2, CM: 1.5, LM: 1, RM: 1, CAM: .8, ST: .7, LW: .5, RW: .5, GK: .1 };
+  const team = s => btSlots(b, s).map((x, k) => ({ s: x[0], c: b.lay[s][k] })).filter(x => x.c !== null);
+  const T = [team(0), team(1)];
+  const who = (side, W, not) => { const L = T[side].filter(x => x.c !== not); return btWPick(r, L, L.map(x => W[x.s] * Math.pow(BT_POOL[x.c].ovr / 80, 3))).c; };
+  const gk = s => (T[s].find(x => x.s === 'GK') || T[s][0]).c;
+  const ev = [];
+  const goals = (side, n, lo, hi) => { for (let k = 0; k < n; k++) { const m = lo + Math.floor(r() * (hi - lo + 1)); const p = who(side, SW); const a = r() < .78 ? who(side, AW, p) : null; ev.push({ m, t: 'g', s: side, p, a }); } };
+  goals(0, Math.min(6, pois(lam[0])), 1, 90); goals(1, Math.min(6, pois(lam[1])), 1, 90);
+  const extra = 5 + Math.floor(r() * 5); const booked = {};
+  for (let k = 0; k < extra; k++) {
+    const side = r() < lam[0] / (lam[0] + lam[1]) ? 0 : 1; const m = 1 + Math.floor(r() * 90); const x = r();
+    if (x < .45) ev.push({ m, t: 'sv', s: side, p: who(side, SW), k: gk(1 - side) });
+    else if (x < .7) ev.push({ m, t: 'w', s: side, p: who(side, SW) });
+    else { const p = who(1 - side, YW); if (!booked[p]) { booked[p] = 1; ev.push({ m, t: 'y', s: 1 - side, p }); } }
+  }
+  const sc = s => ev.filter(e => e.t === 'g' && e.s === s).length;
+  let et = false, pens = null;
+  if (sc(0) === sc(1)) {
+    et = true; goals(0, pois(lam[0] * .3), 91, 120); goals(1, pois(lam[1] * .3), 91, 120);
+    if (sc(0) === sc(1)) {
+      pens = []; const tk = s => T[s].filter(x => x.s !== 'GK').sort((a, c) => BT_POOL[c.c].ovr * SW[c.s] - BT_POOL[a.c].ovr * SW[a.s]).map(x => x.c);
+      const TK = [tk(0), tk(1)], K = [gk(0), gk(1)]; const n = [0, 0], g = [0, 0];
+      for (let k = 0; k < 30; k++) {
+        const s = k % 2; const p = TK[s][n[s] % TK[s].length]; n[s]++;
+        const okp = r() < .76 + (BT_POOL[p].ovr - BT_POOL[K[1 - s]].ovr) * .006; if (okp) g[s]++;
+        pens.push({ s, p, ok: okp ? 1 : 0 });
+        const left = [5 - n[0], 5 - n[1]];
+        if (k >= 9 && k % 2 === 1 && g[0] !== g[1]) break;
+        if (k < 9 && (g[0] + Math.max(0, left[0]) < g[1] || g[1] + Math.max(0, left[1]) < g[0])) break;
+      }
+    }
+  }
+  ev.sort((x, y) => x.m - y.m);
+  const g0 = sc(0), g1 = sc(1);
+  const win = g0 > g1 ? 0 : g1 > g0 ? 1 : (pens ? (pens.filter(p => p.s === 0 && p.ok).length > pens.filter(p => p.s === 1 && p.ok).length ? 0 : 1) : 0);
+  b.res = { ev, sc: [g0, g1], et, pens, win };
+  b.offer = []; b.taken = [];
+  return b.res;
+}
+// что видит игрок со стороны side («силы» и химии не видно)
+function btView(b, side) {
+  return { phase: b.phase, rd: b.rd, kind: b.phase === 'draft' ? btKind(b) : 'done', me: side, turn: btTurn(b), offer: b.offer, taken: b.taken, names: b.names, res: b.res,
+    form: b.form, coach: b.coach, style: b.style, lay: b.lay };
+}
+if (typeof module !== 'undefined' && typeof window === 'undefined') module.exports = { BT_COACHES, BT_STYLES, btStyleEdge, btNew, btKind, btDoPick, btBest, btCanPick, btTurn, btView, btMove, btArrange, btPool, btStrength, btChem, btTac, btPen, btRng, btNick, btIds, BT_FORMS, BT_ROUNDS, BT_TOTAL, get BT_VER() { btPool(); return BT_VER; } };
+
+// ===================== «БИТВА СОСТАВОВ»: экраны =====================
+// В Telegram — онлайн через сервер (живой соперник или бот, рейтинг). В веб-версии — против бота, без рейтинга.
+let BTL = null;
+function btC(i) { return btPool()[i]; }
+function btName(c) { try { const v = modIdx().pl[c.n]; if (v && v.n) return v.n; } catch (e) {} return c.n; }
+function btClub(c) { return typeof modClubName === 'function' ? modClubName(c.cl) : c.cl; }
+function btShort(c) { const n = btName(c).split(' '); return n[n.length - 1]; }
+function btTier(o) { return o >= 86 ? 0 : o >= 80 ? 1 : o >= 74 ? 2 : 3; }
+function btNet() { return typeof netOn === 'function' && netOn(); }
+function btStop() { if (BTL) { clearTimeout(BTL.t); clearTimeout(BTL.lt); clearInterval(BTL.anim); BTL.stop = 1; } }
+
+// ---------- лобби ----------
+async function btLobby(msg) {
+  btStop(); G = null; BTL = { stop: 0 };
+  const net = btNet();
+  let top = null; if (net) { try { top = await api('/bt/top'); } catch (e) { msg = msg || e.message; } }
+  const me = top && top.m.me;
+  const fl = net ? (top ? top.freeLeft : NET.me && NET.me.btFree) : null;
+  app.innerHTML = `<div class="page bt"><div class="m38head"><button class="icon" id="btB" title="Меню">${ic('menu')}</button>${mLogo('bt')}<b>Битва составов</b></div>
+  <div class="card"><p>Сначала каждый выбирает схему, тренера и стиль игры. Потом вы с соперником по очереди забираете футболистов из общей пятёрки карточек примерно одного уровня — за 11 раундов собирается состав. Затем быстрый матч; ничья — дополнительное время и пенальти.</p>
+  <p class="small muted">Каждый раунд первым выбирает то один, то другой. Сильнее тот, у кого выше рейтинг, меньше игроков не на своих позициях и лучше сыгранность: одноклубники, игроки одной сборной или одной лиги понимают друг друга лучше. Важно и то, как тренер, схема и стиль подходят друг другу.</p></div>
+  ${msg ? `<p class="bad c">${esc(msg)}</p>` : ''}
+  ${net ? `<div class="card"><div class="kv"><span>Ваши очки в этом месяце</span><b>${me ? me.p + ' · ' + me.rank + '-е место' : '0'}</b></div>${me ? `<div class="kv"><span>Победы / поражения</span><b>${me.w} / ${me.l}</b></div>` : ''}
+   <div class="kv"><span>Матчи сегодня</span><b>${fl === null || fl === undefined ? (NET.me && NET.me.premium ? 'без ограничений (Premium)' : '—') : 'осталось ' + fl + ' из ' + (top ? top.freePerDay : 5)}</b></div></div>` : ''}
+  <div class="col"><button class="btn big" id="btGo">${net ? 'Найти соперника' : 'Играть'}</button>
+  ${net ? `<button class="btn ghost" id="btTop">${ic('cup')} Рейтинг битвы составов</button>` : '<p class="small muted c">Онлайн-соперники и рейтинг — в версии игры для Telegram. Здесь — тренировочные матчи.</p>'}</div></div>`;
+  $('#btB').onclick = () => { btStop(); startScreen(); };
+  $('#btGo').onclick = () => net ? btFind() : btLocal();
+  if ($('#btTop')) $('#btTop').onclick = () => btTopModal(top);
+}
+function btTopModal(top, tab) {
+  if (!top) return; tab = tab || 'm'; const T = top[tab];
+  showModal(`<h2>Рейтинг: битва составов</h2><div class="grid2"><button class="btn sm ${tab === 'm' ? '' : 'ghost'}" id="tm">Этот месяц</button><button class="btn sm ${tab === 'a' ? '' : 'ghost'}" id="ta">За всё время</button></div>
+  <p class="small muted">Победа — 1 очко.</p>
+  ${T.rows.length ? `<div class="card">${T.rows.map(r => `<div class="row${r.me ? ' my' : ''}"><b>${r.rank}. ${esc(r.name)}</b><span class="sp"></span><span class="small muted">${r.w}–${r.l}</span><b>${r.p}</b></div>`).join('')}</div>` : '<p class="muted">Пока никто не набрал очков.</p>'}
+  ${T.me && T.me.rank > 50 ? `<p class="small">Вы: ${T.me.rank}-е место, ${T.me.p} очк.</p>` : ''}<div class="btns"><button class="btn ghost" id="tX">Закрыть</button></div>`);
+  $('#tm').onclick = () => btTopModal(top, 'm'); $('#ta').onclick = () => btTopModal(top, 'a'); $('#tX').onclick = closeModal;
+}
+
+// ---------- поиск соперника (онлайн) ----------
+function btFind() {
+  btStop(); BTL = { net: 1, stop: 0, t0: Date.now() };
+  app.innerHTML = `<div class="start"><div class="logo spin">${ic('ball')}</div><h2>Ищем соперника…</h2><p class="muted" id="btW">0 с</p><p class="small muted">Обычно это занимает до 20 секунд.</p><button class="btn ghost" id="btX">Отмена</button></div>`;
+  $('#btX').onclick = async () => { btStop(); try { await api('/bt/cancel', { method: 'POST', body: {} }); } catch (e) {} btLobby(); };
+  const L = BTL;
+  const go = async () => {
+    if (L.stop) return;
+    try {
+      const r = await api('/bt/find', { method: 'POST', body: { ver: (btPool(), BT_VER) } });
+      if (L.stop) return;
+      if (r.b) { btGot(r.b); return; }
+      const w = $('#btW'); if (w) w.textContent = r.wait + ' с';
+    } catch (e) {
+      if (L.stop) return;
+      if (e.code === 'limit') { btLobby(e.message); if (typeof storeModal === 'function') storeModal('premium'); return; }
+      btLobby(e.message); return;
+    }
+    L.t = setTimeout(go, 1500);
+  };
+  go();
+}
+function btGot(v) {
+  const net = BTL && BTL.net; btStop(); BTL = { net, stop: 0, v, id: v.id, key: '', sel: null };
+  btRoute(); if (net) btPoll();
+}
+// какой экран показать по состоянию матча
+function btRoute() { const v = BTL.v; if (v.phase === 'done') { btMatch(); return true; } btDraw(); return false; }
+function btPoll() {
+  const L = BTL; if (L.stop || !L.net) return;
+  L.t = setTimeout(async () => {
+    if (L.stop) return;
+    try { const r = await api('/bt/state?id=' + L.id); if (L.stop) return; L.v = r.b; } catch (e) { if (e.status === 404) { btLobby('Матч прерван'); return; } }
+    if (btRoute()) return; btPoll();
+  }, 900);
+}
+
+// ---------- тренировочный матч без сервера (веб-версия) ----------
+function btLocal() {
+  btStop(); const seed = Math.floor(Math.random() * 2 ** 31);
+  const b = btNew(seed, ['Вы', btNick()], [0, 1]);
+  BTL = { net: 0, stop: 0, b, key: '', sel: null }; btLocalTick();
+}
+function btLocalTick() {
+  const L = BTL, b = L.b; clearTimeout(L.lt); if (L.stop) return;
+  L.v = btView(b, 0); L.v.pickSec = 20;
+  if (b.phase === 'done') { btMatch(); return; }
+  const s = btTurn(b);
+  if (s === 1) { L.v.left = 0; L.lt = setTimeout(() => { if (L.stop) return; btDoPick(b, 1, btBest(b, 1, Math.random), 1); if (b.lay[1].length) btArrange(b, 1); btLocalTick(); }, 1500 + Math.random() * 3000); }
+  else { L.v.left = 20000; L.lt = setTimeout(() => { if (L.stop) return; btDoPick(b, 0, btBest(b, 0), 1); btLocalTick(); }, 20000); }
+  btDraw();
+}
+
+function btCountdown(left) { const L = BTL; clearInterval(L.anim); if (!left) return; const end = Date.now() + left; L.anim = setInterval(() => { const s = $('#btS'); if (s) s.textContent = Math.max(0, Math.round((end - Date.now()) / 1000)); }, 500); }
+
+// ---------- драфт ----------
+function btCoachTeam(C) { const t = C[5]; if (!t) return 'без клуба'; if (t.startsWith('NT:')) return 'сб. ' + ((NATIONS[t.slice(3)] || [t.slice(3)])[0]); return typeof modClubName === 'function' ? modClubName(t) : t; }
+function btTacCard(k, v) {
+  const t = v.taken.find(x => x.i === k); const can = !t && v.turn === v.me; const o = v.offer[k];
+  const sub = v.kind === 'f' ? 'схема' : v.kind === 'c' ? 'тренер' : 'стиль';
+  const tag = t ? (t.side === v.me ? '<i class="bttk me">ваш</i>' : '<i class="bttk op">соперника</i>') : '';
+  const C = v.kind === 'c' ? BT_COACHES.find(x => x[0] === o) : null;
+  return `<button class="m38pick btp${can ? '' : ' off'}" data-i="${k}" ${can ? '' : 'disabled'}><div class="m38c bttc${C ? ' t' + btTier(C[3]) : ''}${t ? ' gone' : ''}">${C ? `<div class="m38o"><b>${C[3]}</b><span>тренер</span></div>` : `<div class="m38m">${sub}</div>`}<div class="m38n">${esc(o)}</div>${C ? `<div class="m38m">${flagE(C[4])} ${esc(btCoachTeam(C))}</div>` : ''}${tag}</div></button>`;
+}
+function btCard(i, v) {
+  if (v.kind !== 'p') return btTacCard(i, v);
+  const c = btC(i); const t = v.taken.find(x => x.i === i); const my = v.me;
+  const fake = { form: v.form, lay: v.lay }; const k = btPlace(fake, my, i); const can = !t && v.turn === my && k >= 0;
+  const S = BT_FORMS[v.form[my]]; const pen = k >= 0 ? btPen(S[k][0], c) : 0;
+  const tag = t ? (t.side === my ? '<i class="bttk me">ваш</i>' : '<i class="bttk op">соперника</i>') : (k < 0 ? '<i class="bttk no">некуда поставить</i>' : `<i class="m38t">→ ${POS_RU[S[k][0]]}${pen ? ` <b class="neg">${pen}</b>` : ''}</i>`);
+  return `<button class="m38pick btp${can ? '' : ' off'}" data-i="${i}" ${can ? '' : 'disabled'}><div class="m38c t${btTier(c.ovr)}${t ? ' gone' : ''}"><div class="m38o"><b>${c.ovr}</b><span>${POS_RU[c.pos]}${c.alt && c.alt.length ? '<small> / ' + c.alt.map(x => POS_RU[x]).join(', ') + '</small>' : ''}</span></div>
+  <div class="m38n">${esc(btName(c))}</div><div class="m38m">${flagE(c.nat)} ${esc(btClub(c))}</div>${tag}</div></button>`;
+}
+// поле: свой состав можно переставлять — нажмите игрока, затем другое место
+function btPitch(v, side, cls) {
+  if (!v.form[side]) return `<div class="pitch btpitch ${cls}"><div class="btnof">схема ещё не выбрана</div></div>`;
+  const S = BT_FORMS[v.form[side]]; const L = v.lay[side] || []; const mine = side === v.me && v.phase === 'draft' && v.kind === 'p';
+  return `<div class="pitch btpitch ${cls}">${S.map((x, k) => {
+    const id = L[k]; const c = id !== null && id !== undefined ? btC(id) : null; const pen = c ? btPen(x[0], c) : 0;
+    return `<div class="pp${mine ? ' btsl' : ''}${mine && BTL.sel === k ? ' sel' : ''}" data-k="${k}"${c ? ` data-c="${id}"` : ''} style="left:${x[1]}%;top:${x[2]}%">${c ? `<b class="ovr-s ${oCls(c.ovr + pen)}">${c.ovr + pen}</b><span>${esc(btShort(c))}</span><i>${POS_RU[x[0]]}${pen ? ` <em class="neg">${pen}</em>` : ''}</i>` : `<b class="ovr-s m38e">${POS_RU[x[0]]}</b>`}</div>`;
+  }).join('')}</div>`;
+}
+function btTacLine(v, s) { return `<div><b>${esc(v.form[s] || '—')}</b> · ${esc(v.coach[s] || 'тренер —')}<br><span class="muted">${esc(v.style[s] || 'стиль —')}</span></div>`; }
+function btDraw() {
+  const L = BTL, v = L.v; if (!v || v.phase !== 'draft') return;
+  const key = JSON.stringify([v.rd, v.taken, v.turn, v.lay[v.me], L.sel]); if (key === L.key && $('.btd')) return; L.key = key;
+  const my = v.me, op = 1 - my;
+  const myTurn = v.turn === my; const sec = Math.max(0, Math.round((v.left || 0) / 1000));
+  app.innerHTML = `<div class="page m38 bt btd"><div class="m38head"><button class="icon" id="btQ" title="Выйти">${ic('menu')}</button><b>${v.kind !== 'p' ? 'Тактика · ' + BT_TAC_RU[v.kind].toLowerCase() : 'Игроки · ' + Math.min(v.rd - 2, 11) + '/11'}</b><span class="sp"></span><span class="small muted">Вы — ${esc(v.names[op])}</span></div>
+  <div class="btturn ${myTurn ? 'me' : ''}">${myTurn ? 'Ваш выбор' : 'Выбирает ' + esc(v.names[op]) + '…'}${myTurn && v.left ? ` · <b id="btS">${sec}</b> с` : ''}</div>
+  ${myTurn && v.left ? `<div class="btbar"><i style="animation-duration:${v.left}ms;width:${Math.min(100, v.left / (v.pickSec * 10))}%"></i></div>` : ''}
+  <div class="m38cards btcards">${v.offer.map((x, k) => btCard(v.kind === "p" ? x : k, v)).join("")}</div>
+  <div class="bttac">${btTacLine(v, my)}${btTacLine(v, op)}</div>
+  <div class="btboards"><div><div class="btname me">Вы</div>${btPitch(v, my, 'me')}</div><div><div class="btname op">${esc(v.names[op])}</div>${btPitch(v, op, 'op')}</div></div>
+  ${v.kind === 'p' ? '<p class="small muted c">Нажмите на своего игрока, затем на другое место — они поменяются. Не на своей позиции игрок теряет в рейтинге.</p>' : '<p class="small muted c">Сначала по очереди разбираете схемы, тренеров и стили, потом — игроков.</p>'}</div>`;
+  document.querySelectorAll('.btp:not(.off)').forEach(x => x.onclick = () => btDoMine(+x.dataset.i));
+  document.querySelectorAll('.btsl').forEach(x => x.onclick = () => btTap(+x.dataset.k));
+  $('#btQ').onclick = btQuit;
+  btCountdown(myTurn ? v.left : 0);
+}
+async function btTap(k) {
+  const L = BTL, v = L.v, my = v.me;
+  if (L.sel === null) { if (v.lay[my][k] !== null) { L.sel = k; btDraw(); } return; }
+  const a = L.sel; L.sel = null; if (a === k) { btDraw(); return; }
+  if (L.net) { try { const r = await api('/bt/move', { method: 'POST', body: { id: L.id, a, c: k } }); L.v = r.b; } catch (e) { UI.toast = e.message; if (typeof render2 === 'function') render2(); } }
+  else if (!btMove(L.b, 0, a, k)) { UI.toast = 'Так переставить нельзя'; if (typeof render2 === 'function') render2(); } else L.v = btView(L.b, 0), L.v.pickSec = 20, L.v.left = v.left;
+  btDraw();
+}
+async function btDoMine(i) {
+  const L = BTL; if (L.busy) return; L.busy = 1; L.sel = null;
+  try {
+    if (L.net) { const r = await api('/bt/pick', { method: 'POST', body: { id: L.id, i } }); L.v = r.b; }
+    else { if (btDoPick(L.b, 0, i)) { L.busy = 0; btLocalTick(); return; } }
+  } catch (e) { if (e.message) UI.toast = e.message; }
+  L.busy = 0; if (L.stop) return;
+  if (L.v.phase === 'done') { btMatch(); return; }
+  btDraw(); if (typeof render2 === 'function') render2();
+}
+function btQuit() {
+  showModal(`<h2>Выйти из матча?</h2><p>${BTL.net ? 'Выход засчитывается как поражение.' : 'Матч не сохранится.'}</p><div class="btns"><button class="btn bad" id="qY">Выйти</button><button class="btn ghost" id="qN">Остаться</button></div>`);
+  $('#qN').onclick = closeModal;
+  $('#qY').onclick = async () => { closeModal(); const id = BTL.id, net = BTL.net; btStop(); if (net) { try { await api('/bt/leave', { method: 'POST', body: { id } }); } catch (e) {} } btLobby(); };
+}
+
+// ---------- матч: ~30 секунд ----------
+function btEvText(e, v) {
+  const n = i => esc(btName(btC(i)));
+  if (e.t === 'g') return `<b>Гол!</b> ${n(e.p)}${e.a !== null && e.a !== undefined ? ` <span class="muted">(пас: ${n(e.a)})</span>` : ''}`;
+  if (e.t === 'sv') return `${n(e.k)} спасает после удара ${n(e.p)}`;
+  if (e.t === 'w') return `${n(e.p)} бьёт мимо`;
+  if (e.t === 'y') return `Жёлтая карточка: ${n(e.p)}`;
+  return '';
+}
+// значки на поле во время матча: голы, передачи, жёлтые
+function btMark(sel, id, k) {
+  const pp = document.querySelector(`.btmb ${sel} .pp[data-c="${id}"]`); if (!pp) return;
+  let m = pp.querySelector('.btmk'); if (!m) { m = document.createElement('u'); m.className = 'btmk'; pp.appendChild(m); m.dataset.g = 0; m.dataset.a = 0; m.dataset.y = 0; }
+  m.dataset[k] = +m.dataset[k] + 1;
+  m.innerHTML = (+m.dataset.g ? '<b>⚽' + (+m.dataset.g > 1 ? m.dataset.g : '') + '</b>' : '') + (+m.dataset.a ? '<i>А' + (+m.dataset.a > 1 ? m.dataset.a : '') + '</i>' : '') + (+m.dataset.y ? '<em></em>' : '');
+  pp.classList.remove('flash'); void pp.offsetWidth; pp.classList.add('flash');
+}
+function btMatch() {
+  const L = BTL; const v = L.v; const R = v.res; const my = v.me, op = 1 - my;
+  clearTimeout(L.t); clearInterval(L.anim); L.key = '';
+  // раскладка по времени: 90 минут ≈ 27 с, доп. время ≈ 5 с, пенальти по 0,9 с
+  const tl = []; const M = m => m <= 90 ? m * 300 : 27000 + (m - 90) * 160;
+  tl.push({ at: 0, k: 'start' });
+  for (const e of R.ev) tl.push({ at: M(e.m), k: 'ev', e });
+  tl.push({ at: M(45) + 1, k: 'ht' }); tl.push({ at: M(90) + 1, k: 'ft90' });
+  let end = M(90) + 400;
+  if (R.et) { end = M(120) + 400; tl.push({ at: M(120) + 1, k: 'ft120' }); }
+  if (R.pens) { R.pens.forEach((p, k) => tl.push({ at: end + 600 + k * 900, k: 'pen', p })); end += 600 + R.pens.length * 900 + 300; }
+  tl.sort((a, b) => a.at - b.at);
+  app.innerHTML = `<div class="page bt btm"><div class="btscore"><div><b class="btname me">Вы</b><span class="bttm">${esc(v.coach[my])}<br>${esc(v.form[my])} · ${esc(v.style[my])}</span></div>
+  <div class="sc"><b id="sc0">0</b> : <b id="sc1">0</b><div id="btMin" class="small muted">0'</div><div id="btP" class="small"></div></div>
+  <div><b class="btname op">${esc(v.names[op])}</b><span class="bttm">${esc(v.coach[op])}<br>${esc(v.form[op])} · ${esc(v.style[op])}</span></div></div>
+  <div class="btboards btmb"><div>${btPitch(v, my, 'me')}</div><div>${btPitch(v, op, 'op')}</div></div>
+  <div class="card btfeed" id="btF"></div><div class="btns" id="btEnd"><button class="btn ghost" id="btSkip">Пропустить</button></div></div>`;
+  const sc = [0, 0], ps = [0, 0]; let k = 0; const t0 = Date.now(); let skip = false;
+  const feed = $('#btF');
+  const add = (h, cls) => { feed.insertAdjacentHTML('afterbegin', `<div class="btev ${cls || ''}">${h}</div>`); };
+  const step = () => {
+    const now = skip ? 1e12 : Date.now() - t0;
+    while (k < tl.length && tl[k].at <= now) {
+      const x = tl[k++];
+      if (x.k === 'ev') { const e = x.e; const mine = e.s === my;
+        if (e.t === 'g') { sc[e.s]++; $('#sc' + (e.s === my ? 0 : 1)).textContent = sc[e.s]; btMark(e.s === my ? '.btpitch.me' : '.btpitch.op', e.p, 'g'); if (e.a !== null && e.a !== undefined) btMark(e.s === my ? '.btpitch.me' : '.btpitch.op', e.a, 'a'); }
+        if (e.t === 'y') btMark(e.s === my ? '.btpitch.me' : '.btpitch.op', e.p, 'y');
+        add(mine ? `<i class="m">${e.m}'</i> ${btEvText(e, v)}` : `${btEvText(e, v)} <i class="m">${e.m}'</i>`, (e.t === 'g' ? 'goal ' : '') + (mine ? 'me' : 'op')); }
+      else if (x.k === 'ht') add('<i class="m">45\'</i> Перерыв', 'sys');
+      else if (x.k === 'ft90') add(R.et ? '<i class="m">90\'</i> Ничья — дополнительное время' : '<i class="m">90\'</i> Финальный свисток', 'sys');
+      else if (x.k === 'ft120') add(R.pens ? '<i class="m">120\'</i> Снова ничья — серия пенальти' : '<i class="m">120\'</i> Конец дополнительного времени', 'sys');
+      else if (x.k === 'pen') { const p = x.p; if (p.ok) ps[p.s]++; $('#btP').textContent = 'пен. ' + ps[my] + ' : ' + ps[op];
+        add(`Пенальти: ${esc(btName(btC(p.p)))} — ${p.ok ? '<b>забил</b>' : 'не забил'}`, (p.s === my ? 'me' : 'op') + (p.ok ? '' : ' miss')); }
+    }
+    const m = Math.min(R.et ? 120 : 90, Math.floor(now <= 27000 ? now / 300 : 90 + (now - 27000) / 160)); const mm = $('#btMin'); if (mm) mm.textContent = (k >= tl.length ? (R.pens ? 'пенальти' : 'матч окончен') : m + "'");
+    if (k >= tl.length) { clearInterval(L.anim); btFinal(); }
+  };
+  L.anim = setInterval(step, 100); step();
+  $('#btSkip').onclick = () => { skip = true; step(); };
+}
+function btFinal() {
+  const L = BTL, v = L.v, R = v.res, my = v.me; const win = R.win === my;
+  const goals = R.ev.filter(e => e.t === 'g' && e.s === my);
+  const box = $('#btEnd'); if (!box) return;
+  box.outerHTML = `<div class="card bfin ${win ? 'win' : 'lose'}"><h2>${win ? 'Победа!' : 'Поражение'}</h2>
+  ${R.left !== undefined ? `<p class="small muted">${R.left === my ? 'Вы вышли из матча — техническое поражение.' : 'Соперник вышел из матча — победа засчитана вам.'}</p>` : ''}
+  ${L.net ? `<p>${win ? '+1 очко в рейтинг битвы составов' : 'Очки не начислены'}</p>` : '<p class="small muted">Тренировочный матч без рейтинга.</p>'}
+  ${goals.length ? `<p class="small">Ваши голы: ${goals.map(e => esc(btShort(btC(e.p))) + ' ' + e.m + "'").join(', ')}</p>` : ''}</div>
+  <div class="col"><button class="btn big" id="btAg">Ещё матч</button><button class="btn ghost" id="btLb">В лобби</button></div>`;
+  $('#btAg').onclick = () => L.net ? btFind() : btLocal();
+  $('#btLb').onclick = () => { btLobby(); if (L.net && typeof netMe === 'function') netMe(); };
+}
 
 (function(){startScreen();})();
 </script></body></html>
